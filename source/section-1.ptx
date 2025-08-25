@@ -5,15 +5,300 @@
     <p>Some words</p>
   </introduction>
   <subsection xml:id="subsection-1">
-    <title>My First Subsection</title>
-    <p>Some more words</p>
-    <p>foo</p>
-    <figure>
-      <caption>A frog</caption>
-      <image source="frog.jpg" width="50%">
-        <description>A nice-looking frog with a longish description.</description>
-      </image>
-    </figure>
-    <p>Bar: <m>\foo</m></p>
+    <title>Natural numbers and integers</title>
+    <axiom xml:id="axiom-peano">
+      <statement>
+        <p>
+          There is a set <m>\N</m>, whose elements are called <term>natural numbers</term>,
+          and a function <m>s \colon \N \to \N</m>, satisfying:
+          <ol marker="1.">
+            <li>
+              There is an element <m>1 \in \N</m>.
+            </li>
+            <li>
+              There is no <m>n \in \N</m> such that <m>s(n) = 1</m>.
+            </li>
+            <li>
+              The function <m>s</m> is injective (this means that
+              <m>s(n) = s(m)</m> only if <m>n = m</m>).
+            </li>
+            <li xml:id="axiom-induction">
+              <title>Principle of induction</title>
+              <p>
+                Suppose <m>S \subseteq \N</m> is a subset such that
+                <m>1 \in S</m> and if <m>n \in S</m> then <m>n+1 \in S</m>.
+                Then <m>S = \N</m>.
+              </p>
+            </li>
+          </ol>
+          We call <m>s</m> the <term>successor function</term>. Informally
+          think of <m>s(n) = n+1</m>.
+        </p>
+      </statement>
+    </axiom>
+    <proposition xml:id="prop-predecessors-are-unique">
+      <statement>
+        <p>
+          If <m>n \in \N</m> and <m>n \ne 1</m>, there is a unique <m>m \in \N</m>
+          such that <m>s(m) = n</m>.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Let <m>
+            A = \{ n \in \N : n = 1 or n = s(m)\text{ for some }m \in N \}
+            \subseteq \N
+          </m>. Then <m>1 \in A</m> and if <m>n \in A</m>, then <m>s(n) \in A</m>,
+          so <m>A = \N</m> by <xref ref="axiom-induction"/>. Hence, if <m>n \in \N</m>
+          and <m>n \ne 1</m>, then <me>n = s(m)</me> for some <m>m \in \N</m>, which is
+          unique since <m>s</m> is injective. Indeed, if <m>n = s(m')</m>, then
+          <m>s(m) = s(m')</m>, therefore <me>m = m'</me>.
+        </p>
+      </proof>
+    </proposition>
+    <remark>
+      <p>
+        We set <m>2 = s(1)</m>, <m>3 = s(2)</m>, and so on, so that <m>\N = \{ 1, 2, 3, \ldots \}</m>.
+      </p>
+    </remark>
+    <definition xml:id="def-addition">
+      <statement>
+        <p>
+          We define a binary operation <m>+ \colon \N \times \N \to \N</m> by
+          <ol marker="1.">
+            <li>For all <m>n \in \N</m>, <m>n + 1 = s(n)</m>.</li>
+            <li>For all <m>n, m \in N</m>, <m>n + s(m) = s(n + m)</m>.</li>
+          </ol>
+        </p>
+      </statement>
+    </definition>
+    <p>
+      Observe that this is a recursive definition: <md>
+        <mrow>n+1 \amp = s(n)</mrow>
+        <mrow>n+2 \amp = n + s(1) = s(n+1) = s(s(n))</mrow>
+        <mrow>n+3 \amp = n + s(2) = s(n+2) = s(n + s(1)) = s(s(n + 1)) = s(s(s(n)))</mrow>
+      </md>
+    </p>
+    <proposition xml:id="prop-addition-associative">
+      <statement>
+        <p>
+          For all <m>a, b, c \in \N</m>, we have <me>(a + b) + c = a + (b + c)</me>.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Let <m>A = \{ c \in \N \colon (a + b) + c = a + (b + c)\text{ for all }a, b \in \N\}</m>. We
+          will show that <m>A = \N</m> using induction <xref ref="axiom-induction"/>. Indeed, for
+          <m>a, b \in \N</m>, we have
+          <me>(a + b) + 1  = s(a + b) = a + s(b) = a + (b + 1)</me>,
+          so <m>1 \in A</m>. Now suppose <m>c \in A</m>. Then for <m>a, b \in \N</m>, we have
+          <md>
+            <mrow>(a + b) + s(c) \amp = s((a + b) + c) = s(a + (b + c))</mrow>
+            <mrow> \amp = a + s(b + c) = a + (b + s(c))</mrow>
+          </md>. This shows <m>s(c) \in A</m> and the proof by induction is complete.
+        </p>
+      </proof>
+    </proposition>
+    <definition xml:id="def-multiplication">
+      <statement>
+        <p>
+          We define another operation <m>\cdot \colon \N \times \N \to \N</m> by:
+          <ol marker="1.">
+            <li>
+              <p>
+                For all <m>n \in \N</m>, <m>n \cdot 1 = n</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                For all <m>n, m \in \N</m>, <m>n \cdot s(m) = n \cdot m + n</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </definition>
+    <p>
+      Explicitly, <md>
+        <mrow>n \cdot 2 \amp = n \cdot s(1) = n \cdot 1 + n = n + n</mrow>
+        <mrow>n \cdot 3 \amp = n \cdot s(2) = n \cdot 2 + n = (n + n) + n</mrow>
+      </md> and so on.
+    </p>
+    <proposition xml:id="prop-more-field-axioms">
+      <statement>
+        <p>
+          Let <m>a, b, c \in \N</m>.
+        </p>
+        <ol>
+          <li>
+            <p>
+              <m>a + b = b + a</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>a + c = b + c</m>, then <m>a = b</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>a \cdot b = b \cdot a</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>a \cdot (b \cdot c) = (a \cdot b) \cdot c</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>a \cdot (b + c) = a \cdot b + a \cdot c</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>a \cdot c = b \cdot c</m>, then <m>a = c</m>.
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </proposition>
+    <proof>
+      <p>
+        Proof of item 5 only. Let
+        <me>
+          A = \{ c \in \N : a \cdot (b + c) = a \cdot b + a \cdot c \text{ for all } a, b \in \N \}
+        </me>. For <m>a, b \in \N</m>, we have
+        <me>
+          a \cdot (b + 1) = a \cdot s(b) = a \cdot b + a = a\cdot b + a\cdot 1
+        </me>, so <m>1 \in A</m>.
+      </p>
+      <p>
+        Now suppose <m>c \in A</m> and let <m>a, b \in \N</m>, so that <m>a \cdot (b+c) = a\cdot b + a \cdot c</m>.
+        Then <md>
+          <mrow>a \cdot (b + s(c)) \amp = a \cdot s(b + c) = a \cdot (b + c) + a</mrow>
+          <mrow>\amp = (a\cdot b + a\cdot c) + a = a\cdot b + a \cdot c + a</mrow>
+          <mrow>\amp = a\cdot b + (a\cdot c + a\cdot 1 )= a\cdot b + a(c \cdot 1) = a \cdot b + a\cdot s(c)</mrow>
+        </md>, which shows <m>s(c) \in A</m> so that <m>A = \N</m>.
+      </p>
+    </proof>
+    <p>
+      Now we give the <term>standard form of induction</term>. Let <m>P(n)</m> be a statement about a
+      natural number <m>n</m> that is either true or false. If <m>P(1)</m> is true and if, whenever
+      <m>P(n)</m> is true we also have <m>P(n+1)</m> is true, then <m>P(n)</m> is true for all <m>n \in \N</m>.
+    </p>
+    <definition xml:id="def-less-than">
+      <statement>
+        <p>
+          If <m>m, n \in \N</m>, we say <m>m</m> is <term>less than</term> <m>n</m>, and write <m>m \lt n</m>,
+          if <m>n = m + k</m> for some <m>k \in \N</m>. We write <m>m \leq n</m> if we only wish to assert that
+          <m>m \lt n</m> or <m>m = n</m>.
+        </p>
+      </statement>
+    </definition>
+    <proposition xml:id="prop-order-axioms">
+      <statement>
+        <p>
+          Let <m>a, b, c \in \N</m>.
+          <ol>
+            <li>
+              <p>
+                We have <m>a \leq a</m>, but <m>a \not\lt a</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                If <m>a \lt b</m> and <m>b \lt c</m>, then <m>a \lt c</m>, and similarly for <m>\leq</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                If <m>a \leq b</m> and <m>b \leq a</m>, then <m>a = b</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Exactly one of <m>a \lt b</m> or <m>a = b</m> or <m>b \lt a</m> is true.
+              </p>
+            </li>
+            <li>
+              <p>
+                We have <m>a \lt b</m> if and only if <m>a + c \lt b + c</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                We have <m>a \lt b</m> if and only if <m>a \cdot c \lt b \cdot c</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Proof of 2. Suppose that <m>a \lt b</m> and <m>b \lt c</m>. Then we have
+          <m>b = a + k</m> and <m>c = b + \ell</m> for some <m>k, \ell \in \N</m>.
+          Then <me>
+            c = b + \ell = (a + k) + \ell = a + (k + \ell)
+          </me> with <m>k + \ell \in \N</m>, so <m>a \lt c</m>.
+        </p>
+        <p>
+          Proof of 4. First we will show that no more than one of the statements <md>
+            <mrow>a \amp \lt b</mrow>
+            <mrow>a \amp = b</mrow>
+            <mrow>b \amp \lt a</mrow>
+          </md> is true. Suppose first that <m>a \lt b</m>. Then <m>b = a + k</m> for
+          some <m>k \in \N</m>. Using the fact that <m>m \ne m + n</m> for all <m>m, n \in \N</m>,
+          we find <m>b = a + k \ne a</m>. Similarly, if <m>b \lt a</m> then <m>a \ne b</m>.
+        </p>
+        <p>
+          Now if <m>a \lt b</m> and <m>b \lt a</m> then <m>b = a + k</m> and <m>a = b + \ell</m>
+          for some <m>k, \ell \in \N</m>, so <me>
+            b = (b + \ell) + k = b + (\ell + k)
+          </me>, but this implies <m>b \ne b</m>, a contradiction. Similarly, if <m>a = b</m>,
+          then <m>a \not\lt b</m> and <m>b \not\lt a</m>. This shows at most one of the statements
+          is true.
+        </p>
+        <p>
+          To show at most one of the statements is true, let's fix <m>a \in \N</m> and let
+          <m>P(b)</m> be the statement <q><m>a \lt b</m> or <m>a = b</m> or <m>b \lt a</m></q>.
+          If <m>a \ne 1</m>, then <m>a = s(k) = 1 + k</m> for some <m>k \in \N</m>, so <m>1 \lt a</m>
+          and we have established <m>P(1)</m>. Now, let's suppose that <m>b \in \N</m> and that
+          <m>P(b)</m> is true, meaning that <m>a \lt b</m> or <m>a = b</m> or <m>b \lt a</m>.
+        </p>
+        <p>
+          Suppose first that <m>a \lt b</m>. Then <m>b = a + k </m> for some <m>k \in \N</m>,
+          so <m>s(b) = s(a+k) = a + s(k)</m>. This shows that <m>a \lt s(b)</m>, so <m>P(b+1)</m>
+          is true in this case.
+        </p>
+        <p>
+          Suppose next that <m>a = b</m>. Then <m>s(b) = b + 1 = a + 1</m>, so <m>a \lt s(b)</m>
+          and <m>P(b+1)</m> is true as before.
+        </p>
+        <p>
+          Finally, suppose that <m>b \lt a</m>. Then <m>a = b + k</m> for some <m>k</m>. If
+          <m>k = 1</m>, then <m>a = b + 1 = s(b)</m>, so <m>P(b+1)</m> is true. If <m>k \ne 1</m>,
+          then <m>k = s(\ell)</m> for some <m>\ell \in \N</m> and <me>
+            a = b + s(\ell) = b + \ell + 1 = (b + 1) + \ell = s(b) + \ell
+          </me>. This shows that <m>a \lt s(b)</m>, and therefore <m>P(b+1)</m> is true in this
+          case as well.
+        </p>
+        <p>
+          We have shown that <m>P(b) \implies P(b+1)</m> for all <m>b\in \N</m>, which concludes
+          the proof by induction.
+        </p>
+      </proof>
+    </proposition>
+    <theorem xml:id="thm-well-ordering">
+      <title>The well-ordering principle</title>
+      <statement>
+        <p>
+          If <m>A \subseteq \N</m> is nonempty, then <m>A</m> has a <term>least element</term>.
+          That is, there exists <m>a \in A</m> such that <m>a \leq b</m> for all <m>b \in A</m>.
+        </p>
+      </statement>
+    </theorem>
+
   </subsection>
+
 </section>
