@@ -300,5 +300,425 @@
     </theorem>
 
   </subsection>
-
+  <subsection xml:id="subsec-the-integers">
+    <title>The Integers</title>
+    <definition xml:id="def-relation">
+      <statement>
+        <p>
+          A <term>relation</term> on a set <m>A</m> is a subset 
+          <m>R</m> of the Cartesian product
+          <m>A \times A</m>. If <m>(x,y) \in R</m>, we write
+          <me>
+            x \sim_R y
+          </me>
+          or simply <m>x \sim y</m> if the relation <m>R</m> is understood.
+          Sometimes we abuse notation and identify the equivalence operator
+          <m>\sim</m> with the relation <m>R</m>.
+        </p>
+      </statement>
+    </definition>
+    <definition xml:id="def-equivalence-relation">
+      <statement>
+        <p>
+          A relation <m>\sim</m> is called an <term>equivalence relation</term>
+          if 
+          <ol marker="1.">
+            <li>
+              <p>
+                It is <em>reflexive</em>: <m>x \sim x</m> for all <m>x \in A</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                It is <em>symmetric</em>: If <m>x \sim y</m> then <m>y \sim x</m>
+                for all <m>x, y \in A</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                It is <em>transitive</em>: If <m>x \sim y</m> and <m>y \sim z</m>
+                then <m>x \sim z</m> for all <m>x, y, z \in A</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </definition>
+    <example xml:id="ex-equiv-rel-01">
+      <p>
+        Let <m>A = \{ 1, 2, 3 \}</m> and let 
+        <m>R = \{ (1, 1), (2, 2), (3, 3), (2, 3), (3, 2) \}</m>.
+        Then observe:
+        <md>
+          <mrow>(1, 1), (2, 2), (3, 3) \in R \amp \implies \text{reflexive}</mrow>
+          <mrow>(2, 3), (3, 2) \in R \amp \implies \text{symmetric}</mrow>
+          <mrow>(2, 3), (3, 2) \in R \text{ and } (2, 2) \in R \amp</mrow>
+          <mrow>(3, 2), (2, 3) \in R \text{ and } (3, 3) \in R \amp</mrow>
+          <mrow>(2, 2), (2, 3) \in R \text{ and } (2, 3) \in R \amp</mrow>
+          <mrow>(3, 3), (3, 2) \in R \text{ and } (3, 2) \in R \amp \text{transitive}</mrow>
+        </md>, so <m>R</m> is an equivalence relation.
+      </p>
+    </example>
+    <definition xml:id="def-partition-of-set">
+      <statement>
+        <p>
+          Let <m>A</m> be a set. A collection of subsets <m>A_i</m> of <m>A</m>
+          is called a <term>partition</term> of <m>A</m> if each element of
+          <m>A</m> belongs to exactly one of the <m>A_i</m>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      Notice that <xref ref="def-partition-of-set"/> does not require the
+      elements of a partition to be finite in number. In other words, we can
+      partition a set into infinitely many parts.
+    </p>
+    <lemma xml:id="lem-partitions-parts-disjoint-equal">
+      <statement>
+        <p>
+          Suppose <m>A</m> is partitioned into the subsets <m>A_i</m>. Then
+          we have, for all <m>i</m>, <m>j</m>:
+          <men xml:id="eq-partitions-parts-disjoint-equal">
+            A_i \cap A_j = \varnothing \text{ or } A_i = A_j
+          </men>.
+          This is usually summarized by saying 
+          <q>
+            The parts of a partition
+            are either equal or disjoint.
+          </q>
+        </p>
+        <p>
+          The converse is also true, namely, if <m>A_i</m> is a collection 
+          of subsets of <m>A</m>
+          satisfying <xref ref="eq-partitions-parts-disjoint-equal"/>
+          and <m>\bigcup A_i = A</m>,
+          then the <m>A_i</m> are a partition of <m>A</m>.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Suppose first that the <m>A_i</m> partition <m>A</m>.
+          Then each element of <m>A</m> has to belong to exactly one of the
+          <m>A_i</m>. Now suppose <m>a</m>
+          is an element of <m>A_i \cap A_j</m>. Then, because <m>a</m> belongs
+          to exactly one of the <m>A_i</m>, we must have <m>A_i = A_j</m>.
+          This shows that the <m>A_i</m> satisfy 
+          <xref ref="eq-partitions-parts-disjoint-equal"/>.
+        </p>
+        <p>
+          On the other hand, suppose that <m>A_i</m> are some subsets of
+          <m>A</m> satisfying <xref ref="eq-partitions-parts-disjoint-equal"/>.
+          Then let <m>a \in A</m>; it is enough to show that <m>a</m> belongs
+          to exactly one of the <m>A_i</m>. If we suppose <m>a</m> belongs to
+          two of the <m>A_i</m>, say <m>a \in A_i</m> and <m>a \in A_j</m>, then
+          by <xref ref="eq-partitions-parts-disjoint-equal"/> we have at once
+          that <m>A_i = A_j</m>. So <m>a</m> cannot belong to more than one
+          of the <m>A_i</m>. On the other hand, the union of the <m>A_i</m> 
+          is equal to <m>A</m>, hence it certainly contains <m>a</m>, which
+          means that <m>a</m> belongs to at least one of the <m>A_i</m>.
+        </p>
+        <p>
+          Thus we have shown that <m>a</m> belongs to exactly one of the 
+          <m>A_i</m>, and so the <m>A_i</m> are a partition of <m>A</m>, 
+          as required.
+        </p>
+      </proof>
+    </lemma>
+    <proposition xml:id="prop-equivalence-relations-partition">
+      <statement>
+        <p>
+          Let <m>\sim</m> be an equivalence relation on a set <m>A</m>. For each
+          <m>a \in A</m> we define a subset <m>[a] = \{ x \in A : x \sim a \}</m>,
+          called the <term>equivalence class</term> of <m>a</m> under <m>\sim</m>.
+          The set of all such equivalence classes is a partition of <m>A</m>.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          We proceed according to <xref ref="lem-partitions-parts-disjoint-equal"/>
+          and show that the equivalence classes 
+          satisfy <xref ref="eq-partitions-parts-disjoint-equal" /> and that
+          their union is <m>A</m>.
+        </p>
+        <p>
+          Suppose <m>x \in [a]</m> and <m>x \in [b]</m> for some <m>a, b \in A</m>.
+          Then by definition we have <m>x \sim a</m> and <m>x \sim b</m>. Thus
+          <m>a \sim x</m> and hence <m>a \sim b</m>. It follows that 
+          <me>[a] \subseteq [b]</me>. Indeed, if <m>y \sim a</m>, then also
+          <m>y \sim x</m> (because <m>a \sim x</m> and <m>\sim</m> is an
+          equivalence relation). Thence <m>y \sim b</m> because <m>x \sim b</m>
+          and finally this means that <m>y \in [b]</m>. It follows by a symmetric
+          argument that <m>[b] \subseteq [a]</m>. Hence <m>[a] = [b]</m>. 
+        </p>
+        <p>
+          This shows that for all <m>a, b \in A</m>, either 
+          <m>[a] \cap [b] = \varnothing</m> or <m>[a] = [b]</m>, which is the 
+          content of <xref ref="eq-partitions-parts-disjoint-equal"/>.
+        </p>
+        <p>
+          To see that the union of the equivalence classes is <m>A</m>, 
+          we just notice that each <m>a \in A</m> is certainly a member
+          of its own equivalence class <m>[a]</m>, because <m>A</m> is an
+          equivalence relation. This concludes the proof.
+        </p>
+      </proof>
+    </proposition>
+    <example>
+      <p>
+        For the equivalence relation <m>R</m> on the set <m>A</m> of 
+        <xref ref="ex-equiv-rel-01"/>, namely
+        <md>
+          <mrow>A \amp = \{ 1, 2, 3 \}</mrow>
+          <mrow>R \amp = \{ (1, 1), (2, 2), (3, 3), (2, 3), (3, 2) \}</mrow>
+        </md>,
+        we have the following equivalence classes:
+        <me>
+          [1] = \{1\}, [2] = \{2, 3\}, [3] = \{2, 3\}
+        </me>.
+        The partition of <m>A</m> associated to the equivalence relation is
+        <me>
+          A = \{1\} \cup \{2, 3\}
+        </me>.
+      </p>
+    </example>
+    <p>
+      Equivalence relations are a powerful method of constructing new sets
+      from old. We can look at the set of equivalence classes as a new
+      mathematical object. This is illustrated in diabolically clever fashion
+      by <xref ref="def-defining-relation-minus"/>.
+    </p>
+    <definition xml:id="def-defining-relation-minus">
+      <statement>
+        <p>
+          We define a relation <m>\sim</m> on the set <m>\N \times \N</m>
+          by <me>
+            (a, b) \sim (c, d) \text{ if } a + d = b + c
+          </me>.
+        </p>
+        <p>
+          This looks strange, but it is concocted quite precisely. We are trying
+          to construct the negative integers out of thin air. The idea is to
+          represent a number like <m>-3</m> as the class of all pairs
+          <m>(a, b) \in \N \times \N</m> where <m>a + 3 = b</m>. It's the
+          idea of being three less than something.
+        </p>
+      </statement>
+    </definition>
+    <proposition xml:id="prop-minus-relation-equiv-relation">
+      <statement>
+        <p>
+          The relation <m>\sim</m> is an equivalence relation.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Let <m>a, b \in \N</m>. Then <m>a + b = b + a</m>, so we have
+          <m>(a, b) \sim (a, b)</m>. Thus the relation is reflexive.
+        </p>
+        <p>
+          Next let us suppose that <m>(a, b) \sim (c, d)</m> for some
+          <m>a, b, c, d \in \N</m>. Then <m>a + d = b + c</m>. It follows
+          that <m>c + b = d + a</m>, so <m>(c, d) \sim (a, b)</m>.
+          Thus the relation is symmetric.
+        </p>
+        <p>
+          Finally, let us suppose that <m>(a, b) \sim (c, d)</m> and
+          <m>(c, d) \sim (e, f)</m> for some <m>a, b, c, d, e, f \in \N</m>.
+          Then <m>a + d = b + c</m> and <m>c + f = d + e</m>. Adding,
+          we find
+          <md>
+            <mrow>a + d + c + f   \amp = b + c + d + e</mrow>
+            <mrow>a + f + (c + d) \amp = b + e + (c + d)</mrow>
+            <mrow>a + f \amp = b + e</mrow>
+          </md> from which it follows at once that <m>(a, b) \sim (e, f)</m>
+          and the relation is transitive.
+        </p>
+      </proof>
+    </proposition>
+    <definition xml:id="def-integers">
+      <statement>
+        <p>
+          The set of <term>integers</term>, denoted <m>\Z</m>, is the set
+          of equivalence classes of <m>\sim</m> in the set <m>\N \times \N</m>.
+        </p>
+        <p>
+          That is, 
+          <me>
+            \Z = \{ [(a, b)] : a, b \in \N \}
+          </me>.
+          We define the elements <m>\overline{0} \in \Z</m> 
+          and <m>\overline{1} \in \Z</m> by 
+          <md>
+            <mrow>\overline{0} \amp = [(1, 1)] = \{ (a, b) \in \N \times \N : a = b \} </mrow>
+            <mrow>\overline{1} \amp = [(2, 1)] = \{ (a, b) \in \N \times \N : a = 1 + b \}</mrow>
+          </md>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      Having defined the integers, it's now our duty to give them their familiar operations and
+      show that these extend the operations on <m>\N</m>. This is done in a standard way below.
+    </p>
+    <definition xml:id="def-addition-integers">
+      <statement>
+        <p>
+          We define the operation <m>+ \colon \Z \to \Z</m> by 
+          <men xml:id="eq-addition-integers-01">
+            [(a, b)] + [(c, d)] = [(a + c, b + d)].
+          </men>
+          This definition requires a short proof to be valid. So it is only
+          provisional for now.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      For <xref ref="def-addition-integers"/> to be valid, we have to show
+      that the right-hand side of <xref ref="eq-addition-integers-01"/>
+      doesn't depend on our choices of <m>a, b, c, d</m>. If we let those
+      numbers vary within their equivalence classes, the right-hand-side must
+      not change. When this is established, we say that addition of integers
+      is <em>well-defined</em>.
+    </p>
+    <proposition xml:id="prop-addition-integers-well-defined">
+      <statement>
+        <p>
+          Let's suppose that <m>[(a, b)] = [(a', b')]</m>, so that 
+          <m>(a', b')</m> is another member of the equivalence class
+          <m>[(a, b)]</m>. Similarly, let's take <m>(c', d')</m> so that
+          <m>[(c', d')] = [(c, d)]</m>. Then it doesn't matter which we use
+          to compute <m>[(a, b)] + [(c, d)]</m>, because
+          <me>
+            [(a + c, b + d)] = [(a' + c', b' + d')]
+          </me>.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Since <m>[(a, b)] = [(a', b')]</m> and <m>[(c, d)] = [(c', d')]</m>,
+          we have <me>
+            a + b' = b + a' \quad \text{ and } \quad c + d' = d + c'
+          </me>. Adding, we find
+          <md>
+            <mrow>a + c + b' + d' \amp = b + d + a' + c'</mrow>
+            <mrow>(a + c) + (b' + d') \amp = (b + d) + (a' + c')</mrow>
+          </md>, which means that 
+          <m>[(a + c), (b + d)] = [(a' + c', b' + d')]</m>, as required.
+        </p>
+      </proof>
+    </proposition>
+    <definition xml:id="def-negation-subtraction-integers">
+      <statement>
+        <p>
+          Define <term>negation</term> <m>- \colon \Z \to \Z</m> by
+          <me>
+            -[(a, b)] = [(b, a)].
+          </me>
+        </p>
+        <p>
+          Define <term>subtraction</term> <m>- \colon \Z \times \Z \to \Z</m>
+          by <me>
+            [(a, b)] - [(c, d)] = [(a, b)] + (-[(c, d)])
+          </me>.
+        </p>
+      </statement>
+    </definition>
+    <proposition xml:id="prop-neg-sub-integers-well-defined">
+      <statement>
+        <p>
+          The operations of <xref ref="def-negation-subtraction-integers"/>
+          are well-defined.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Left to the reader.
+        </p>
+      </proof>
+    </proposition>
+    <proposition xml:id="prop-properties-of-addition-integers">
+      <statement>
+        <p>
+          Let <m>x, y, z \in \Z</m>. Then
+          <ol marker="1.">
+            <li>
+              <p>
+                <m>x + (y + z) = (x + y) + z</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>x + y = y + x</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>x + \overline{0} = x</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>x - x = \overline{0}</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Left to the reader.
+        </p>
+      </proof>
+    </proposition>
+    <definition xml:id="def-multiplication-integers">
+      <statement>
+        <p>
+          Define multiplication <m>\cdot \colon \Z \times \Z \to \Z</m> by
+          <me>
+            [(a, b)] \cdot [(c, d)] = [(ac + bd, ad + bc)]
+          </me>.
+        </p>
+      </statement>
+    </definition>
+    <proposition xml:id="prop-mul-integers-well-defined-properties">
+      <statement>
+        <p>
+          Multiplication is well-defined and satisfies the following for
+          all <m>x, y, z \in \Z</m>.
+          <ol marker="1.">
+            <li>
+              <p>
+                <m>(xy)z = x(yz)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>x \cdot \overline{1} = x</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>xy = yx</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>x(y + z) = xy + xz</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                If <m>xy = \overline{0}</m> then either <m>x = \overline{0}</m>
+                or <m>y = \overline{0}</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Left to the reader.
+        </p>
+      </proof>
+    </proposition>
+  </subsection>
 </section>
