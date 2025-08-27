@@ -5,7 +5,10 @@
 
     <document-id>authorslastnamelowercase-ShortTitleCamelCase</document-id>
 
-    <macros>\newcommand{\N}{\mathbf{N}}</macros>
+    <macros>
+      \newcommand{\N}{\mathbf{N}}
+      \newcommand{\Z}{\mathbf{Z}}
+    </macros>
     <latex-image-preamble>\usepackage{tikz}</latex-image-preamble>
   </docinfo>
 
