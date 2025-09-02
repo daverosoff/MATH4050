@@ -292,6 +292,53 @@
         </p>
       </proof>
     </proposition>
+    <lemma xml:id="lem-successor-fixpoint-free">
+      <statement>
+        <p>
+          The successor function <m>s \colon \N \to \N</m> has no fixed point, that is,
+          for all <m>n \in \N</m> we have <m>s(n) \ne n</m>.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Left to the reader.
+        </p>
+      </proof>
+    </lemma>
+    <lemma xml:id="lem-addition-not-identity">
+      <statement>
+        <p>
+          To complete the proof of <xref ref="prop-order-axioms"/> we should prove
+          the fact that <m>m \ne m + n</m> for natural numbers <m>m</m> and <m>n</m>.
+        </p>
+        <p>
+          Indeed, let us fix <m>m \in \N</m> and let <m>P(n)</m> be the statement
+          <q><m>m \ne m + n</m></q>. We'll establish that <m>P(n)</m> is true for 
+          all natural numbers <m>n</m> by induction.
+        </p>
+        <p>
+          If <m>m = 1</m>, then we cannot have <m>m = m + 1 = s(1)</m>, because
+          by <xref ref="axiom-peano"/>, <m>1</m> is not the successor of any
+          natural number. If <m>m \ne 1</m>, then <m>m = s(k)</m> for some
+          natural number <m>k</m>, and we have
+          <me>
+            s(k) = m = m + 1 = s(k) + 1 = s(s(k)),
+          </me>
+          a contradiction of <xref ref="lem-successor-fixpoint-free"/>. So we
+          cannot have <m>m = m + 1</m> in that case either, and we have established
+          <m>P(1)</m> for all choices of <m>m</m>.
+        </p>
+        <p>
+          Now suppose <m>n \in \N</m> and that <m>P(n)</m> is true, so that
+          <me>
+            m \ne m + n
+          </me>. Then we need to show that <m>m \ne m + s(n)</m>. If <m>m = 1</m>,
+          this follows at once from <xref ref="axiom-peano"/>. Otherwise, we
+          have <m>m = s(k)</m> for some <m>k \in \N</m>.
+          FINISH THIS
+        </p>
+      </statement>
+    </lemma>
     <theorem xml:id="thm-well-ordering">
       <title>The well-ordering principle</title>
       <statement>
