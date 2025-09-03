@@ -152,7 +152,7 @@
                 <m>a \cdot (b \cdot c) = (a \cdot b) \cdot c</m>.
               </p>
             </li>
-            <li>
+            <li xml:id="li-multiplication-distributes">
               <p>
                 <m>a \cdot (b + c) = a \cdot b + a \cdot c</m>.
               </p>
@@ -168,7 +168,13 @@
     </proposition>
     <proof>
       <p>
-        Proof of item 5 only. Let
+        Items 1<ndash/>4 and 6 are left to the reader. Items 2 and 6
+        appear on <xref ref="subsec-hw-01" text="title"/>
+        as <xref ref="hw-01-cancel-addition"/>
+        and <xref ref="hw-01-cancel-multiplication"/>.
+      </p>
+      <p>
+        Proof of <xref ref="li-multiplication-distributes"/> only. Let
         <me>
           A = \{ c \in \N : a \cdot (b + c) = a \cdot b + a \cdot c \text{ for all } a, b \in \N \}
         </me>. For <m>a, b \in \N</m>, we have
@@ -224,7 +230,7 @@
                 Exactly one of <m>a \lt b</m> or <m>a = b</m> or <m>b \lt a</m> is true.
               </p>
             </li>
-            <li>
+            <li xml:id="li-addition-preserves-order">
               <p>
                 We have <m>a \lt b</m> if and only if <m>a + c \lt b + c</m>.
               </p>
@@ -239,6 +245,11 @@
       </statement>
       <proof>
         <p>
+          Items 1, 3, 5, and 6 are left to the reader. <xref ref="li-addition-preserves-order"/>
+          appears on <xref ref="subsec-hw-01" text="title"/>
+          as <xref ref="hw-01-addition-preserves-order"/>.
+        </p>
+        <p>
           Proof of 2. Suppose that <m>a \lt b</m> and <m>b \lt c</m>. Then we have
           <m>b = a + k</m> and <m>c = b + \ell</m> for some <m>k, \ell \in \N</m>.
           Then <me>
@@ -251,7 +262,8 @@
             <mrow>a \amp = b</mrow>
             <mrow>b \amp \lt a</mrow>
           </md> is true. Suppose first that <m>a \lt b</m>. Then <m>b = a + k</m> for
-          some <m>k \in \N</m>. Using the fact that <m>m \ne m + n</m> for all <m>m, n \in \N</m>,
+          some <m>k \in \N</m>. <xref ref="lem-addition-not-nilpotent"/> says
+          that <m>m \ne m + n</m> for all <m>m, n \in \N</m>. Thus,
           we find <m>b = a + k \ne a</m>. Similarly, if <m>b \lt a</m> then <m>a \ne b</m>.
         </p>
         <p>
@@ -296,48 +308,26 @@
       <statement>
         <p>
           The successor function <m>s \colon \N \to \N</m> has no fixed point, that is,
-          for all <m>n \in \N</m> we have <m>s(n) \ne n</m>.
+          for all <m>n \in \N</m> we have <m>n \ne n + 1</m>.
         </p>
       </statement>
       <proof>
         <p>
-          Left to the reader.
+          Left to the reader (<xref ref="hw-01-successor-fixpoint-free"/>).
         </p>
       </proof>
     </lemma>
-    <lemma xml:id="lem-addition-not-identity">
+    <lemma xml:id="lem-addition-not-nilpotent"> 
       <statement>
         <p>
-          To complete the proof of <xref ref="prop-order-axioms"/> we should prove
-          the fact that <m>m \ne m + n</m> for natural numbers <m>m</m> and <m>n</m>.
-        </p>
-        <p>
-          Indeed, let us fix <m>m \in \N</m> and let <m>P(n)</m> be the statement
-          <q><m>m \ne m + n</m></q>. We'll establish that <m>P(n)</m> is true for 
-          all natural numbers <m>n</m> by induction.
-        </p>
-        <p>
-          If <m>m = 1</m>, then we cannot have <m>m = m + 1 = s(1)</m>, because
-          by <xref ref="axiom-peano"/>, <m>1</m> is not the successor of any
-          natural number. If <m>m \ne 1</m>, then <m>m = s(k)</m> for some
-          natural number <m>k</m>, and we have
-          <me>
-            s(k) = m = m + 1 = s(k) + 1 = s(s(k)),
-          </me>
-          a contradiction of <xref ref="lem-successor-fixpoint-free"/>. So we
-          cannot have <m>m = m + 1</m> in that case either, and we have established
-          <m>P(1)</m> for all choices of <m>m</m>.
-        </p>
-        <p>
-          Now suppose <m>n \in \N</m> and that <m>P(n)</m> is true, so that
-          <me>
-            m \ne m + n
-          </me>. Then we need to show that <m>m \ne m + s(n)</m>. If <m>m = 1</m>,
-          this follows at once from <xref ref="axiom-peano"/>. Otherwise, we
-          have <m>m = s(k)</m> for some <m>k \in \N</m>.
-          FINISH THIS
+          For all <m>n, k \in \N</m>, we have <m>n \ne n + k</m>.
         </p>
       </statement>
+      <proof>
+        <p>
+          Left to the reader (<xref ref="hw-01-addition-not-nilpotent"/>).
+        </p>
+      </proof>
     </lemma>
     <theorem xml:id="thm-well-ordering">
       <title>The well-ordering principle</title>
@@ -695,17 +685,17 @@
                 <m>x + (y + z) = (x + y) + z</m>.
               </p>
             </li>
-            <li>
+            <li xml:id="li-integer-addition-commutative">
               <p>
                 <m>x + y = y + x</m>.
               </p>
             </li>
-            <li>
+            <li xml:id="li-zero-additive-identity">
               <p>
                 <m>x + \overline{0} = x</m>.
               </p>
             </li>
-            <li>
+            <li xml:id="li-x-minus-x-is-0">
               <p>
                 <m>x - x = \overline{0}</m>.
               </p>
@@ -715,7 +705,9 @@
       </statement>
       <proof>
         <p>
-          Left to the reader.
+          Left to the reader 
+          (<xref first="hw-01-integer-addition-commutative"
+          last="hw-01-x-minus-x-is-0"/>).
         </p>
       </proof>
     </proposition>
@@ -766,9 +758,92 @@
       </statement>
       <proof>
         <p>
-          Left to the reader.
+          Left to the reader (see <xref ref="subsec-hw-01" text="title"/>).
         </p>
       </proof>
     </proposition>
+    <definition xml:id="def-integer-less-than">
+      <statement>
+        <p>
+          For <m>[(a,b)], [(c,d)] \in \Z</m>, define <m>[(a, b)] \lt [(c, d)]</m>
+          if <m>a + d \lt b + c</m>, that is, if <m>b + c = a + d + k</m>
+          for some <m>k \in \N</m>.
+        </p>
+      </statement>
+    </definition>
+    <proposition xml:id="prop-natural-integer-inclusion">
+      <statement>
+        <p>
+          Define the function <m>i \colon \N \to \Z</m> by <m>i(n) = [(n+1, 1)]</m>.
+          Then it satisfies the following.
+          <ol marker="(1)">
+            <li xml:id="li-inc-n-z-injective">
+              <p>
+                The function <m>i</m> is injective.
+              </p>
+            </li>
+            <li xml:id="li-inc-1-1">
+              <p>
+                <m>i(1) = \overline{1}</m>.
+              </p>
+            </li>
+            <li xml:id="li-inc-n-positive">
+              <p>
+                <m>i(\N) = \{ x \in \Z : x \gt \overline{0} \}</m>.
+              </p>
+            </li>
+            <li xml:id="li-inc-morphism">
+              <p>
+                For <m>a, b \in \N</m> we have <m>i(a + b) = i(a) + i(b)</m>,
+                <m>i(ab) = i(a)i(b)</m>, and <m>a \lt b</m> if and only if
+                <m>i(a) \lt i(b)</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <proof>
+        <p>
+          For <xref ref="li-inc-n-z-injective" text="local"/>, suppose that
+          <m>i(a) = i(b)</m>. Then <me>
+            [(a + 1, 1)] = [(b + 1, 1)]
+          </me>. This means, by definition, that <m>a + 1 + 1 = b + 1 + 1</m>,
+          whence <m>a = b</m>.
+        </p>
+        <p>
+          For <xref ref="li-inc-1-1" text="local"/>, observe that
+          <me>
+            i(1) = [(2, 1)] = \overline{1}
+          </me>.
+        </p>
+        <p>
+          For <xref ref="li-inc-n-positive" text="local"/>, choose
+          <m>x \in i(\N)</m>. We'll show that <m>\overline{0} \lt x</m>. Indeed,
+          we have <m>x = [(n + 1, 1)]</m> for some <m>n \in \N</m>. Therefore,
+          <md>
+            <mrow>n + 2 \amp = 2 + n \implies 2 \lt n + 2 \implies [(1, 1)] \lt [(n + 1, 1)]</mrow>
+            <mrow> \amp \implies \overline{0} \lt x. </mrow>
+          </md>
+          Conversely, suppose now that <m>x = [(a, b)] \gt \overline{0}</m>.
+          Then
+          <md>
+            <mrow>[(1, 1)] \amp \lt [(a, b)] \implies 1 + b \lt 1 + a \implies 1 + a = 1 + b + k \text{ for some $k \in \N$}</mrow>
+            <mrow> \amp \implies [(a, b)] = [(k+1, 1)] \in i(\N)</mrow>.
+          </md>
+        </p>
+      </proof>
+    </proposition>
+    <p>
+      We use <m>i</m> to think of <m>\N</m> as a particular subset of <m>\Z</m>
+      and we also write
+      <md>
+        <mrow>\vdots \amp </mrow>
+        <mrow>-2 \amp = [(1, 3)]</mrow>
+        <mrow>-1 \amp = [(1, 2)]</mrow>
+        <mrow>0 \amp = [(1, 1)]</mrow>
+        <mrow>1 \amp = [(2, 1)]</mrow>
+        <mrow>\vdots \amp =</mrow>
+      </md>.
+    </p>
   </subsection>
 </section>
