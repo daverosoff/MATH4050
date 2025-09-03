@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<section xml:id="homework" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Homework assignments</title>
+  <subsection xml:id="subsec-hw-01">
+    <title>HW 01</title>
+    <p>
+      Note: These statements should be proved using only the definitions and
+      properties presented in the lecture notes.
+      <ol marker="1.">
+        <li>
+          <p>
+            Show that, for all <m>a, b, c \in \N</m>, the following are true.
+            <ol marker="(a)">
+              <li xml:id="hw-01-cancel-addition">
+                <p>
+                  If <m>a + c = b + c</m>, then <m>a = b</m>.
+                </p>
+              </li>
+              <li xml:id="hw-01-cancel-multiplication">
+                <p>
+                  If <m>ac = bc</m>, then <m>a = b</m>.
+                </p>
+              </li>
+              <li xml:id="hw-01-addition-preserves-order">
+                <p>
+                  We have <m>a \lt b</m> if and only if <m>a + c \lt b + c</m>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </li>
+        <li>
+          <p>
+            <ol marker="(a)">
+              <li xml:id="hw-01-successor-fixpoint-free">
+                <p>
+                  Prove that <m>n \ne n + 1</m> for all <m>n \in \N</m>.
+                </p>
+              </li>
+              <li xml:id="hw-01-addition-not-nilpotent">
+                <p>
+                  Use <xref text="local" ref="hw-01-successor-fixpoint-free"/> to
+                  prove that <m>n \ne n + k</m> for all <m>n, k \in \N</m>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </li>
+        <li>
+          <p>
+            Prove the following identities hold for all <m>x, y \in \Z</m>. You
+            may freely use any corresponding properties of <m>\N</m>.
+            <ol marker="(a)">
+              <li xml:id="hw-01-integer-addition-commutative">
+                <p>
+                  <m>x + y = y + x</m>
+                </p>
+              </li>
+              <li xml:id="hw-01-zero-additive-identity">
+                <p>
+                  <m>x + \overline{0} = x</m>
+                </p>
+              </li>
+              <li xml:id="hw-01-x-minus-x-is-0">
+                <p>
+                  <m>x - x = \overline{0}</m>
+                </p>
+              </li>
+            </ol>
+          </p>
+        </li>
+        <li xml:id="hw-01-multiplication-well-defined">
+          <p>
+            Show that multiplication in <m>\Z</m>, defined by
+            <me>
+              [(a,b)] \cdot [(c, d)] = [(ac + bd, ad + bc)]
+            </me>
+            is well-defined.
+          </p>
+        </li>
+        <li>
+          <p>
+            For <m>[(a, b)] \in \Z</m>, show that <m>[(a, b)] = \overline{0}</m>
+            if and only if <m>a = b</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            For <m>[(a, b)] \in \Z</m>, show that <m>\overline{0} \lt [(a,b)]</m>
+            if and only if <m>b \lt a</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            For <m>x, y, z \in \Z</m>, prove the following.
+            <ol marker="(a)">
+              <li>
+                <p>
+                  If <m>xy = \overline{0}</m> then <m>x = \overline{0}</m>
+                  or <m>y = \overline{0}</m>. Hint: Suppose <m>x \ne \overline{0}</m>
+                  and split into cases <m>x \lt \overline{0}</m>
+                  and <m>\overline{0} \lt x</m>. Use the results of previous
+                  problems.
+                </p>
+              </li>
+              <li>
+                <p>
+                  If <m>x \lt y</m> and <m>\overline{0} \lt z</m>, then
+                  <m>xz \lt yz</m>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </li>
+        <li>
+          <p>
+            For <m>x, y \in \Z</m>, we write <m>x \leq y</m> if
+            either <m>x \lt y</m> or <m>x = y</m>. Prove that <m>\leq</m>
+            is a <em>partial order</em>. That is, prove the following
+            are true for all <m>x, y, z \in \Z</m>.
+            <ol marker="i.">
+              <li>
+                <p>
+                  <m>x \leq x</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  If <m>x \leq y</m> and <m>y \leq x</m>, then <m>x = y</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  If <m>x \leq y</m> and <m>y \leq z</m>, then <m>x \leq z</m>
+                </p>
+              </li>
+            </ol>
+            (For the last two parts you will probably want to divide into cases.)
+          </p>
+        </li>
+      </ol>
+    </p>
+  </subsection>
+</section>
