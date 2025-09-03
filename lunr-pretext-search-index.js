@@ -16,7 +16,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1",
   "title": "The Construction of the Real Numbers",
-  "body": " The Construction of the Real Numbers   We have to start from somewhere, but assuming as little as we can, we'll generate the real numbers out of just the natural numbers and some basic mathematical constructs.    Natural numbers and integers    There is a set , whose elements are called natural numbers , and a function , satisfying:  There is an element .  There is no such that .  The function is injective (this means that only if ).   Principle of induction  Suppose is a subset such that and if then . Then .   We call the successor function . Informally think of .      If and , there is a unique such that .    Let . Then and if , then , so by . Hence, if and , then for some , which is unique since is injective. Indeed, if , then , therefore .     We set , , and so on, so that .     We define a binary operation by  For all , .  For all , .      Observe that this is a recursive definition:     For all , we have .    Let . We will show that using induction . Indeed, for , we have , so . Now suppose . Then for , we have . This shows and the proof by induction is complete.      We define another operation by:   For all , .    For all , .       Explicitly, and so on.    Let .    .    If , then .     .     .     .    If , then .        Proof of item 5 only. Let . For , we have , so .  Now suppose and let , so that . Then , which shows so that .   Now we give the standard form of induction . Let be a statement about a natural number that is either true or false. If is true and if, whenever is true we also have is true, then is true for all .    If , we say is less than  , and write , if for some . We write if we only wish to assert that or .      Let .   We have , but .    If and , then , and similarly for .    If and , then .    Exactly one of or or is true.    We have if and only if .    We have if and only if .       Proof of 2. Suppose that and . Then we have and for some . Then with , so .  Proof of 4. First we will show that no more than one of the statements is true. Suppose first that . Then for some . Using the fact that for all , we find . Similarly, if then .  Now if and then and for some , so , but this implies , a contradiction. Similarly, if , then and . This shows at most one of the statements is true.  To show at most one of the statements is true, let's fix and let be the statement or or . If , then for some , so and we have established . Now, let's suppose that and that is true, meaning that or or .  Suppose first that . Then for some , so . This shows that , so is true in this case.  Suppose next that . Then , so and is true as before.  Finally, suppose that . Then for some . If , then , so is true. If , then for some and . This shows that , and therefore is true in this case as well.  We have shown that for all , which concludes the proof by induction.     The well-ordering principle   If is nonempty, then has a least element . That is, there exists such that for all .      The Integers    A relation on a set is a subset of the Cartesian product . If , we write or simply if the relation is understood. Sometimes we abuse notation and identify the equivalence operator with the relation .      A relation is called an equivalence relation if   It is reflexive : for all .    It is symmetric : If then for all .    It is transitive : If and then for all .        Let and let . Then observe: , so is an equivalence relation.     Let be a set. A collection of subsets of is called a partition of if each element of belongs to exactly one of the .    Notice that does not require the elements of a partition to be finite in number. In other words, we can partition a set into infinitely many parts.    Suppose is partitioned into the subsets . Then we have, for all , : . This is usually summarized by saying The parts of a partition are either equal or disjoint.   The converse is also true, namely, if is a collection of subsets of satisfying and , then the are a partition of .    Suppose first that the partition . Then each element of has to belong to exactly one of the . Now suppose is an element of . Then, because belongs to exactly one of the , we must have . This shows that the satisfy .  On the other hand, suppose that are some subsets of satisfying . Then let ; it is enough to show that belongs to exactly one of the . If we suppose belongs to two of the , say and , then by we have at once that . So cannot belong to more than one of the . On the other hand, the union of the is equal to , hence it certainly contains , which means that belongs to at least one of the .  Thus we have shown that belongs to exactly one of the , and so the are a partition of , as required.      Let be an equivalence relation on a set . For each we define a subset , called the equivalence class of under . The set of all such equivalence classes is a partition of .    We proceed according to and show that the equivalence classes satisfy and that their union is .  Suppose and for some . Then by definition we have and . Thus and hence . It follows that . Indeed, if , then also (because and is an equivalence relation). Thence because and finally this means that . It follows by a symmetric argument that . Hence .  This shows that for all , either or , which is the content of .  To see that the union of the equivalence classes is , we just notice that each is certainly a member of its own equivalence class , because is an equivalence relation. This concludes the proof.     For the equivalence relation on the set of , namely , we have the following equivalence classes: . The partition of associated to the equivalence relation is .   Equivalence relations are a powerful method of constructing new sets from old. We can look at the set of equivalence classes as a new mathematical object. This is illustrated in diabolically clever fashion by .    We define a relation on the set by .  This looks strange, but it is concocted quite precisely. We are trying to construct the negative integers out of thin air. The idea is to represent a number like as the class of all pairs where . It's the idea of being three less than something.      The relation is an equivalence relation.    Let . Then , so we have . Thus the relation is reflexive.  Next let us suppose that for some . Then . It follows that , so . Thus the relation is symmetric.  Finally, let us suppose that and for some . Then and . Adding, we find from which it follows at once that and the relation is transitive.      The set of integers , denoted , is the set of equivalence classes of in the set .  That is, . We define the elements and by .    Having defined the integers, it's now our duty to give them their familiar operations and show that these extend the operations on . This is done in a standard way below.    We define the operation by This definition requires a short proof to be valid. So it is only provisional for now.    For to be valid, we have to show that the right-hand side of doesn't depend on our choices of . If we let those numbers vary within their equivalence classes, the right-hand-side must not change. When this is established, we say that addition of integers is well-defined .    Let's suppose that , so that is another member of the equivalence class . Similarly, let's take so that . Then it doesn't matter which we use to compute , because .    Since and , we have . Adding, we find , which means that , as required.      Define negation  by   Define subtraction  by .      The operations of are well-defined.    Left to the reader.      Let . Then    .     .     .     .       Left to the reader.      Define multiplication by .      Multiplication is well-defined and satisfies the following for all .                       If then either or .       Left to the reader.     "
+  "body": " The Construction of the Real Numbers   We have to start from somewhere, but assuming as little as we can, we'll generate the real numbers out of just the natural numbers and some basic mathematical constructs.    Natural numbers and integers    There is a set , whose elements are called natural numbers , and a function , satisfying:  There is an element .  There is no such that .  The function is injective (this means that only if ).   Principle of induction  Suppose is a subset such that and if then . Then .   We call the successor function . Informally think of .      If and , there is a unique such that .    Let . Then and if , then , so by . Hence, if and , then for some , which is unique since is injective. Indeed, if , then , therefore .     We set , , and so on, so that .     We define a binary operation by  For all , .  For all , .      Observe that this is a recursive definition:     For all , we have .    Let . We will show that using induction . Indeed, for , we have , so . Now suppose . Then for , we have . This shows and the proof by induction is complete.      We define another operation by:   For all , .    For all , .       Explicitly, and so on.    Let .    .    If , then .     .     .     .    If , then .        Items 1 4 and 6 are left to the reader. Items 2 and 6 appear on as and .  Proof of only. Let . For , we have , so .  Now suppose and let , so that . Then , which shows so that .   Now we give the standard form of induction . Let be a statement about a natural number that is either true or false. If is true and if, whenever is true we also have is true, then is true for all .    If , we say is less than  , and write , if for some . We write if we only wish to assert that or .      Let .   We have , but .    If and , then , and similarly for .    If and , then .    Exactly one of or or is true.    We have if and only if .    We have if and only if .       Items 1, 3, 5, and 6 are left to the reader. appears on as .  Proof of 2. Suppose that and . Then we have and for some . Then with , so .  Proof of 4. First we will show that no more than one of the statements is true. Suppose first that . Then for some . says that for all . Thus, we find . Similarly, if then .  Now if and then and for some , so , but this implies , a contradiction. Similarly, if , then and . This shows at most one of the statements is true.  To show at most one of the statements is true, let's fix and let be the statement or or . If , then for some , so and we have established . Now, let's suppose that and that is true, meaning that or or .  Suppose first that . Then for some , so . This shows that , so is true in this case.  Suppose next that . Then , so and is true as before.  Finally, suppose that . Then for some . If , then , so is true. If , then for some and . This shows that , and therefore is true in this case as well.  We have shown that for all , which concludes the proof by induction.      The successor function has no fixed point, that is, for all we have .    Left to the reader ( ).      For all , we have .    Left to the reader ( ).     The well-ordering principle   If is nonempty, then has a least element . That is, there exists such that for all .      The Integers    A relation on a set is a subset of the Cartesian product . If , we write or simply if the relation is understood. Sometimes we abuse notation and identify the equivalence operator with the relation .      A relation is called an equivalence relation if   It is reflexive : for all .    It is symmetric : If then for all .    It is transitive : If and then for all .        Let and let . Then observe: , so is an equivalence relation.     Let be a set. A collection of subsets of is called a partition of if each element of belongs to exactly one of the .    Notice that does not require the elements of a partition to be finite in number. In other words, we can partition a set into infinitely many parts.    Suppose is partitioned into the subsets . Then we have, for all , : . This is usually summarized by saying The parts of a partition are either equal or disjoint.   The converse is also true, namely, if is a collection of subsets of satisfying and , then the are a partition of .    Suppose first that the partition . Then each element of has to belong to exactly one of the . Now suppose is an element of . Then, because belongs to exactly one of the , we must have . This shows that the satisfy .  On the other hand, suppose that are some subsets of satisfying . Then let ; it is enough to show that belongs to exactly one of the . If we suppose belongs to two of the , say and , then by we have at once that . So cannot belong to more than one of the . On the other hand, the union of the is equal to , hence it certainly contains , which means that belongs to at least one of the .  Thus we have shown that belongs to exactly one of the , and so the are a partition of , as required.      Let be an equivalence relation on a set . For each we define a subset , called the equivalence class of under . The set of all such equivalence classes is a partition of .    We proceed according to and show that the equivalence classes satisfy and that their union is .  Suppose and for some . Then by definition we have and . Thus and hence . It follows that . Indeed, if , then also (because and is an equivalence relation). Thence because and finally this means that . It follows by a symmetric argument that . Hence .  This shows that for all , either or , which is the content of .  To see that the union of the equivalence classes is , we just notice that each is certainly a member of its own equivalence class , because is an equivalence relation. This concludes the proof.     For the equivalence relation on the set of , namely , we have the following equivalence classes: . The partition of associated to the equivalence relation is .   Equivalence relations are a powerful method of constructing new sets from old. We can look at the set of equivalence classes as a new mathematical object. This is illustrated in diabolically clever fashion by .    We define a relation on the set by .  This looks strange, but it is concocted quite precisely. We are trying to construct the negative integers out of thin air. The idea is to represent a number like as the class of all pairs where . It's the idea of being three less than something.      The relation is an equivalence relation.    Let . Then , so we have . Thus the relation is reflexive.  Next let us suppose that for some . Then . It follows that , so . Thus the relation is symmetric.  Finally, let us suppose that and for some . Then and . Adding, we find from which it follows at once that and the relation is transitive.      The set of integers , denoted , is the set of equivalence classes of in the set .  That is, . We define the elements and by .    Having defined the integers, it's now our duty to give them their familiar operations and show that these extend the operations on . This is done in a standard way below.    We define the operation by This definition requires a short proof to be valid. So it is only provisional for now.    For to be valid, we have to show that the right-hand side of doesn't depend on our choices of . If we let those numbers vary within their equivalence classes, the right-hand-side must not change. When this is established, we say that addition of integers is well-defined .    Let's suppose that , so that is another member of the equivalence class . Similarly, let's take so that . Then it doesn't matter which we use to compute , because .    Since and , we have . Adding, we find , which means that , as required.      Define negation  by   Define subtraction  by .      The operations of are well-defined.    Left to the reader.      Let . Then    .     .     .     .       Left to the reader ( ).      Define multiplication by .      Multiplication is well-defined and satisfies the following for all .                       If then either or .       Left to the reader (see ).      For , define if , that is, if for some .      Define the function by . Then it satisfies the following.   The function is injective.     .     .    For we have , , and if and only if .       For , suppose that . Then . This means, by definition, that , whence .  For , observe that .  For , choose . We'll show that . Indeed, we have for some . Therefore, Conversely, suppose now that . Then     We use to think of as a particular subset of and we also write    "
 },
 {
   "id": "axiom-peano",
@@ -88,7 +88,7 @@ var ptx_lunr_docs = [
   "type": "Proof",
   "number": "1.1.1",
   "title": "",
-  "body": " Proof of item 5 only. Let . For , we have , so .  Now suppose and let , so that . Then , which shows so that .  "
+  "body": " Items 1 4 and 6 are left to the reader. Items 2 and 6 appear on as and .  Proof of only. Let . For , we have , so .  Now suppose and let , so that . Then , which shows so that .  "
 },
 {
   "id": "subsection-1-12",
@@ -115,14 +115,32 @@ var ptx_lunr_docs = [
   "type": "Proposition",
   "number": "9",
   "title": "",
-  "body": "  Let .   We have , but .    If and , then , and similarly for .    If and , then .    Exactly one of or or is true.    We have if and only if .    We have if and only if .       Proof of 2. Suppose that and . Then we have and for some . Then with , so .  Proof of 4. First we will show that no more than one of the statements is true. Suppose first that . Then for some . Using the fact that for all , we find . Similarly, if then .  Now if and then and for some , so , but this implies , a contradiction. Similarly, if , then and . This shows at most one of the statements is true.  To show at most one of the statements is true, let's fix and let be the statement or or . If , then for some , so and we have established . Now, let's suppose that and that is true, meaning that or or .  Suppose first that . Then for some , so . This shows that , so is true in this case.  Suppose next that . Then , so and is true as before.  Finally, suppose that . Then for some . If , then , so is true. If , then for some and . This shows that , and therefore is true in this case as well.  We have shown that for all , which concludes the proof by induction.   "
+  "body": "  Let .   We have , but .    If and , then , and similarly for .    If and , then .    Exactly one of or or is true.    We have if and only if .    We have if and only if .       Items 1, 3, 5, and 6 are left to the reader. appears on as .  Proof of 2. Suppose that and . Then we have and for some . Then with , so .  Proof of 4. First we will show that no more than one of the statements is true. Suppose first that . Then for some . says that for all . Thus, we find . Similarly, if then .  Now if and then and for some , so , but this implies , a contradiction. Similarly, if , then and . This shows at most one of the statements is true.  To show at most one of the statements is true, let's fix and let be the statement or or . If , then for some , so and we have established . Now, let's suppose that and that is true, meaning that or or .  Suppose first that . Then for some , so . This shows that , so is true in this case.  Suppose next that . Then , so and is true as before.  Finally, suppose that . Then for some . If , then , so is true. If , then for some and . This shows that , and therefore is true in this case as well.  We have shown that for all , which concludes the proof by induction.   "
+},
+{
+  "id": "lem-successor-fixpoint-free",
+  "level": "2",
+  "url": "section-1.html#lem-successor-fixpoint-free",
+  "type": "Lemma",
+  "number": "10",
+  "title": "",
+  "body": "  The successor function has no fixed point, that is, for all we have .    Left to the reader ( ).   "
+},
+{
+  "id": "lem-addition-not-nilpotent",
+  "level": "2",
+  "url": "section-1.html#lem-addition-not-nilpotent",
+  "type": "Lemma",
+  "number": "11",
+  "title": "",
+  "body": "  For all , we have .    Left to the reader ( ).   "
 },
 {
   "id": "thm-well-ordering",
   "level": "2",
   "url": "section-1.html#thm-well-ordering",
   "type": "Theorem",
-  "number": "10",
+  "number": "12",
   "title": "The well-ordering principle.",
   "body": " The well-ordering principle   If is nonempty, then has a least element . That is, there exists such that for all .   "
 },
@@ -131,7 +149,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-1.html#def-relation",
   "type": "Definition",
-  "number": "11",
+  "number": "13",
   "title": "",
   "body": "  A relation on a set is a subset of the Cartesian product . If , we write or simply if the relation is understood. Sometimes we abuse notation and identify the equivalence operator with the relation .   "
 },
@@ -140,7 +158,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-1.html#def-equivalence-relation",
   "type": "Definition",
-  "number": "12",
+  "number": "14",
   "title": "",
   "body": "  A relation is called an equivalence relation if   It is reflexive : for all .    It is symmetric : If then for all .    It is transitive : If and then for all .      "
 },
@@ -149,7 +167,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-1.html#ex-equiv-rel-01",
   "type": "Example",
-  "number": "13",
+  "number": "15",
   "title": "",
   "body": " Let and let . Then observe: , so is an equivalence relation.  "
 },
@@ -158,7 +176,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-1.html#def-partition-of-set",
   "type": "Definition",
-  "number": "14",
+  "number": "16",
   "title": "",
   "body": "  Let be a set. A collection of subsets of is called a partition of if each element of belongs to exactly one of the .   "
 },
@@ -167,7 +185,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-1.html#lem-partitions-parts-disjoint-equal",
   "type": "Lemma",
-  "number": "15",
+  "number": "17",
   "title": "",
   "body": "  Suppose is partitioned into the subsets . Then we have, for all , : . This is usually summarized by saying The parts of a partition are either equal or disjoint.   The converse is also true, namely, if is a collection of subsets of satisfying and , then the are a partition of .    Suppose first that the partition . Then each element of has to belong to exactly one of the . Now suppose is an element of . Then, because belongs to exactly one of the , we must have . This shows that the satisfy .  On the other hand, suppose that are some subsets of satisfying . Then let ; it is enough to show that belongs to exactly one of the . If we suppose belongs to two of the , say and , then by we have at once that . So cannot belong to more than one of the . On the other hand, the union of the is equal to , hence it certainly contains , which means that belongs to at least one of the .  Thus we have shown that belongs to exactly one of the , and so the are a partition of , as required.   "
 },
@@ -176,7 +194,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-1.html#prop-equivalence-relations-partition",
   "type": "Proposition",
-  "number": "16",
+  "number": "18",
   "title": "",
   "body": "  Let be an equivalence relation on a set . For each we define a subset , called the equivalence class of under . The set of all such equivalence classes is a partition of .    We proceed according to and show that the equivalence classes satisfy and that their union is .  Suppose and for some . Then by definition we have and . Thus and hence . It follows that . Indeed, if , then also (because and is an equivalence relation). Thence because and finally this means that . It follows by a symmetric argument that . Hence .  This shows that for all , either or , which is the content of .  To see that the union of the equivalence classes is , we just notice that each is certainly a member of its own equivalence class , because is an equivalence relation. This concludes the proof.   "
 },
@@ -185,7 +203,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-1.html#subsec-the-integers-9",
   "type": "Example",
-  "number": "17",
+  "number": "19",
   "title": "",
   "body": " For the equivalence relation on the set of , namely , we have the following equivalence classes: . The partition of associated to the equivalence relation is .  "
 },
@@ -194,7 +212,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-1.html#def-defining-relation-minus",
   "type": "Definition",
-  "number": "18",
+  "number": "20",
   "title": "",
   "body": "  We define a relation on the set by .  This looks strange, but it is concocted quite precisely. We are trying to construct the negative integers out of thin air. The idea is to represent a number like as the class of all pairs where . It's the idea of being three less than something.   "
 },
@@ -203,7 +221,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-1.html#prop-minus-relation-equiv-relation",
   "type": "Proposition",
-  "number": "19",
+  "number": "21",
   "title": "",
   "body": "  The relation is an equivalence relation.    Let . Then , so we have . Thus the relation is reflexive.  Next let us suppose that for some . Then . It follows that , so . Thus the relation is symmetric.  Finally, let us suppose that and for some . Then and . Adding, we find from which it follows at once that and the relation is transitive.   "
 },
@@ -212,7 +230,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-1.html#def-integers",
   "type": "Definition",
-  "number": "20",
+  "number": "22",
   "title": "",
   "body": "  The set of integers , denoted , is the set of equivalence classes of in the set .  That is, . We define the elements and by .   "
 },
@@ -221,7 +239,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-1.html#def-addition-integers",
   "type": "Definition",
-  "number": "21",
+  "number": "23",
   "title": "",
   "body": "  We define the operation by This definition requires a short proof to be valid. So it is only provisional for now.   "
 },
@@ -230,7 +248,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-1.html#prop-addition-integers-well-defined",
   "type": "Proposition",
-  "number": "22",
+  "number": "24",
   "title": "",
   "body": "  Let's suppose that , so that is another member of the equivalence class . Similarly, let's take so that . Then it doesn't matter which we use to compute , because .    Since and , we have . Adding, we find , which means that , as required.   "
 },
@@ -239,7 +257,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-1.html#def-negation-subtraction-integers",
   "type": "Definition",
-  "number": "23",
+  "number": "25",
   "title": "",
   "body": "  Define negation  by   Define subtraction  by .   "
 },
@@ -248,7 +266,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-1.html#prop-neg-sub-integers-well-defined",
   "type": "Proposition",
-  "number": "24",
+  "number": "26",
   "title": "",
   "body": "  The operations of are well-defined.    Left to the reader.   "
 },
@@ -257,16 +275,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-1.html#prop-properties-of-addition-integers",
   "type": "Proposition",
-  "number": "25",
+  "number": "27",
   "title": "",
-  "body": "  Let . Then    .     .     .     .       Left to the reader.   "
+  "body": "  Let . Then    .     .     .     .       Left to the reader ( ).   "
 },
 {
   "id": "def-multiplication-integers",
   "level": "2",
   "url": "section-1.html#def-multiplication-integers",
   "type": "Definition",
-  "number": "26",
+  "number": "28",
   "title": "",
   "body": "  Define multiplication by .   "
 },
@@ -275,9 +293,36 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-1.html#prop-mul-integers-well-defined-properties",
   "type": "Proposition",
-  "number": "27",
+  "number": "29",
   "title": "",
-  "body": "  Multiplication is well-defined and satisfies the following for all .                       If then either or .       Left to the reader.   "
+  "body": "  Multiplication is well-defined and satisfies the following for all .                       If then either or .       Left to the reader (see ).   "
+},
+{
+  "id": "def-integer-less-than",
+  "level": "2",
+  "url": "section-1.html#def-integer-less-than",
+  "type": "Definition",
+  "number": "30",
+  "title": "",
+  "body": "  For , define if , that is, if for some .   "
+},
+{
+  "id": "prop-natural-integer-inclusion",
+  "level": "2",
+  "url": "section-1.html#prop-natural-integer-inclusion",
+  "type": "Proposition",
+  "number": "31",
+  "title": "",
+  "body": "  Define the function by . Then it satisfies the following.   The function is injective.     .     .    For we have , , and if and only if .       For , suppose that . Then . This means, by definition, that , whence .  For , observe that .  For , choose . We'll show that . Indeed, we have for some . Therefore, Conversely, suppose now that . Then    "
+},
+{
+  "id": "homework",
+  "level": "1",
+  "url": "homework.html",
+  "type": "Section",
+  "number": "2",
+  "title": "Homework assignments",
+  "body": " Homework assignments   HW 01  Note: These statements should be proved using only the definitions and properties presented in the lecture notes.   Show that, for all , the following are true.   If , then .    If , then .    We have if and only if .          Prove that for all .    Use to prove that for all .       Prove the following identities hold for all . You may freely use any corresponding properties of .                     Show that multiplication in , defined by is well-defined.    For , show that if and only if .    For , show that if and only if .    For , prove the following.   If then or . Hint: Suppose and split into cases and . Use the results of previous problems.    If and , then .       For , we write if either or . Prove that is a partial order . That is, prove the following are true for all .        If and , then     If and , then    (For the last two parts you will probably want to divide into cases.)      "
 }
 ]
 
