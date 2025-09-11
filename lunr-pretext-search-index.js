@@ -10,18 +10,18 @@ var ptx_lunr_docs = [
   "body": "  Dave Rosoff    Notes for Real Analysis, adapted from notes written by Andrew Phillips.   "
 },
 {
-  "id": "section-1",
+  "id": "sec-construction-reals",
   "level": "1",
-  "url": "section-1.html",
+  "url": "sec-construction-reals.html",
   "type": "Section",
   "number": "1",
   "title": "The Construction of the Real Numbers",
-  "body": " The Construction of the Real Numbers   We have to start from somewhere, but assuming as little as we can, we'll generate the real numbers out of just the natural numbers and some basic mathematical constructs.    Natural numbers and integers    There is a set , whose elements are called natural numbers , and a function , satisfying:  There is an element .  There is no such that .  The function is injective (this means that only if ).   Principle of induction  Suppose is a subset such that and if then . Then .   We call the successor function . Informally think of .      If and , there is a unique such that .    Let . Then and if , then , so by . Hence, if and , then for some , which is unique since is injective. Indeed, if , then , therefore .     We set , , and so on, so that .     We define a binary operation by  For all , .  For all , .      Observe that this is a recursive definition:     For all , we have .    Let . We will show that using induction . Indeed, for , we have , so . Now suppose . Then for , we have . This shows and the proof by induction is complete.      We define another operation by:   For all , .    For all , .       Explicitly, and so on.    Let .    .    If , then .     .     .     .    If , then .        Items 1 4 and 6 are left to the reader. Items 2 and 6 appear on as and .  Proof of only. Let . For , we have , so .  Now suppose and let , so that . Then , which shows so that .   Now we give the standard form of induction . Let be a statement about a natural number that is either true or false. If is true and if, whenever is true we also have is true, then is true for all .    If , we say is less than  , and write , if for some . We write if we only wish to assert that or .      Let .   We have , but .    If and , then , and similarly for .    If and , then .    Exactly one of or or is true.    We have if and only if .    We have if and only if .       Items 1, 3, 5, and 6 are left to the reader. appears on as .  Proof of 2. Suppose that and . Then we have and for some . Then with , so .  Proof of 4. First we will show that no more than one of the statements is true. Suppose first that . Then for some . says that for all . Thus, we find . Similarly, if then .  Now if and then and for some , so , but this implies , a contradiction. Similarly, if , then and . This shows at most one of the statements is true.  To show at most one of the statements is true, let's fix and let be the statement or or . If , then for some , so and we have established . Now, let's suppose that and that is true, meaning that or or .  Suppose first that . Then for some , so . This shows that , so is true in this case.  Suppose next that . Then , so and is true as before.  Finally, suppose that . Then for some . If , then , so is true. If , then for some and . This shows that , and therefore is true in this case as well.  We have shown that for all , which concludes the proof by induction.      The successor function has no fixed point, that is, for all we have .    Left to the reader ( ).      For all , we have .    Left to the reader ( ).     The well-ordering principle   If is nonempty, then has a least element . That is, there exists such that for all .      The Integers    A relation on a set is a subset of the Cartesian product . If , we write or simply if the relation is understood. Sometimes we abuse notation and identify the equivalence operator with the relation .      A relation is called an equivalence relation if   It is reflexive : for all .    It is symmetric : If then for all .    It is transitive : If and then for all .        Let and let . Then observe: , so is an equivalence relation.     Let be a set. A collection of subsets of is called a partition of if each element of belongs to exactly one of the .    Notice that does not require the elements of a partition to be finite in number. In other words, we can partition a set into infinitely many parts.    Suppose is partitioned into the subsets . Then we have, for all , : . This is usually summarized by saying The parts of a partition are either equal or disjoint.   The converse is also true, namely, if is a collection of subsets of satisfying and , then the are a partition of .    Suppose first that the partition . Then each element of has to belong to exactly one of the . Now suppose is an element of . Then, because belongs to exactly one of the , we must have . This shows that the satisfy .  On the other hand, suppose that are some subsets of satisfying . Then let ; it is enough to show that belongs to exactly one of the . If we suppose belongs to two of the , say and , then by we have at once that . So cannot belong to more than one of the . On the other hand, the union of the is equal to , hence it certainly contains , which means that belongs to at least one of the .  Thus we have shown that belongs to exactly one of the , and so the are a partition of , as required.      Let be an equivalence relation on a set . For each we define a subset , called the equivalence class of under . The set of all such equivalence classes is a partition of .    We proceed according to and show that the equivalence classes satisfy and that their union is .  Suppose and for some . Then by definition we have and . Thus and hence . It follows that . Indeed, if , then also (because and is an equivalence relation). Thence because and finally this means that . It follows by a symmetric argument that . Hence .  This shows that for all , either or , which is the content of .  To see that the union of the equivalence classes is , we just notice that each is certainly a member of its own equivalence class , because is an equivalence relation. This concludes the proof.     For the equivalence relation on the set of , namely , we have the following equivalence classes: . The partition of associated to the equivalence relation is .   Equivalence relations are a powerful method of constructing new sets from old. We can look at the set of equivalence classes as a new mathematical object. This is illustrated in diabolically clever fashion by .    We define a relation on the set by .  This looks strange, but it is concocted quite precisely. We are trying to construct the negative integers out of thin air. The idea is to represent a number like as the class of all pairs where . It's the idea of being three less than something.      The relation is an equivalence relation.    Let . Then , so we have . Thus the relation is reflexive.  Next let us suppose that for some . Then . It follows that , so . Thus the relation is symmetric.  Finally, let us suppose that and for some . Then and . Adding, we find from which it follows at once that and the relation is transitive.      The set of integers , denoted , is the set of equivalence classes of in the set .  That is, . We define the elements and by .    Having defined the integers, it's now our duty to give them their familiar operations and show that these extend the operations on . This is done in a standard way below.    We define the operation by This definition requires a short proof to be valid. So it is only provisional for now.    For to be valid, we have to show that the right-hand side of doesn't depend on our choices of . If we let those numbers vary within their equivalence classes, the right-hand-side must not change. When this is established, we say that addition of integers is well-defined .    Let's suppose that , so that is another member of the equivalence class . Similarly, let's take so that . Then it doesn't matter which we use to compute , because .    Since and , we have . Adding, we find , which means that , as required.      Define negation  by   Define subtraction  by .      The operations of are well-defined.    Left to the reader.      Let . Then    .     .     .     .       Left to the reader ( ).      Define multiplication by .      Multiplication is well-defined and satisfies the following for all .                       If then either or .       Left to the reader (see ).      For , define if , that is, if for some .      Define the function by . Then it satisfies the following.   The function is injective.     .     .    For we have , , and if and only if .       For , suppose that . Then . This means, by definition, that , whence .  For , observe that .  For , choose . We'll show that . Indeed, we have for some . Therefore, Conversely, suppose now that . Then     We use to think of as a particular subset of and we also write    "
+  "body": " The Construction of the Real Numbers   We have to start from somewhere, but assuming as little as we can, we'll generate the real numbers out of just the natural numbers and some basic mathematical constructs.    The natural numbers    There is a set , whose elements are called natural numbers , and a function , satisfying:  There is an element .  There is no such that .  The function is injective (this means that only if ).   Principle of induction  Suppose is a subset such that and if then . Then .   We call the successor function . Informally think of .      If and , there is a unique such that .    Let . Then and if , then , so by . Hence, if and , then for some , which is unique since is injective. Indeed, if , then , therefore .     We set , , and so on, so that .     We define a binary operation by  For all , .  For all , .      Observe that this is a recursive definition:     For all , we have .    Let . We will show that using induction . Indeed, for , we have , so . Now suppose . Then for , we have . This shows and the proof by induction is complete.      We define another operation by:   For all , .    For all , .       Explicitly, and so on.    Let .    .    If , then .     .     .     .    If , then .        Items 1 4 and 6 are left to the reader. Items 2 and 6 appear on as and .  Proof of only. Let . For , we have , so .  Now suppose and let , so that . Then , which shows so that .   Now we give the standard form of induction . Let be a statement about a natural number that is either true or false. If is true and if, whenever is true we also have is true, then is true for all .    If , we say is less than  , and write , if for some . We write if we only wish to assert that or .      Let .   We have , but .    If and , then , and similarly for .    If and , then .    Exactly one of or or is true.    We have if and only if .    We have if and only if .       Items 1, 3, 5, and 6 are left to the reader. appears on as .  Proof of 2. Suppose that and . Then we have and for some . Then with , so .  Proof of 4. First we will show that no more than one of the statements is true. Suppose first that . Then for some . says that for all . Thus, we find . Similarly, if then .  Now if and then and for some , so , but this implies , a contradiction. Similarly, if , then and . This shows at most one of the statements is true.  To show at most one of the statements is true, let's fix and let be the statement or or . If , then for some , so and we have established . Now, let's suppose that and that is true, meaning that or or .  Suppose first that . Then for some , so . This shows that , so is true in this case.  Suppose next that . Then , so and is true as before.  Finally, suppose that . Then for some . If , then , so is true. If , then for some and . This shows that , and therefore is true in this case as well.  We have shown that for all , which concludes the proof by induction.      The successor function has no fixed point, that is, for all we have .    Left to the reader ( ).      For all , we have .    Left to the reader ( ).     The well-ordering principle   If is nonempty, then has a least element . That is, there exists such that for all .      The integers    A relation on a set is a subset of the Cartesian product . If , we write or simply if the relation is understood. Sometimes we abuse notation and identify the equivalence operator with the relation .      A relation is called an equivalence relation if   It is reflexive : for all .    It is symmetric : If then for all .    It is transitive : If and then for all .        Let and let . Then observe: , so is an equivalence relation.     Let be a set. A collection of subsets of is called a partition of if each element of belongs to exactly one of the .    Notice that does not require the elements of a partition to be finite in number. In other words, we can partition a set into infinitely many parts.    Suppose is partitioned into the subsets . Then we have, for all , : . This is usually summarized by saying The parts of a partition are either equal or disjoint.   The converse is also true, namely, if is a collection of subsets of satisfying and , then the are a partition of .    Suppose first that the partition . Then each element of has to belong to exactly one of the . Now suppose is an element of . Then, because belongs to exactly one of the , we must have . This shows that the satisfy .  On the other hand, suppose that are some subsets of satisfying . Then let ; it is enough to show that belongs to exactly one of the . If we suppose belongs to two of the , say and , then by we have at once that . So cannot belong to more than one of the . On the other hand, the union of the is equal to , hence it certainly contains , which means that belongs to at least one of the .  Thus we have shown that belongs to exactly one of the , and so the are a partition of , as required.      Let be an equivalence relation on a set . For each we define a subset , called the equivalence class of under . The set of all such equivalence classes is a partition of .    We proceed according to and show that the equivalence classes satisfy and that their union is .  Suppose and for some . Then by definition we have and . Thus and hence . It follows that . Indeed, if , then also (because and is an equivalence relation). Thence because and finally this means that . It follows by a symmetric argument that . Hence .  This shows that for all , either or , which is the content of .  To see that the union of the equivalence classes is , we just notice that each is certainly a member of its own equivalence class , because is an equivalence relation. This concludes the proof.     For the equivalence relation on the set of , namely , we have the following equivalence classes: . The partition of associated to the equivalence relation is .   Equivalence relations are a powerful method of constructing new sets from old. We can look at the set of equivalence classes as a new mathematical object. This is illustrated in diabolically clever fashion by .    We define a relation on the set by .  This looks strange, but it is concocted quite precisely. We are trying to construct the negative integers out of thin air. The idea is to represent a number like as the class of all pairs where . It's the idea of being three less than something.      The relation is an equivalence relation.    Let . Then , so we have . Thus the relation is reflexive.  Next let us suppose that for some . Then . It follows that , so . Thus the relation is symmetric.  Finally, let us suppose that and for some . Then and . Adding, we find from which it follows at once that and the relation is transitive.      The set of integers , denoted , is the set of equivalence classes of in the set .  That is, . We define the elements and by .    Having defined the integers, it's now our duty to give them their familiar operations and show that these extend the operations on . This is done in a standard way below.    We define the operation by This definition requires a short proof to be valid. So it is only provisional for now.    For to be valid, we have to show that the right-hand side of doesn't depend on our choices of . If we let those numbers vary within their equivalence classes, the right-hand-side must not change. When this is established, we say that addition of integers is well-defined .    Let's suppose that , so that is another member of the equivalence class . Similarly, let's take so that . Then it doesn't matter which we use to compute , because .    Since and , we have . Adding, we find , which means that , as required.      Define negation  by   Define subtraction  by .      The operations of are well-defined.    Left to the reader.      Let . Then    .     .     .     .       Left to the reader ( ).      Define multiplication by .      Multiplication is well-defined and satisfies the following for all .                       If then either or .       Left to the reader (see ).      For , define if , that is, if for some .      Define the function by . Then it satisfies the following.   The function is injective.     .     .    For we have , , and if and only if .       For , suppose that . Then . This means, by definition, that , whence .  For , observe that .  For , choose . We'll show that . Indeed, we have for some . Therefore, Conversely, suppose now that . Then     We use to think of as a particular subset of and we also write     The rational numbers  We'll construct the rational numbers from the integers in almost the same way we constructed the integers from the rationals: using the machinery of equivalence classes.    Let . Define a relation on by . Informally, we think of as representing the quotient .      The relation of is an equivalence relation.    Left to the reader.      The set of rational numbers , denoted , is the set of equivalence classes of the relation of in . We define special elements by .         For , we have .    For , we have .          Suppose . Then , so by definition . Conversely, if , then , so .    Suppose . Then , so by definition and so . COnversely, if , then of course we also have and so .         Define addition by .  Define negation by .  Define subtraction by .         Addition and negation are well-defined.    For all we have    .     .     .     .          Proof of 2. Let . Then .      Define multiplication by . Define . Define inversion by .         Multiplication and inversion are well-defined.    Let . Then    .     .    If then .     .     .          Proof of 3. Let , so that . Then since .      For , define if .      For , we have if and only if .    Suppose . Since , we have either . Hence, and . In both cases, .  Now suppose . Then both and or and . If then . On the other hand, if , then . This concludes the proof.      Define the inclusion function by .      The inclusion function of has the following properties.   The functionn is injective.    We have and .    If , then             We have if and only if .          For 1, we observe that if , so that , then by definition we have , so . Thus is injective.  For 2, we simply compute and similarly for .  The proof of 3 is left to the reader.      Define division by . We extend the mapping to all of by defining for all .      Division is well-defined.    Left to the reader.    We use to think of as a subset of and write for . We also write for when , .    The real numbers    For any , define its absolute value  by .      Let .   We have , with if and only if .     .    When , we have .    (The triangle inequality)     (The reverse triangle inequality)        Proof of 4: We have and , so . On the other hand, we also have , so that . Therefore , and the result follows from 3.     The archimedean property of the real numbers   For all , there exists such that .    Left to the reader.      A sequence of rational numbers is a function . We write instead of .          is a sequence with values .    Define a sequence by . We will see later that this sequence (among many others) converges to , so we will eventually need a bigger number system.         Let be a sequence of rational numbers. We call a Cauchy sequence , for each rational , there exists such that for all .      The sequence with terms is not Cauchy, because we can choose and then for all there exist such that which is not less than .      The sequence is Cauchy. Let be rational. Then choose . Then , so is a Cauchy sequence.      Let be the set of all Cauchy sequences of rational numbers and define a relation on by if, for all rational , there is such that for all .      The relation is an equivalence relation.    Let and let .     "
 },
 {
   "id": "axiom-peano",
   "level": "2",
-  "url": "section-1.html#axiom-peano",
+  "url": "sec-construction-reals.html#axiom-peano",
   "type": "Axiom",
   "number": "1",
   "title": "",
@@ -30,16 +30,16 @@ var ptx_lunr_docs = [
 {
   "id": "prop-predecessors-are-unique",
   "level": "2",
-  "url": "section-1.html#prop-predecessors-are-unique",
+  "url": "sec-construction-reals.html#prop-predecessors-are-unique",
   "type": "Proposition",
   "number": "2",
   "title": "",
   "body": "  If and , there is a unique such that .    Let . Then and if , then , so by . Hence, if and , then for some , which is unique since is injective. Indeed, if , then , therefore .   "
 },
 {
-  "id": "subsection-1-4",
+  "id": "subsec-naturals-4",
   "level": "2",
-  "url": "section-1.html#subsection-1-4",
+  "url": "sec-construction-reals.html#subsec-naturals-4",
   "type": "Remark",
   "number": "3",
   "title": "",
@@ -48,7 +48,7 @@ var ptx_lunr_docs = [
 {
   "id": "def-addition",
   "level": "2",
-  "url": "section-1.html#def-addition",
+  "url": "sec-construction-reals.html#def-addition",
   "type": "Definition",
   "number": "4",
   "title": "",
@@ -57,7 +57,7 @@ var ptx_lunr_docs = [
 {
   "id": "prop-addition-associative",
   "level": "2",
-  "url": "section-1.html#prop-addition-associative",
+  "url": "sec-construction-reals.html#prop-addition-associative",
   "type": "Proposition",
   "number": "5",
   "title": "",
@@ -66,7 +66,7 @@ var ptx_lunr_docs = [
 {
   "id": "def-multiplication",
   "level": "2",
-  "url": "section-1.html#def-multiplication",
+  "url": "sec-construction-reals.html#def-multiplication",
   "type": "Definition",
   "number": "6",
   "title": "",
@@ -75,25 +75,25 @@ var ptx_lunr_docs = [
 {
   "id": "prop-more-field-axioms",
   "level": "2",
-  "url": "section-1.html#prop-more-field-axioms",
+  "url": "sec-construction-reals.html#prop-more-field-axioms",
   "type": "Proposition",
   "number": "7",
   "title": "",
   "body": "  Let .    .    If , then .     .     .     .    If , then .      "
 },
 {
-  "id": "subsection-1-11",
+  "id": "subsec-naturals-11",
   "level": "2",
-  "url": "section-1.html#subsection-1-11",
+  "url": "sec-construction-reals.html#subsec-naturals-11",
   "type": "Proof",
   "number": "1.1.1",
   "title": "",
   "body": " Items 1 4 and 6 are left to the reader. Items 2 and 6 appear on as and .  Proof of only. Let . For , we have , so .  Now suppose and let , so that . Then , which shows so that .  "
 },
 {
-  "id": "subsection-1-12",
+  "id": "subsec-naturals-12",
   "level": "2",
-  "url": "section-1.html#subsection-1-12",
+  "url": "sec-construction-reals.html#subsec-naturals-12",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -102,7 +102,7 @@ var ptx_lunr_docs = [
 {
   "id": "def-less-than",
   "level": "2",
-  "url": "section-1.html#def-less-than",
+  "url": "sec-construction-reals.html#def-less-than",
   "type": "Definition",
   "number": "8",
   "title": "",
@@ -111,7 +111,7 @@ var ptx_lunr_docs = [
 {
   "id": "prop-order-axioms",
   "level": "2",
-  "url": "section-1.html#prop-order-axioms",
+  "url": "sec-construction-reals.html#prop-order-axioms",
   "type": "Proposition",
   "number": "9",
   "title": "",
@@ -120,7 +120,7 @@ var ptx_lunr_docs = [
 {
   "id": "lem-successor-fixpoint-free",
   "level": "2",
-  "url": "section-1.html#lem-successor-fixpoint-free",
+  "url": "sec-construction-reals.html#lem-successor-fixpoint-free",
   "type": "Lemma",
   "number": "10",
   "title": "",
@@ -129,7 +129,7 @@ var ptx_lunr_docs = [
 {
   "id": "lem-addition-not-nilpotent",
   "level": "2",
-  "url": "section-1.html#lem-addition-not-nilpotent",
+  "url": "sec-construction-reals.html#lem-addition-not-nilpotent",
   "type": "Lemma",
   "number": "11",
   "title": "",
@@ -138,7 +138,7 @@ var ptx_lunr_docs = [
 {
   "id": "thm-well-ordering",
   "level": "2",
-  "url": "section-1.html#thm-well-ordering",
+  "url": "sec-construction-reals.html#thm-well-ordering",
   "type": "Theorem",
   "number": "12",
   "title": "The well-ordering principle.",
@@ -147,7 +147,7 @@ var ptx_lunr_docs = [
 {
   "id": "def-relation",
   "level": "2",
-  "url": "section-1.html#def-relation",
+  "url": "sec-construction-reals.html#def-relation",
   "type": "Definition",
   "number": "13",
   "title": "",
@@ -156,7 +156,7 @@ var ptx_lunr_docs = [
 {
   "id": "def-equivalence-relation",
   "level": "2",
-  "url": "section-1.html#def-equivalence-relation",
+  "url": "sec-construction-reals.html#def-equivalence-relation",
   "type": "Definition",
   "number": "14",
   "title": "",
@@ -165,7 +165,7 @@ var ptx_lunr_docs = [
 {
   "id": "ex-equiv-rel-01",
   "level": "2",
-  "url": "section-1.html#ex-equiv-rel-01",
+  "url": "sec-construction-reals.html#ex-equiv-rel-01",
   "type": "Example",
   "number": "15",
   "title": "",
@@ -174,7 +174,7 @@ var ptx_lunr_docs = [
 {
   "id": "def-partition-of-set",
   "level": "2",
-  "url": "section-1.html#def-partition-of-set",
+  "url": "sec-construction-reals.html#def-partition-of-set",
   "type": "Definition",
   "number": "16",
   "title": "",
@@ -183,7 +183,7 @@ var ptx_lunr_docs = [
 {
   "id": "lem-partitions-parts-disjoint-equal",
   "level": "2",
-  "url": "section-1.html#lem-partitions-parts-disjoint-equal",
+  "url": "sec-construction-reals.html#lem-partitions-parts-disjoint-equal",
   "type": "Lemma",
   "number": "17",
   "title": "",
@@ -192,16 +192,16 @@ var ptx_lunr_docs = [
 {
   "id": "prop-equivalence-relations-partition",
   "level": "2",
-  "url": "section-1.html#prop-equivalence-relations-partition",
+  "url": "sec-construction-reals.html#prop-equivalence-relations-partition",
   "type": "Proposition",
   "number": "18",
   "title": "",
   "body": "  Let be an equivalence relation on a set . For each we define a subset , called the equivalence class of under . The set of all such equivalence classes is a partition of .    We proceed according to and show that the equivalence classes satisfy and that their union is .  Suppose and for some . Then by definition we have and . Thus and hence . It follows that . Indeed, if , then also (because and is an equivalence relation). Thence because and finally this means that . It follows by a symmetric argument that . Hence .  This shows that for all , either or , which is the content of .  To see that the union of the equivalence classes is , we just notice that each is certainly a member of its own equivalence class , because is an equivalence relation. This concludes the proof.   "
 },
 {
-  "id": "subsec-the-integers-9",
+  "id": "subsec-integers-9",
   "level": "2",
-  "url": "section-1.html#subsec-the-integers-9",
+  "url": "sec-construction-reals.html#subsec-integers-9",
   "type": "Example",
   "number": "19",
   "title": "",
@@ -210,7 +210,7 @@ var ptx_lunr_docs = [
 {
   "id": "def-defining-relation-minus",
   "level": "2",
-  "url": "section-1.html#def-defining-relation-minus",
+  "url": "sec-construction-reals.html#def-defining-relation-minus",
   "type": "Definition",
   "number": "20",
   "title": "",
@@ -219,7 +219,7 @@ var ptx_lunr_docs = [
 {
   "id": "prop-minus-relation-equiv-relation",
   "level": "2",
-  "url": "section-1.html#prop-minus-relation-equiv-relation",
+  "url": "sec-construction-reals.html#prop-minus-relation-equiv-relation",
   "type": "Proposition",
   "number": "21",
   "title": "",
@@ -228,7 +228,7 @@ var ptx_lunr_docs = [
 {
   "id": "def-integers",
   "level": "2",
-  "url": "section-1.html#def-integers",
+  "url": "sec-construction-reals.html#def-integers",
   "type": "Definition",
   "number": "22",
   "title": "",
@@ -237,7 +237,7 @@ var ptx_lunr_docs = [
 {
   "id": "def-addition-integers",
   "level": "2",
-  "url": "section-1.html#def-addition-integers",
+  "url": "sec-construction-reals.html#def-addition-integers",
   "type": "Definition",
   "number": "23",
   "title": "",
@@ -246,7 +246,7 @@ var ptx_lunr_docs = [
 {
   "id": "prop-addition-integers-well-defined",
   "level": "2",
-  "url": "section-1.html#prop-addition-integers-well-defined",
+  "url": "sec-construction-reals.html#prop-addition-integers-well-defined",
   "type": "Proposition",
   "number": "24",
   "title": "",
@@ -255,7 +255,7 @@ var ptx_lunr_docs = [
 {
   "id": "def-negation-subtraction-integers",
   "level": "2",
-  "url": "section-1.html#def-negation-subtraction-integers",
+  "url": "sec-construction-reals.html#def-negation-subtraction-integers",
   "type": "Definition",
   "number": "25",
   "title": "",
@@ -264,7 +264,7 @@ var ptx_lunr_docs = [
 {
   "id": "prop-neg-sub-integers-well-defined",
   "level": "2",
-  "url": "section-1.html#prop-neg-sub-integers-well-defined",
+  "url": "sec-construction-reals.html#prop-neg-sub-integers-well-defined",
   "type": "Proposition",
   "number": "26",
   "title": "",
@@ -273,7 +273,7 @@ var ptx_lunr_docs = [
 {
   "id": "prop-properties-of-addition-integers",
   "level": "2",
-  "url": "section-1.html#prop-properties-of-addition-integers",
+  "url": "sec-construction-reals.html#prop-properties-of-addition-integers",
   "type": "Proposition",
   "number": "27",
   "title": "",
@@ -282,7 +282,7 @@ var ptx_lunr_docs = [
 {
   "id": "def-multiplication-integers",
   "level": "2",
-  "url": "section-1.html#def-multiplication-integers",
+  "url": "sec-construction-reals.html#def-multiplication-integers",
   "type": "Definition",
   "number": "28",
   "title": "",
@@ -291,7 +291,7 @@ var ptx_lunr_docs = [
 {
   "id": "prop-mul-integers-well-defined-properties",
   "level": "2",
-  "url": "section-1.html#prop-mul-integers-well-defined-properties",
+  "url": "sec-construction-reals.html#prop-mul-integers-well-defined-properties",
   "type": "Proposition",
   "number": "29",
   "title": "",
@@ -300,7 +300,7 @@ var ptx_lunr_docs = [
 {
   "id": "def-integer-less-than",
   "level": "2",
-  "url": "section-1.html#def-integer-less-than",
+  "url": "sec-construction-reals.html#def-integer-less-than",
   "type": "Definition",
   "number": "30",
   "title": "",
@@ -309,11 +309,227 @@ var ptx_lunr_docs = [
 {
   "id": "prop-natural-integer-inclusion",
   "level": "2",
-  "url": "section-1.html#prop-natural-integer-inclusion",
+  "url": "sec-construction-reals.html#prop-natural-integer-inclusion",
   "type": "Proposition",
   "number": "31",
   "title": "",
   "body": "  Define the function by . Then it satisfies the following.   The function is injective.     .     .    For we have , , and if and only if .       For , suppose that . Then . This means, by definition, that , whence .  For , observe that .  For , choose . We'll show that . Indeed, we have for some . Therefore, Conversely, suppose now that . Then    "
+},
+{
+  "id": "def-rational-equiv-classes",
+  "level": "2",
+  "url": "sec-construction-reals.html#def-rational-equiv-classes",
+  "type": "Definition",
+  "number": "32",
+  "title": "",
+  "body": "  Let . Define a relation on by . Informally, we think of as representing the quotient .   "
+},
+{
+  "id": "prop-rational-equiv-eq-rel",
+  "level": "2",
+  "url": "sec-construction-reals.html#prop-rational-equiv-eq-rel",
+  "type": "Proposition",
+  "number": "33",
+  "title": "",
+  "body": "  The relation of is an equivalence relation.    Left to the reader.   "
+},
+{
+  "id": "def-rational-numbers",
+  "level": "2",
+  "url": "sec-construction-reals.html#def-rational-numbers",
+  "type": "Definition",
+  "number": "34",
+  "title": "",
+  "body": "  The set of rational numbers , denoted , is the set of equivalence classes of the relation of in . We define special elements by .   "
+},
+{
+  "id": "prop-recognizing-rational-zero-and-one",
+  "level": "2",
+  "url": "sec-construction-reals.html#prop-recognizing-rational-zero-and-one",
+  "type": "Proposition",
+  "number": "35",
+  "title": "",
+  "body": "     For , we have .    For , we have .          Suppose . Then , so by definition . Conversely, if , then , so .    Suppose . Then , so by definition and so . COnversely, if , then of course we also have and so .      "
+},
+{
+  "id": "def-rational-operations",
+  "level": "2",
+  "url": "sec-construction-reals.html#def-rational-operations",
+  "type": "Definition",
+  "number": "36",
+  "title": "",
+  "body": "  Define addition by .  Define negation by .  Define subtraction by .   "
+},
+{
+  "id": "prop-rational-addition-properties",
+  "level": "2",
+  "url": "sec-construction-reals.html#prop-rational-addition-properties",
+  "type": "Proposition",
+  "number": "37",
+  "title": "",
+  "body": "     Addition and negation are well-defined.    For all we have    .     .     .     .          Proof of 2. Let . Then .   "
+},
+{
+  "id": "def-rational-multiplication",
+  "level": "2",
+  "url": "sec-construction-reals.html#def-rational-multiplication",
+  "type": "Definition",
+  "number": "38",
+  "title": "",
+  "body": "  Define multiplication by . Define . Define inversion by .   "
+},
+{
+  "id": "prop-rational-multiplication-properties",
+  "level": "2",
+  "url": "sec-construction-reals.html#prop-rational-multiplication-properties",
+  "type": "Proposition",
+  "number": "39",
+  "title": "",
+  "body": "     Multiplication and inversion are well-defined.    Let . Then    .     .    If then .     .     .          Proof of 3. Let , so that . Then since .   "
+},
+{
+  "id": "def-rational-order",
+  "level": "2",
+  "url": "sec-construction-reals.html#def-rational-order",
+  "type": "Definition",
+  "number": "40",
+  "title": "",
+  "body": "  For , define if .   "
+},
+{
+  "id": "prop-rationals-positive-recognition",
+  "level": "2",
+  "url": "sec-construction-reals.html#prop-rationals-positive-recognition",
+  "type": "Proposition",
+  "number": "41",
+  "title": "",
+  "body": "  For , we have if and only if .    Suppose . Since , we have either . Hence, and . In both cases, .  Now suppose . Then both and or and . If then . On the other hand, if , then . This concludes the proof.   "
+},
+{
+  "id": "def-inclusion-integers-rationals",
+  "level": "2",
+  "url": "sec-construction-reals.html#def-inclusion-integers-rationals",
+  "type": "Definition",
+  "number": "42",
+  "title": "",
+  "body": "  Define the inclusion function by .   "
+},
+{
+  "id": "prop-inclusion-integers-rationals",
+  "level": "2",
+  "url": "sec-construction-reals.html#prop-inclusion-integers-rationals",
+  "type": "Proposition",
+  "number": "43",
+  "title": "",
+  "body": "  The inclusion function of has the following properties.   The functionn is injective.    We have and .    If , then             We have if and only if .          For 1, we observe that if , so that , then by definition we have , so . Thus is injective.  For 2, we simply compute and similarly for .  The proof of 3 is left to the reader.   "
+},
+{
+  "id": "def-division-rationals",
+  "level": "2",
+  "url": "sec-construction-reals.html#def-division-rationals",
+  "type": "Definition",
+  "number": "44",
+  "title": "",
+  "body": "  Define division by . We extend the mapping to all of by defining for all .   "
+},
+{
+  "id": "prop-division-well-defined",
+  "level": "2",
+  "url": "sec-construction-reals.html#prop-division-well-defined",
+  "type": "Proposition",
+  "number": "45",
+  "title": "",
+  "body": "  Division is well-defined.    Left to the reader.   "
+},
+{
+  "id": "def-absolute-value",
+  "level": "2",
+  "url": "sec-construction-reals.html#def-absolute-value",
+  "type": "Definition",
+  "number": "46",
+  "title": "",
+  "body": "  For any , define its absolute value  by .   "
+},
+{
+  "id": "prop-absolute-value-properties",
+  "level": "2",
+  "url": "sec-construction-reals.html#prop-absolute-value-properties",
+  "type": "Proposition",
+  "number": "47",
+  "title": "",
+  "body": "  Let .   We have , with if and only if .     .    When , we have .    (The triangle inequality)     (The reverse triangle inequality)        Proof of 4: We have and , so . On the other hand, we also have , so that . Therefore , and the result follows from 3.   "
+},
+{
+  "id": "prop-archimedean-property",
+  "level": "2",
+  "url": "sec-construction-reals.html#prop-archimedean-property",
+  "type": "Proposition",
+  "number": "48",
+  "title": "The archimedean property of the real numbers.",
+  "body": " The archimedean property of the real numbers   For all , there exists such that .    Left to the reader.   "
+},
+{
+  "id": "def-sequence-rationals",
+  "level": "2",
+  "url": "sec-construction-reals.html#def-sequence-rationals",
+  "type": "Definition",
+  "number": "49",
+  "title": "",
+  "body": "  A sequence of rational numbers is a function . We write instead of .   "
+},
+{
+  "id": "subsec-real-numbers-6",
+  "level": "2",
+  "url": "sec-construction-reals.html#subsec-real-numbers-6",
+  "type": "Example",
+  "number": "50",
+  "title": "",
+  "body": "      is a sequence with values .    Define a sequence by . We will see later that this sequence (among many others) converges to , so we will eventually need a bigger number system.      "
+},
+{
+  "id": "def-cauchy-sequence",
+  "level": "2",
+  "url": "sec-construction-reals.html#def-cauchy-sequence",
+  "type": "Definition",
+  "number": "51",
+  "title": "",
+  "body": "  Let be a sequence of rational numbers. We call a Cauchy sequence , for each rational , there exists such that for all .   "
+},
+{
+  "id": "subsec-real-numbers-8",
+  "level": "2",
+  "url": "sec-construction-reals.html#subsec-real-numbers-8",
+  "type": "Example",
+  "number": "52",
+  "title": "",
+  "body": "  The sequence with terms is not Cauchy, because we can choose and then for all there exist such that which is not less than .   "
+},
+{
+  "id": "subsec-real-numbers-9",
+  "level": "2",
+  "url": "sec-construction-reals.html#subsec-real-numbers-9",
+  "type": "Example",
+  "number": "53",
+  "title": "",
+  "body": "  The sequence is Cauchy. Let be rational. Then choose . Then , so is a Cauchy sequence.   "
+},
+{
+  "id": "def-equivalence-rel-cauchy-sequences",
+  "level": "2",
+  "url": "sec-construction-reals.html#def-equivalence-rel-cauchy-sequences",
+  "type": "Definition",
+  "number": "54",
+  "title": "",
+  "body": "  Let be the set of all Cauchy sequences of rational numbers and define a relation on by if, for all rational , there is such that for all .   "
+},
+{
+  "id": "prop-equivalence-rel-cauchy-sequences",
+  "level": "2",
+  "url": "sec-construction-reals.html#prop-equivalence-rel-cauchy-sequences",
+  "type": "Proposition",
+  "number": "55",
+  "title": "",
+  "body": "  The relation is an equivalence relation.    Let and let .   "
 },
 {
   "id": "homework",
