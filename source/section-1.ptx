@@ -1285,12 +1285,12 @@
             </li>
             <li>
               <p>
-                (The triangle inequality) <m>\abs{x + y} \leq \abs{x} + \abs{y}</m>
+                (The triangle inequality) <m>\abs{x + y} \leq \abs{x} + \abs{y}</m>.
               </p>
             </li>
             <li>
               <p>
-                (The reverse triangle inequality) <m>\abs{x + y} \geq \abs{x} - \abs{y}</m>
+                (The reverse triangle inequality) <m>\abs{x + y} \geq \abs{x} - \abs{y}</m>.
               </p>
             </li>
           </ol>
@@ -1433,7 +1433,7 @@
           <md>
             <mrow>\abs{a_n - b_n} \amp \eps/2 \quad \text{for all $n \geq N_1$}</mrow>
             <mrow>\abs{b_n - c_n} \amp \eps/2 \quad \text{for all $n \geq N_2$}</mrow>
-          </md>. Therefore, for all <m>n \geq \mathrm{max}(N_1, N_2)</m>, we have
+          </md>. Therefore, for all <m>n \geq \max(N_1, N_2)</m>, we have
           <me>
             \abs{a_n - c_n} = \abs{a_n - b_n + b_n - c_n} \leq \abs{a_n - b_n}
             + \abs{b_n - c_n} \lt \frac{\eps}{2} + \frac{\eps}{2} = \eps
@@ -1445,9 +1445,287 @@
     <definition xml:id="def-real-numbers">
       <statement>
         <p>
-          The set of <term>real numbers</term>, denoted <m>\R</m>
+          The set of <term>real numbers</term>, denoted <m>\R</m>, is the set
+          of equivalence classes of <m>\sim</m> in <m>C(\Q)</m>, where
+          <m>\sim</m> is the relation of 
+          <xref ref="def-equivalence-rel-cauchy-sequences"/>.
         </p>
       </statement>
     </definition>
+    <proposition xml:id="prop-constant-sequence-cauchy">
+      <statement>
+        <p>
+          A sequence all of whose terms are equal is Cauchy.
+        </p>
+      </statement>
+    </proposition>
+    <proposition xml:id="prop-inclusion-rationals-into-reals">
+      <statement>
+        <p>
+          There is an injective function <m>i \colon \Q \to \R</m>
+          defined by <m>i(x) = [\overline{x}]</m> where <m>\overline{x}</m>
+          denotes the constant sequence with value <m>x</m>.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Suppose <m>i(x) = i(y)</m> for some <m>x, y \in \Q</m>. Then by
+          definition we have <m>[\overline{x}] = [\overline{y}]</m>.
+          This means that for all <m>\eps \gt 0</m>, we have <m>\abs{x - y} \lt \eps</m>.
+          This implies <m>x = y</m>, for if not, then <m>\abs{x - y} \gt 0</m>,
+          in which case <m>\abs{x - y} \lt \abs{x - y}</m>, a contradiction.
+        </p>
+      </proof>
+    </proposition>
+    <p>
+      We use the mapping <m>i</m> to view <m>\Q</m> as a subset of <m>\R</m>
+      and we simply write <m>x</m> for <m>i(x)</m> where <m>x</m> is rational.
+    </p>
+    <definition xml:id="def-addition-multiplication-sequences">
+      <statement>
+        <p>
+          Let <m>a_n</m> and <m>b_n</m> be sequences of rational numbers. Then
+          the sum of <m>a_n</m> and <m>b_n</m> is the sequence whose terms
+          are <m>a_n + b_n</m>, and the product of <m>a_n</m> and <m>b_n</m>
+          is the sequence whose terms are <m>a_n b_n</m>.
+        </p>
+      </statement>
+    </definition>
+    <proposition xml:id="prop-sums-products-of-Cauchy-are-Cauchy">
+      <statement>
+        <p>
+          If <m>a_n, b_n \in C(\Q)</m>, then so are <m>a_n + b_n</m> and
+          <m>a_n b_n</m>.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Left to the reader.
+        </p>
+      </proof>
+    </proposition>
+    <definition xml:id="def-addition-multiplication-real-numbers">
+      <statement>
+        <p>
+          Let <m>x, y \in \R</m>, so <m>x = [a_n]</m> and <m>y = [b_n]</m> for
+          some <m>a_n, b_n \in C(\Q)</m>. We define 
+          <me>
+            x + y = [a_n + b_n], \quad xy = [a_n b_n]
+          </me>.
+        </p>
+      </statement>
+    </definition>
+    <proposition xml:id="prop-real-ops-well-defined">
+      <statement>
+        <p>
+          Suppose
+          <me>
+            x = [a_n] = [a_n'] \quad \text{and} \quad y = [b_n] = [b_n']
+          </me>.
+          Then for every <m>\eps \gt 0</m>, there exist <m>N_1, N_2 \in \N</m>
+          such that 
+          <md>
+            <mrow>n \geq N_1 \amp \implies \abs{a_n - a_n'} \lt \eps/2</mrow>
+            <mrow>n \geq N_2 \amp \implies \abs{b_n - b_n'} \lt \eps/2</mrow>
+          </md>. Then for all <m>n \geq \max(N_1, N_2)</m> we have
+          <md>
+            <mrow>\abs{a_n + b_n - a_n' - b_n'} \amp = \abs{a_n - a_n' + b_n - b_n'}</mrow>
+            <mrow>\amp \leq \abs{a_n - a_n'} + \abs{b_n - b_n'} \lt \eps</mrow>,
+          </md>
+          so <m>[(a_n + b_n)] = [(a_n' + b_n')]</m>.
+        </p>
+      </statement>
+    </proposition>
+    <lemma xml:id="lem-nonzero-real-represented-nonzero-sequence">
+      <statement>
+        <p>
+          If <m>x \in \R</m> and <m>x \ne 0</m>, then 
+          there is a Cauchy sequence <m>a_n</m> representing <m>x</m>,
+          a rational number <m>c \gt 0</m>, and <m>N \in \N</m> such that
+          <me>
+            \abs{a_n} \geq c
+          </me>
+          for all <m>n \geq N</m>.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Since <m>[a_n] \ne [\overline{0}]</m>, there exists <m>\eps \gt 0</m>
+          such that for all <m>N \in \N</m>, there is <m>n_0 \geq N</m> with
+          <m>\abs{a_n - 0} \geq \eps</m>.
+        </p>
+        <p>
+          At the same time, because <m>[a_n]</m> is Cauchy, there is
+          <m>M \in \N</m> with <m>\abs{a_m - a_n} \lt \eps/2</m> for all
+          <m>m, n \geq M</m>. In particular, there is <m>n_0 \geq \max(M, N)</m>
+          such that <m>\abs{a_{n_0}} \geq \eps</m> and 
+          <me>
+            \abs{a_n} = \abs{a_{n_0} + a_n - a_{n_0}} \geq \abs{a_{n_0}} - \abs{a_n - a_{n_0}}
+            \geq \eps - \eps/2 = \eps/2
+          </me>
+          for all <m>n \geq \max(M, N)</m> with <m>c = \eps/2 \gt 0</m>.
+        </p>
+      </proof>
+    </lemma>
+    <proposition xml:id="prop-real-inverses-exist">
+      <statement>
+        <p>
+          If <m>x \ne 0</m> is a real number, there is a real number <m>y</m>
+          such that <m>xy = 1</m>.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Let's write <m>x = [a_n]</m> and use
+          <xref ref="lem-nonzero-real-represented-nonzero-sequence"/>
+          to get <m>N \in \N</m>
+          and <m>c \gt 0</m> such that <m>\abs{a_n} \geq c</m> for all <m>n \geq N</m>.
+          Now define a sequence <m>b_n</m> by <m>b_n = 0</m> for all <m>n \lt N</m>
+          and <m>b_n = 1/a_n</m> for <m>n \geq N</m>. Now let <m>\eps \gt 0</m>.
+          Since <m>[a_n]</m> is Cauchy,
+          there exists <m>M \in \N</m> such that 
+          <me>
+            \abs{a_n - a_m} \lt c^2 \eps \quad \text{for all $m, n \geq M$}
+          </me>.
+          Now, suppose that <m>m, n \geq \max(M, N)</m>. Then
+          <m>a_m a_n \geq c^2</m>, whence 
+          <me>
+            \frac{1}{a_m a_n} \leq \frac{1}{c^2}
+          </me> and
+          <me>
+            \abs{b_m - b_n} = \abs{\frac{1}{a_m} - \frac{1}{a_n}}
+            = \abs{\frac{a_n - a_m}{a_m a_n}} \leq \frac{c^2 \eps}{c^2} = \eps
+          </me>,
+          so <m>b_n \in C(\Q)</m>. 
+        </p>
+        <p>
+          Next, for <m>n \lt N</m>, we have <m>a_n b_n = 0</m> and for
+          <m>n \geq N</m>, <m>a_n b_n = 1</m>. Now we will prove that the
+          sequence <m>a_n b_n</m> whose terms are 
+          <m>0, \ldots, 0, 1, 1, 1, \ldots</m> is equivalent to <m>\overline{1}</m>.
+          Indeed, let <m>\eps \gt 0</m>. Then for all <m>n \geq N</m>, we have
+          <m>\abs{a_n b_n - 1} = \abs{1 - 1} = 0 \lt \eps</m>.
+        </p>
+        <p>
+          This shows that <m>xy = 1</m> where <m>y = [b_n] \in \R</m>.
+        </p>
+      </proof>
+    </proposition>
+    <definition xml:id="def-inverse-notation">
+      <statement>
+        <p>
+          For <m>x \ne 0 \in \R</m>, we write <m>x^{-1}</m> or <m>1 / x</m>
+          for the unique <m>y \in \R</m> satisfying <m>xy = 1</m>.
+        </p>
+      </statement>
+    </definition>
+    <definition xml:id="def-operations-reals">
+      <statement>
+        <p>
+          We define the operation of division by <m>x / y = xy^{-1}</m> for
+          real numbers <m>x, y</m>, where <m>y \ne 0</m>.
+        </p>
+        <p>
+          We also define negation by <m>-x = [-a_n]</m> and subtraction
+          by <m>x - y = x + (-y)</m>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      All the usual algebraic rules can be proved to hold for this construction
+      of the real numbers. For example, if <m>xz = yz</m> and <m>z \ne 0</m>,
+      then <m>x = y</m>.
+    </p>
+    <definition xml:id="def-positive-reals">
+      <statement>
+        <p>
+          We say <m>x \in \R</m> is <term>positive</term> and write <m>x \gt 0</m>
+          if <m>x = [a_n]</m> for some Cauchy sequence <m>a_n</m> such that
+          there exists rational <m>c \gt 0</m>
+          and <m>N \in \N</m> such that <m>a_n \geq c</m> for all <m>n \geq N</m>.
+        </p>
+        <p>
+          For <m>x, y \in \R</m>, we write <m>x \lt y</m> if <m>y - x \gt 0</m>.
+        </p>
+        <p>
+          We say <m>x \in \R</m> is negative if <m>x = [a_n]</m> for some Cauchy
+          sequence <m>a_n</m> such that
+          there exists rational <m>c \gt 0</m>
+          and <m>N \in \N</m> such that <m>a_n \leq -c</m> for all <m>n \geq N</m>.
+        </p>
+      </statement>
+    </definition>
+    <proposition xml:id="prop-trichotomy-reals">
+      <statement>
+        <p>
+          <ol marker="(a)">
+            <li>
+              <p>
+                For every <m>x \in \R</m>, exactly one of the following is true:
+                <m>x = 0</m>, <m>x \lt 0</m>, or <m>x \gt 0</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                We have <m>x \lt 0</m> if and only if <m>-x \gt 0</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                If <m>x, y \geq 0</m> then <m>x + y \geq 0</m> and <m>xy \geq 0</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                If <m>x \gt y \gt 0</m> then <m>x^{-1} \lt y^{-1}</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Suppose that <m>a_n</m> is a Cauchy sequence and <m>a_n \geq 0</m>
+                for <m>n \geq N</m> for some <m>N \in \N</m>. Then <m>[a_n] \gt 0</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <proof>
+        <p>
+          To prove (a), <m>x \ne 0</m>, then <m>x = [a_n]</m> and there exist
+          <m>c</m> and <m>N</m> as in 
+          <xref ref="lem-nonzero-real-represented-nonzero-sequence"/>. Since
+          <m>a_n</m> is Cauchy, there are two possibilities. There is some
+          <m>M \geq N</m> such that either
+          <ol marker="1.">
+            <li>
+              <p>
+                for all <m>n \geq M</m>, we have <m>a_n \geq c</m>, or
+              </p>
+            </li>
+            <li>
+              <p>
+                for all <m>n \geq M</m>, we have <m>a_n \leq -c</m>.
+              </p>
+            </li>
+          </ol>
+          Indeed, if this isn't the case, then there exist <m>m, n \geq M</m>
+          such that <m>a_m \geq c</m> and <m>a_n \leq -c</m>         
+          Then, in either case, <m>\abs{a_m - a_n} = a_m - a_n \geq 2c</m>,
+          which contradicts <m>a_n</m> being Cauchy. In case 1 we have
+          <m>x \gt 0</m> and in case 2 we have <m>x \lt 0</m>.
+        </p>
+        <p>
+          To prove (e), we suppose that <m>x = [a_n] \lt 0</m>. Then there is
+          a rational number <m>-c \lt 0</m> and <m>b_n \in C(\Q)</m> such that
+          <m>x = [b_n]</m> and <m>b_n \leq -c</m> for all <m>n \geq M</m>, for
+          some <m>M \in \N</m>. Now, for <m>n \geq \max(M,N)</m>, we then have
+          <me>
+            \abs{a_n - b_n} = a_n - b_n \geq 0 + c = c,
+          </me>
+          so that <m>a_n \not\sim b_n</m>, contradicting the assumption that
+          <m>[a_n] = [b_n]</m>. Therefore <m>x \geq 0</m>.
+        </p>
+      </proof>
+    </proposition>
   </subsection>
 </section>
