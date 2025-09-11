@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<section xml:id="section-1" xmlns:xi="http://www.w3.org/2001/XInclude">
+<section xml:id="sec-construction-reals" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>The Construction of the Real Numbers</title>
   <introduction>
     <p>We have to start from somewhere, but assuming as little as we can,
@@ -7,8 +7,8 @@
       some basic mathematical constructs.
     </p>
   </introduction>
-  <subsection xml:id="subsection-1">
-    <title>Natural numbers and integers</title>
+  <subsection xml:id="subsec-naturals">
+    <title>The natural numbers</title>
     <axiom xml:id="axiom-peano">
       <statement>
         <p>
@@ -340,8 +340,8 @@
     </theorem>
 
   </subsection>
-  <subsection xml:id="subsec-the-integers">
-    <title>The Integers</title>
+  <subsection xml:id="subsec-integers">
+    <title>The integers</title>
     <definition xml:id="def-relation">
       <statement>
         <p>
@@ -845,5 +845,609 @@
         <mrow>\amp \vdots</mrow>
       </md>
     </p>
+  </subsection>
+  <subsection xml:id="subsec-rationals">
+    <title>The rational numbers</title>
+    <p>
+      We'll construct the rational numbers from the integers in almost the
+      same way we constructed the integers from the rationals: using the
+      machinery of equivalence classes.
+    </p>
+    <definition xml:id="def-rational-equiv-classes">
+      <statement>
+        <p>
+          Let <m>\Z^{\ast} = \{ x \in \Z : x \ne \overline{0} \}</m>. Define a relation
+          on <m>\Z \times \Z^{\ast}</m> by <me>
+            (x, y) \sim (z, w) \quad \text{ if } \quad xw = yz
+          </me>.
+          Informally, we think of <m>(x, y)</m> as representing the quotient
+          <m>x / y</m>.
+        </p>
+      </statement>
+    </definition>
+    <proposition xml:id="prop-rational-equiv-eq-rel">
+      <statement>
+        <p>
+          The relation of <xref ref="def-rational-equiv-classes"/> is an
+          equivalence relation.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Left to the reader.
+        </p>
+      </proof>
+    </proposition>
+    <definition xml:id="def-rational-numbers">
+      <statement>
+        <p>
+          The set of <term>rational numbers</term>, denoted <m>\Q</m>, is the
+          set of equivalence classes of the relation <m>\sim</m> of
+          <xref ref="def-rational-equiv-classes"/> in <m>\Z \times \Z^{\ast}</m>.
+          We define special elements <m>\overline{0}, \overline{1} \in \Q</m>
+          by
+          <md>
+            <mrow>\overline{0} \amp = [(0, 1)] = \{ (0, y) : y \in \Z^{\ast} \}</mrow>
+            <mrow>\overline{1} \amp = [(1, 1)] = \{ (x, x) : x \in \Z^{\ast} \}</mrow>
+          </md>.
+        </p>
+      </statement>
+    </definition>
+    <proposition xml:id="prop-recognizing-rational-zero-and-one">
+      <statement>
+        <p>
+          <ol marker="(a)">
+            <li>
+              <p>
+                For <m>[(x,y)] \in \Q</m>, we have
+                <me>
+                  [(x, y)] = \overline{0} \text{ if and only if } x = 0
+                </me>.
+              </p>
+            </li>
+            <li>
+              <p>
+                For <m>[(x,y)] \in \Q</m>, we have
+                <me>
+                  [(x, y)] = \overline{1} \text { if and only if } x = y
+                </me>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <proof>
+        <p>
+          <ol marker="(a)">
+            <li>
+              <p>
+                Suppose <m>[(x, y)] = \overline{0} \in \Q</m>. Then
+                <me>
+                  [(x, y)] = [(0, 1)]
+                </me>, so by definition <m>x \cdot 1 = y \cdot 0 = 0</m>.
+                Conversely, if <m>x = 0</m>, then <m>x \cdot 1 = y \cdot 0 = 0</m>,
+                so <m>[(x, y)] = [(0, 1)] = \overline{0}</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Suppose <m>[(x, y)] = \overline{1} \in \Q</m>. Then
+                <me>
+                  [(x, y)] = [(1, 1)]
+                </me>, so by definition <m>x \cdot 1 = y \cdot 1</m> and so
+                <m>x = y</m>. COnversely, if <m>x = y</m>, then of course we
+                also have
+                <me>
+                  x \cdot 1 = y \cdot 1
+                </me>
+                and so <m>[(x, y)] = [(1, 1)]</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </proof>
+    </proposition>
+    <definition xml:id="def-rational-operations">
+      <statement>
+        <p>
+          Define addition <m>+ \colon \Q \times \Q \to \Q</m> by
+          <me>
+            [(a, b)] + [(c, d)] = [(ad + bc, bd)]
+          </me>.
+        </p>
+        <p>
+          Define negation <m>- \colon \Q \to \Q</m> by 
+          <me>
+            -[(a, b)] = [(-a, b)]
+          </me>.
+        </p>
+        <p>
+          Define subtraction <m>- \colon \Q \times \Q \to \Q</m> by
+          <me>
+            [(a, b)] - [(c, d)] = [(a, b)] + (-[(c, d)])
+          </me>.
+        </p>
+      </statement>
+    </definition>
+    <proposition xml:id="prop-rational-addition-properties">
+      <statement>
+        <p>
+          <ol marker="(a)">
+            <li>
+              <p>
+                Addition and negation are well-defined.
+              </p>
+            </li>
+            <li>
+              <p>
+                For all <m>r, s, t \in \Q</m> we have
+                <ol marker="1.">
+                  <li>
+                    <p>
+                      <m>r + (s + t) = (r + s) + t</m>.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>r + \overline{0} = r</m>.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>r + (-r) = \overline{0}</m>.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>r + s = s + r</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Proof of 2. Let <m>r = [(a, b)] \in \Q</m>. Then
+          <md>
+            <mrow>r + \overline{0} \amp = [(a, b)] + [(0, 1)]</mrow>
+            <mrow> \amp = [(a \cdot 1 + b \cdot 0, b \cdot 1)]</mrow>
+            <mrow> \amp = [(a, b)] = r</mrow>
+          </md>.
+        </p>
+      </proof>
+    </proposition>
+    <definition xml:id="def-rational-multiplication">
+      <statement>
+        <p>
+          Define multiplication <m>\cdot \colon \Q \times \Q \to \Q</m> by
+          <me>
+            [(a, b)] \cdot [(c, d)] = [(ac, bd)]
+          </me>.
+          Define <m>\Q^{\ast} = \{ x \in \Q : x \ne \overline{0} \}</m>. Define inversion
+          <m>(\phantom{x})^{-1} \colon \Q^{\ast} \to \Q^{\ast}</m> by
+          <me>
+            [(a, b)]^{-1} = [(b, a)]
+          </me>.
+        </p>
+      </statement>
+    </definition>
+    <proposition xml:id="prop-rational-multiplication-properties">
+      <statement>
+        <p>
+          <ol marker="(a)">
+            <li>
+              <p>
+                Multiplication and inversion are well-defined.
+              </p>
+            </li>
+            <li>
+              <p>
+                Let <m>r, s, t \in \Q</m>. Then
+                <ol marker="1.">
+                  <li>
+                    <p>
+                      <m>(rs)t = r(st)</m>.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>r \cdot \overline{1} = r</m>.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      If <m>r \ne \overline{0}</m> then <m>r \cdot r^{-1} = \overline{1}</m>.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>rs = sr</m>.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>r(s+t) = rs + rt</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Proof of 3. Let <m>r = [(a, b)] \ne \overline{0}</m>, so that 
+          <m>a \ne 0</m>. Then
+          <md>
+            <mrow>r \cdot r^{-1} \amp = [(a, b)] \cdot [(b, a)]</mrow>
+            <mrow> \amp = [(ab, ba)]</mrow>
+            <mrow> \amp = [(1, 1)] = \overline{1}</mrow>
+          </md>
+          since <m>ab \cdot 1 = ba \cdot 1</m>.
+        </p>
+      </proof>
+    </proposition>
+    <definition xml:id="def-rational-order">
+      <statement>
+        <p>
+          For <m>[(a, b)], [(c, d)] \in \Q</m>, define <m>[(a, b)] \lt [(c, d)]</m>
+          if
+          <me>
+            \begin{cases}
+              ad \lt bc \amp \text{if $b$, $d \gt 0$ or $b$, $d \lt 0$} \\
+              ad \gt bc \amp \text{if $b \lt 0$, $d \gt 0$ or $b \gt 0$, $d \lt 0$}
+            \end{cases}
+          </me>.
+        </p>
+      </statement>
+    </definition>
+    <proposition xml:id="prop-rationals-positive-recognition">
+      <statement>
+        <p>
+          For <m>[(x, y)] \in \Q</m>, we have <m>\overline{0} \lt [(x, y)]</m>
+          if and only if <m>\overline{0} \lt xy</m>.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Suppose <m>\overline{0} \lt [(x, y)]</m>. Since <me>
+            \overline{0} = [(0, 1)] \lt [(x, y)]
+          </me>, we have either
+          <md>
+            <mrow>0 \cdot y \amp \lt 1 \cdot x \quad \text{(if $y \gt 0$) or}</mrow>
+            <mrow>0 \cdot y \amp \gt 1 \cdot x \quad \text{(if $y \lt 0$) or}</mrow>
+          </md>.
+          Hence, <m>y \gt 0 \implies x \gt 0</m> and <m>y \lt 0 \implies x \lt 0</m>.
+          In both cases, <m>xy \gt 0</m>.
+        </p>
+        <p>
+          Now suppose <m>xy \gt 0</m>. Then both <m>x \gt 0</m> and <m>y \gt 0</m>
+          or <m>x \lt 0</m> and <m>y \lt 0</m>. If <m>x, y \gt 0</m> then
+          <me>
+            0 \cdot y \lt 1 \dot x \implies \overline{0} = [(0, 1)] \lt [(x, y)]
+          </me>. On the other hand, if <m>x, y \lt 0</m>, then
+          <me>
+            0 \cdot y \gt 1 \dot x \implies \overline{0} = [(0, 1)] \lt [(x, y)].
+          </me>.
+          This concludes the proof.
+        </p>
+      </proof>
+    </proposition>
+    <definition xml:id="def-inclusion-integers-rationals">
+      <statement>
+        <p>
+          Define the inclusion function <m>i \colon \Z \to \Q</m> by
+          <me>
+            i(x) = [(x, 1)]
+          </me>.
+        </p>
+      </statement>
+    </definition>
+    <proposition xml:id="prop-inclusion-integers-rationals">
+      <statement>
+        <p>
+          The inclusion function of <xref ref="def-inclusion-integers-rationals"/>
+          has the following properties.
+          <ol marker="1.">
+            <li>
+              <p>
+                The functionn <m>i</m> is injective.
+              </p>
+            </li>
+            <li>
+              <p>
+                We have <m>i(0) = \overline{0}</m> and
+                <m>i(1) = \overline{1}</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                If <m>x, y \in \Z</m>, then
+                <ol marker="(i)">
+                  <li>
+                    <p>
+                      <m>i(x+y) = i(x) + i(y)</m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>i(xy) = i(x) i(y)</m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      We have <m>x \lt y</m> if and only if <m>i(x) \lt i(y)</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <proof>
+        <p>
+          For 1, we observe that if <m>i(x) = i(y)</m>, so that
+          <me>
+            [(x, 1)] = [(y, 1)]
+          </me>,
+          then by definition we have <m>x \cdot 1 = 1 \cdot y</m>,
+          so <m>x = y</m>. Thus <m>i</m> is injective.
+        </p>
+        <p>
+          For 2, we simply compute
+          <md>
+            <mrow>i(x + y) \amp = [(x + y, 1)] 
+              = [(x \cdot 1 + 1 \cdot y, 1 \cdot 1)]</mrow>
+            <mrow>\amp = [(x, 1)] + [(y, 1)] = i(x) + i(y)</mrow>
+          </md>
+          and similarly for <m>i(xy)</m>.
+        </p>
+        <p>
+          The proof of 3 is left to the reader.
+        </p>
+      </proof>
+    </proposition>
+    <definition xml:id="def-division-rationals">
+      <statement>
+        <p>
+          Define division
+          <me>
+            \cdot / \cdot \colon \Q^{\ast} \times \Q^{\ast} \to \Q^{\ast}
+          </me>
+          by <m>r / s = rs^{-1}</m>. We extend the mapping to all of 
+          <m>Q \times \Q^{\ast}</m> by defining 
+          <m>\overline{0} / s = \overline{0}</m> for all <m>s \in \Q^{\ast}</m>.
+        </p>
+      </statement>
+    </definition>
+    <proposition xml:id="prop-division-well-defined">
+      <statement>
+        <p>
+          Division is well-defined.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Left to the reader.
+        </p>
+      </proof>
+    </proposition>
+    <p>
+      We use <m>i</m> to think of <m>\Z</m> as a subset of <m>\Q</m> and write
+      <m>x = [(x, 1)]</m> for <m>x \in \Z</m>. We also write <m>x/y</m> for
+      <m>[(x, y)] \in \Q</m> when <m>z \in \Z</m>, <m>y \in \Z^{\ast}</m>.
+    </p>
+  </subsection>
+  <subsection xml:id="subsec-real-numbers">
+    <title>The real numbers</title>
+    <definition xml:id="def-absolute-value">
+      <statement>
+        <p>
+          For any <m>x \in \Q</m>, define its <term>absolute value</term>
+          <m>|x|</m> by 
+          <me>
+            \abs{x} = \begin{cases}
+              x \amp \text{if $x \geq 0$} \\
+              -x \amp \text{if $x \lt 0$}
+            \end{cases}
+          </me>.
+        </p>
+      </statement>
+    </definition>
+    <proposition xml:id="prop-absolute-value-properties">
+      <statement>
+        <p>
+          Let <m>x, y \in \Q</m>.
+          <ol marker="1.">
+            <li>
+              <p>
+                We have <m>\abs{x} \geq 0</m>, with <m>\abs{x} = 0</m>
+                if and only if <m>x = 0</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\abs{xy} = \abs{x} \abs{y}</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                When <m>y \geq 0</m>, we have 
+                <me>
+                  \abs{x} \leq y \iff -y \leq x \leq y
+                </me>.
+              </p>
+            </li>
+            <li>
+              <p>
+                (The triangle inequality) <m>\abs{x + y} \leq \abs{x} + \abs{y}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                (The reverse triangle inequality) <m>\abs{x + y} \geq \abs{x} - \abs{y}</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Proof of 4: We have <m>x \leq \abs{x}</m> and <m>y \leq \abs{y}</m>,
+          so <m>x + y \leq \abs{x} + \abs{y}</m>. On the other hand, we also
+          have
+          <me>
+            x \geq -\abs{x}, \quad y \geq -\abs{y}
+          </me>,
+          so that <m>x + y \geq -\abs{x} - \abs{y}</m>.
+          Therefore
+          <me>
+            -\abs{x} - \abs{y} \leq x + y \leq \abs{x} + \abs{y}
+          </me>,
+          and the result follows from 3.
+        </p>
+      </proof>
+    </proposition>
+    <proposition xml:id="prop-archimedean-property">
+      <title>The archimedean property of the real numbers</title>
+      <statement>
+        <p>
+          For all <m>x \in \Q</m>, there exists <m>N \in \N</m> such that
+          <m>N \gt x</m>.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Left to the reader.
+        </p>
+      </proof>
+    </proposition>
+    <definition xml:id="def-sequence-rationals">
+      <statement>
+        <p>
+          A <term>sequence of rational numbers</term> is a function
+          <m>a \colon \N \to \Q</m>. We write <m>a_n</m> instead of 
+          <m>a(n)</m>.
+        </p>
+      </statement>
+    </definition>
+    <example>
+      <statement>
+        <p>
+          <ol marker="(a)">
+            <li>
+              <p>
+                <m>a_n = \frac{1}{n}</m> is a sequence with values 
+                <m>1, \frac{1}{2}, \frac{1}{3}, \frac{1}{4}, \ldots</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Define a sequence by 
+                <me>
+                  b_n = 3, \frac{31}{10}, \frac{314}{100}, \frac{3142}{1000},
+                  \frac{31416}{10000}, \ldots
+                </me>.
+                We will see later that this sequence (among many others) 
+                <q>converges</q> to <m>\pi \notin \Q</m>, so we will eventually
+                need a bigger number system.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </example>
+    <definition xml:id="def-cauchy-sequence">
+      <statement>
+        <p>
+          Let <m>a_n</m> be a sequence of rational numbers. We call <m>a_n</m>
+          a <term>Cauchy sequence</term>, for each rational <m>\eps \gt 0</m>,
+          there exists <m>N \in \N</m> such that <m>\abs{a_n - a_m} \lt \eps</m>
+          for all <m>n, m \geq N</m>.
+        </p>
+      </statement>
+    </definition>
+    <example>
+      <statement>
+        <p>
+          The sequence <m>a_n = (-1)^n</m> with terms <m>-1, 1, -1, 1, \ldots</m>
+          is not Cauchy, because we can choose <m>\eps = 1</m> and then for all
+          <m>N \in \N</m> there exist <m>n, m \geq N</m> such that <m>\abs{a_n - a_m} = 2</m>
+          which is not less than <m>\eps</m>.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          The sequence <m>a_n = 1/n</m> is Cauchy. Let <m>\eps \gt 0</m> be 
+          rational. Then choose <m>N \in \N such that N \gt 2/\eps</m>. Then
+          <md>
+            <mrow>n, m \geq N \amp \implies \lt \frac{1}{m}, \frac{1}{m} \leq \frac{1}{N} \lt \eps</mrow>
+            <mrow> \amp \implies \abs{\frac{1}{n} - \frac{1}{m}} \lt \eps</mrow>
+          </md>,
+          so <m>a_n</m> is a Cauchy sequence.
+        </p>
+      </statement>
+    </example>
+    <definition xml:id="def-equivalence-rel-cauchy-sequences">
+      <statement>
+        <p>
+          Let <m>C(\Q)</m> be the set of all Cauchy sequences of rational
+          numbers and define a relation <m>\sim</m> on <m>C(\Q)</m> by
+          <m>a_n \sim b_n</m> if, for all rational <m>\eps \gt 0</m>, there
+          is <m>N \in \N</m> such that <m>\abs{a_n - b_n} \lt \eps</m> for
+          all <m>n \geq N</m>.
+        </p>
+      </statement>
+    </definition>
+    <proposition xml:id="prop-equivalence-rel-cauchy-sequences">
+      <statement>
+        <p>
+          The relation <m>\sim</m> is an equivalence relation.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Let <m>\eps \gt 0</m> and let <m>a_n, b_n, c_n \in C(\Q)</m>.
+          Since <m>\abs{a_n - a_n} = 0</m> for all <m>n</m>, we see that
+          <m>a_n \sim a_n</m>. Next suppose <m>a_n \sim b_n</m>, so that
+          there exists <m>N \in \N</m> such that 
+          <me>
+            \abs{a_n - b_n} \lt \eps \quad \text{for all $n \geq N$}
+          </me>. Then 
+          <me>
+            \abs{b_n - a_n} \lt \abs{a_n - b_n} \lt \eps
+            \quad \text{for all $n \geq N$}
+          </me>,
+          so <m>b_n \sim a_n</m>.
+        </p>
+        <p>
+          Finally, suppose that <m>a_n \sim b_n</m> and <m>b_n \sim c_n</m>.
+          Then there are <m>N_1</m>, <m>N_2 \in \N</m> such that
+          <md>
+            <mrow>\abs{a_n - b_n} \amp \eps/2 \quad \text{for all $n \geq N_1$}</mrow>
+            <mrow>\abs{b_n - c_n} \amp \eps/2 \quad \text{for all $n \geq N_2$}</mrow>
+          </md>. Therefore, for all <m>n \geq \mathrm{max}(N_1, N_2)</m>, we have
+          <me>
+            \abs{a_n - c_n} = \abs{a_n - b_n + b_n - c_n} \leq \abs{a_n - b_n}
+            + \abs{b_n - c_n} \lt \frac{\eps}{2} + \frac{\eps}{2} = \eps
+          </me>.
+          So, <m>a_n \sim c_n</m>, as required.
+        </p>
+      </proof>
+    </proposition>
+    <definition xml:id="def-real-numbers">
+      <statement>
+        <p>
+          The set of <term>real numbers</term>, denoted <m>\R</m>
+        </p>
+      </statement>
+    </definition>
   </subsection>
 </section>
