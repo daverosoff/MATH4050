@@ -10,7 +10,7 @@
       \newcommand{\Z}{\mathbf{Z}}
       \newcommand{\Q}{\mathbf{Q}}
       \newcommand{\R}{\mathbf{R}}
-      \newcommand{1}{\abs}{|#1|}
+      \newcommand{\abs}[1]{\left|#1\right|}
       \newcommand{\eps}{\varepsilon}
     </macros>
     <latex-image-preamble>\usepackage{tikz}</latex-image-preamble>
