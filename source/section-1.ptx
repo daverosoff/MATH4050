@@ -828,8 +828,8 @@
           Then
           <md>
             <mrow>[(1, 1)] \amp \lt [(a, b)] \implies 1 + b \lt 1 + a \implies 1 + a = 1 + b + k \text{ for some $k \in \N$}</mrow>
-            <mrow> \amp \implies [(a, b)] = [(k+1, 1)] \in i(\N)</mrow>.
-          </md>
+            <mrow> \amp \implies [(a, b)] = [(k+1, 1)] \in i(\N)</mrow>
+          </md>.
         </p>
       </proof>
     </proposition>
@@ -1530,8 +1530,8 @@
           </md>. Then for all <m>n \geq \max(N_1, N_2)</m> we have
           <md>
             <mrow>\abs{a_n + b_n - a_n' - b_n'} \amp = \abs{a_n - a_n' + b_n - b_n'}</mrow>
-            <mrow>\amp \leq \abs{a_n - a_n'} + \abs{b_n - b_n'} \lt \eps</mrow>,
-          </md>
+            <mrow>\amp \leq \abs{a_n - a_n'} + \abs{b_n - b_n'} \lt \eps</mrow>
+          </md>,
           so <m>[(a_n + b_n)] = [(a_n' + b_n')]</m>.
         </p>
       </statement>
