@@ -141,4 +141,78 @@
       </ol>
     </p>
   </subsection>
+  <subsection xml:id="subsec-hw-02">
+    <title>HW 02</title>
+    <p>
+      Note: These statements should be proved using only the definitions and
+      properties presented in the lecture notes.
+    </p>
+    <exercises>
+      <exercise>
+        <statement>
+          <p>
+            Show that the equivalence relation of
+            <xref ref="def-rational-equiv-classes"/> is an equivalence
+            relation.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Prove <xref ref="prop-archimedean-property"/>. 
+          </p>
+        </statement>
+        <hint>
+          <p>
+            A rational
+            number <m>x</m> satisfies exactly one of <m>x \lt 0</m>, 
+            <m>x = 0</m>, or <m>x \gt 0</m>, so divide into cases based 
+            on these.
+          </p>
+        </hint>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Prove that if <m>x, y \in \Q</m>, then there exists <m>z \in \Q</m>
+            with <m>x \lt z \lt y</m>. You may use any of the standard
+            properties of the relation <m>\lt</m> on <m>\Q</m>.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Prove that <m>\abs{xy} = \abs{x}\abs{y}</m> for all <m>x, y \in \Q</m>.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Prove the result of <xref ref="li-intervals-absolute-value"/>.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Use <xref ref="li-triangle-ineq">the Triangle Inequality</xref> 
+            to prove 
+            <xref ref="li-reverse-triangle-ineq">the Reverse Triangle Inequality</xref>.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            If <m>a_n</m> and <m>b_n</m> are Cauchy sequences of rational
+            numbers, prove that the sequence <m>c_n = a_n + b_n</m> is 
+            also Cauchy.
+          </p>
+        </statement>
+      </exercise>
+    </exercises>
+  </subsection>
 </section>
