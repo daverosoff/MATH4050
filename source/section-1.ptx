@@ -1275,7 +1275,7 @@
                 <m>\abs{xy} = \abs{x} \abs{y}</m>.
               </p>
             </li>
-            <li>
+            <li xml:id="li-intervals-absolute-value">
               <p>
                 When <m>y \geq 0</m>, we have 
                 <me>
@@ -1283,12 +1283,12 @@
                 </me>.
               </p>
             </li>
-            <li>
+            <li xml:id="li-triangle-ineq">
               <p>
                 (The triangle inequality) <m>\abs{x + y} \leq \abs{x} + \abs{y}</m>.
               </p>
             </li>
-            <li>
+            <li xml:id="li-reverse-triangle-ineq">
               <p>
                 (The reverse triangle inequality) <m>\abs{x + y} \geq \abs{x} - \abs{y}</m>.
               </p>
