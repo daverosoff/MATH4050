@@ -1099,9 +1099,9 @@
           <me>
             \begin{cases}
               ad \lt bc \amp \text{if $b$, $d \gt 0$ or $b$, $d \lt 0$} \\
-              ad \gt bc \amp \text{if $b \lt 0$, $d \gt 0$ or $b \gt 0$, $d \lt 0$}
+              ad \gt bc \amp \text{if $b \lt 0$, $d \gt 0$ or $b \gt 0$, $d \lt 0$}.
             \end{cases}
-          </me>.
+          </me>
         </p>
       </statement>
     </definition>
