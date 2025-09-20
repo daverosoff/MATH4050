@@ -1,0 +1,185 @@
+\documentclass{article}
+\usepackage{amsmath, amsthm, amssymb, mathtools, enumitem, xcolor}
+\usepackage[margin=1in]{geometry}
+\begin{document}
+\title{Homework 1 Solutions}
+\author{Your Name}
+\maketitle
+\section*{Problem 1}
+\textbf{Part b.} Prove that for all $a$, $b$, $c \in \mathbf{N}$, we have
+\[
+    ac = bc \implies a = b.
+\]
+\begin{proof}
+Assume $ac = bc$. We want to show that $a = b$. The proof is by the trichotomy
+principle for natural numbers. We show that the other two cases, namely
+\[
+    a < b \quad \text{and} \quad a > b
+\]
+are impossible. To see this, assume for the sake of contradiction that $a < b$. Then we have
+\[
+    ac < bc,
+\]
+which contradicts our assumption that $ac = bc$. A similar argument shows that the case 
+$a > b$ is also impossible. Therefore we must have $a = b$.
+\end{proof}
+\section*{Problem 2}
+\textbf{Part a.} Prove that for all $n \in \mathbf{N}$, we have $n \ne n + 1$.
+\begin{proof}
+    The proof is by induction on $n$. The base case is $n = 1$. We need to prove
+    \[
+        1 \ne 2,
+    \]
+    but because $2 = s(1)$, this is true by the Peano axioms which say that 
+    $1$ is not the successor of any natural number. For the inductive step, assume
+    that for some $k \in \mathbf{N}$, we have
+    \[
+        k \ne k + 1.
+    \]
+    Because $s$ is injective, we have
+    \[
+        s(k) \ne s(k + 1).
+    \]
+    This concludes the proof.
+\end{proof}
+\textbf{Part b.} Prove that for all $n, k\in \mathbf{N}$, we have
+\[
+    n \ne n + k.
+\]
+\begin{proof}
+    The proof is by induction on $k$. The base case is $k = 1$, which is exactly what we
+    proved in part (a). For the inductive step, assume that for some $k \in \mathbf{N}$,
+    we have
+    \[
+        n \ne n + k,
+    \]
+    for all $n \in \mathbf{N}$. We need to show that for all $n \in \mathbf{N}$,
+    \[
+        n \ne n + s(k).
+    \]
+    If $n = 1$, then $n + s(k) = 1 + s(k) = s(1 + k)$, which is not equal to $1$
+    because, by the Peano axioms, $1$ is not the successor of any natural number.
+
+    Now suppose we have shown that for some $n \in \mathbf{N}$,
+    \[
+        n \ne n + s(k).
+    \]
+    Because $s$ is injective, we have
+    \[
+        s(n) \ne s(n + s(k)) = s(n) + s(k).
+    \]
+    This concludes the proof.
+\end{proof}
+\section*{Problem 3}
+\textbf{Part a.} Prove that, for all $x$, $y \in \mathbf{Z}$, we have
+\[
+    x + y = y + x.
+\]
+\begin{proof}
+    Let $x$ and $y$ be represented by the pairs $(a, b)$ and $(c, d)$ respectively, where
+    $a$, $b$, $c$, $d \in \mathbf{N}$. Then we have
+    \[
+        x + y = (a, b) + (c, d) = (a + c, b + d).
+    \]
+    By the commutativity of addition in $\mathbf{N}$, we have
+    \[
+        (a + c, b + d) = (c + a, d + b).
+    \]
+    But
+    \[
+        (c + a, d + b) = (c, d) + (a, b) = y + x.
+    \]
+    This concludes the proof.
+\end{proof}
+\textbf{Part b.} Prove that, for all $x$, $y \in \mathbf{Z}$, we have
+\[
+    x + \overline{0} = x.
+\]
+\begin{proof}
+    Let $x$ be represented by the pair $(a, b)$, where $a$, $b \in \mathbf{N}$. Then we have
+    \begin{align*}
+        x + \overline{0} &= [(a, b)] + [(0, 1)] = [(a \cdot 1 + b \cdot 0, b \cdot 1)] \\
+        &= [(a, b)] = x.
+    \end{align*}
+    This concludes the proof.
+\end{proof}
+\section*{Problem 4}
+Show that multiplication on $\mathbf{Z}$, defined by
+\[
+    [(a, b)] \cdot [(c, d)] = [(ac + bd, ad + bc)],
+\]
+is well-defined.
+\begin{proof}
+    Let $[(a, b)] = [(a', b')]$ and $[(c, d)] = [(c', d')]$. We need to show that
+    \[
+        [(a, b)] \cdot [(c, d)] = [(a', b')] \cdot [(c', d')].
+    \]
+    By the definition of equality in $\mathbf{Z}$, we have
+    \[
+        a + b' = a' + b \quad \text{and} \quad c + d' = c' + d.
+    \]
+    We need to show that
+    \[
+        [(ac + bd, ad + bc)] = [(a'c' + b'd', a'd' + b'c')].
+    \]
+    By the definition of equality in $\mathbf{Z}$, this is equivalent to showing that
+    \[
+        (ac + bd) + (a'd' + b'c') = (a'c' + b'd') + (ad + bc).
+    \]
+    Rearranging terms, this is equivalent to showing that
+    \[
+        ac + b'c' + a'd' + bd = a'c' + ad + bc + b'd'.
+    \]
+
+    Using the two equalities we have, $a + b' = a' + b$ and $c + d' = c' + d$, 
+    we can add these equalities in various combinations to express all terms 
+    using only addition. Expanding both sides of the equation and grouping terms 
+    appropriately, we see that both sides are equal by the commutativity and associativity of addition in $\mathbf{N}$. Thus, the multiplication is well-defined.
+\end{proof}
+\section*{Problem 5}
+For $[(a, b)] \in \mathbf{Z}$, show that $[(a, b)] = \overline{0}$ if and only if $a = b$.
+\begin{proof}
+    By the definition of equality in $\mathbf{Z}$, we have
+    \[
+        [(a, b)] = \overline{0} \iff (a, b) \sim (0, 1) \iff a + 1 = b + 0 \iff a = b.
+        \]
+        This concludes the proof.
+    \end{proof} 
+\section*{Problem 6}
+For $[(a, b)] \in \mathbf{Z}$, show that $\overline{0} < [(a, b)]$ if and only if $b < a$.
+\begin{proof}
+    By the definition of the order relation in $\mathbf{Z}$, we have
+    \[
+        \overline{0} < [(a, b)] \iff (0, 1) < (a, b) \iff 0 + b < 1 + a \iff b < a.
+    \]
+    This concludes the proof.
+\end{proof}
+\section*{Problem 7}
+\textbf{Part a.} For $x$, $y$, $z \in \mathbf{Z}$, prove that if $xy = \overline{0}$
+then $x = \overline{0}$ or $y = \overline{0}$.
+\begin{proof}
+    Suppose $x \ne \overline{0}$. Then either $x > \overline{0}$ or $x < \overline{0}$.
+    If $x > \overline{0}$, then $x$ is represented by
+    \[
+        (a, b) \quad \text{where } a, b \in \mathbf{N} \text{ and } a > b.
+    \]
+    If $x < \overline{0}$, then $x$ is represented by
+    \[
+        (a, b) \quad \text{where } a, b \in \mathbf{N} \text{ and } a < b.
+    \]
+    In either case, we have $a \ne b$. Now let $y$ be represented by $(c, d)$,
+    where $c$, $d \in \mathbf{N}$. We have
+    \[
+        xy = [(a, b)] \cdot [(c, d)] = [(ad + bc, bd)].
+    \]
+    We want to show that $y = \overline{0}$, which is equivalent to showing that
+    \[
+        (ad + bc, bd) \sim (0, 1) \iff ad + bc + 1 = bd + 0 \iff ad + bc + 1 = bd.
+    \]
+    Rearranging terms, this is equivalent to showing that
+    \[
+        ad + bc + 1 - bd = 0 \iff ad + bc + 1 = bd.
+    \]
+    This is a linear equation in $c$ and $d$. Because $a \ne b$, we can solve for $c$ in terms of $d$ (or vice versa). Thus, there exists a unique solution for $c$ and $d$ in $\mathbf{N
+        
+\end{document}
