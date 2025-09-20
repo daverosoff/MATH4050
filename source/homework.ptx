@@ -215,4 +215,160 @@
       </exercise>
     </exercises>
   </subsection>
+  <subsection xml:id="subsec-hw-03">
+    <title>HW 03</title>
+    <p>
+      Note: These statements should be proved using only the definitions and
+      properties presented in the lecture notes, as well as the additional
+      definitions below.
+    </p>
+    <p>
+      Consider a subset <m>A</m> of <m>\R</m>. We say that <m>M \in \R</m>
+      is a lower bound for <m>A</m> if <m>x \geq M</m> for all 
+      <m>x \in A</m>. We say that <m>M</m> is a greatest lower bound
+      for <m>A</m> if, for all lower bounds <m>M'</m> of <m>A</m>, we 
+      have <m>M \geq M'</m>.
+    </p>
+    <p>
+      Greatest lower bounds are unique when they exist, and every nonempty
+      subset of <m>\R</m> that has a lower bound has a greatest lower bound.
+      You can assume all this without proof for the rest of the HW 03.
+    </p>
+    <p>
+      The greatest lower bound of a set <m>A</m> (provided it exists) 
+      is also called the infimum of <m>A</m> and written <m>\inf{(A)}</m>.
+    </p>
+    <exercises xml:id="exercises-hw-03">
+      <exercise>
+        <statement>
+          <p>
+            Let <m>x, y \in \R</m>. Prove that if <m>x, y \gt 0</m>, then
+            <m>x + y \gt 0</m> and <m>xy \gt 0</m>. 
+          </p>
+        </statement>
+        <hint>
+          <p>
+            Use the definition of a real number as an equivalence class of
+            Cauchy sequences of rational numbers.
+          </p>
+        </hint>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Let <m>a_n</m> be a Cauchy sequence of rational numbers and let
+            <m>x \in \R</m>. Show that if <m>a_n \leq x</m> for all <m>n \in \N</m>, 
+            then <m>[a_n] \leq x</m>. 
+          </p>
+        </statement>
+        <hint>
+          <p>
+            Use a proof by contradiction. If <m>[a_n] \gt x</m>, then there
+            exists <m>r \in \Q</m> such that <m>[a_n] \gt r \gt x</m> (why?).
+          </p>
+        </hint>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Suppose <m>B \subseteq A \subseteq \R</m> are nonempty and that
+            <m>A</m> has an upper bound. 
+            <ol marker="(a)">
+              <li>
+                <p>
+                  Show that <m>B</m> has an upper bound.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Show that <m>\sup{(B)} \leq \sup{(A)}</m>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Suppose <m>A, B \subseteq \R</m> each have an upper bound.
+            <ol marker="(a)">
+              <li>
+                <p>
+                  Show <m>A \cup B</m> has an upper bound.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Find a formula for <m>\sup{(A \cup B)}</m>. Prove your result.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Let <m>A \subseteq \R</m> be nonempty and suppose <m>A</m> has an
+            upper bound. Let <m>M = \sup{(A)}</m> and define the set <m>-A</m>
+            by <me>
+              -A = \{ -x : x \in A \}
+            </me>.
+            Prove that <m>-M = \inf{(-A)}</m>.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Suppose that <m>A \subseteq \R</m> is nonempty. 
+            Show that if <m>M</m> is a lower bound for <m>A</m>, then
+            <m>M = \inf{(A)}</m> if and only if for every real number
+            <m>\eps \gt 0</m>, there is an <m>a \in A</m> such that 
+            <m>a \lt M + \eps</m>.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Find the supremum and infimum of the set <me>
+              \left\{ \frac{m}{m+n} : m, n \in \N \right\}
+            </me>. Prove your results.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            <ol marker="(a)">
+              <li>
+                <p>
+                  Let <m>\mathbf{I} = \{ x \in \R : x \not\in \Q \}</m> be the
+                  set of <em>irrational</em> numbers. Show that if <m>x \in \Q</m>
+                  and <m>y \in \mathbf{I}</m>, then <m>x + y \in \mathbf{I}</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Use the previous part and the density of <m>\Q</m> in <m>\R</m>
+                  to prove that <m>I</m> is also dense in <m>\R</m>. That is, if
+                  <m>x \lt y</m> for <m>x, y \in \R</m>, prove that there exists
+                  <m>t \in \mathbf{I}</m> such that <m>x \lt t \lt y</m>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+        <hint>
+          <p>
+            Apply the density result to <m>x - \sqrt{2} \lt y - \sqrt{2}</m>.
+            You may assume <m>\sqrt{2} \in \mathbf{I}</m>.
+          </p>
+        </hint>
+      </exercise>
+    </exercises>
+  </subsection>
 </section>
