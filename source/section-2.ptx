@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="sec-the-real-number-system">
+    <title>The real number system</title>
+    <subsection xml:id="subsec-properties-of-reals">
+        <title>Properties of <m>\R</m></title>
+        <theorem xml:id="thm-archimedean-prop-reals">
+            <statement>
+                <p>
+                    Let <m>x, y \gt 0</m> be real numbers. Then there is a 
+                    natural number <m>N</m> such that <m>Nx \gt y</m>.
+                </p>
+            </statement>
+        </theorem>
+        <corollary xml:id="cor-rats-between-nats">
+            <statement>
+                <p>
+                    For each <m>x \in \R</m> there is a unique <m>N \in \Z</m>
+                    such that
+                    <me>
+                        N \leq x \lt N+1
+                    </me>.
+                </p>
+            </statement>
+            <proof>
+                <p>
+                    By <xref ref="thm-archimedean-prop-reals"/>, there exists
+                    <m>a \in \Z</m> such that <m>a \gt x</m>. Therefore, the
+                    set
+                    <me>
+                        A = \{ a \in \Z : a \gt x \}
+                    </me>
+                    is nonempty. We observe that, by the well-ordering principle
+                    <xref ref="thm-well-ordering" text="custom"/>
+                </p>
+            </proof>
+        </corollary>
+    </subsection>
+</section>
