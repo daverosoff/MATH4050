@@ -649,11 +649,308 @@ var ptx_lunr_docs = [
   "body": "     For every , exactly one of the following is true: , , or .    We have if and only if .    If then and .    If then .    Suppose that is a Cauchy sequence and for for some . Then .       To prove (a), , then and there exist and as in . Since is Cauchy, there are two possibilities. There is some such that either   for all , we have , or    for all , we have .   Indeed, if this isn't the case, then there exist such that and Then, in either case, , which contradicts being Cauchy. In case 1 we have and in case 2 we have .  To prove (e), we suppose that . Then there is a rational number and such that and for all , for some . Now, for , we then have so that , contradicting the assumption that . Therefore .   "
 },
 {
+  "id": "sec-the-real-number-system",
+  "level": "1",
+  "url": "sec-the-real-number-system.html",
+  "type": "Section",
+  "number": "2",
+  "title": "The real number system",
+  "body": " The real number system   Properties of    Let be real numbers. Then there is a natural number such that .      For each there is a unique such that .    By , there exists such that . Therefore, the set is nonempty. We observe that, by the well-ordering principle ( ) this set has a smallest element. (Strictly speaking, the well-ordering principle doesn't apply to the set , but we can easily prove by contradiction that has a least element using the well-ordering principle.) Call this smallest element .  Now let . Then , because . We also have because if not, then , which means , which would contradict the minimality of . This shows that .  The proof of uniqueness is omitted.      For any real numbers , there is a rational number with .    Choose so that . This is possible by the Archimedean property of the real numbers ( ). Then By the corollary above ( ), there is an integer such that Dividing this inequality by gives Since , we have and hence Thus is a rational number such that .      Let . A real number is an upper bound for provided that for every , . If such an exists, we say that is bounded above .     Let . Then is an upper bound for , and in fact any real number is an upper bound for . Thus is bounded above.  However, is not an upper bound for since but .    The set is not bounded above. To see this, let be arbitrary. By the Archimedean property ( ), there is a natural number such that . Since , this shows that is not an upper bound for . Thus is not bounded above.     We say that a real number is the least upper bound of a set provided that is an upper bound for and that if is any upper bound for , then .      Suppose and are both least upper bounds for a set . Then , because is an upper bound for and is a least upper bound. On the other hand, because is an upper bound for and is a least upper bound. Thus .      Every nonempty set of real numbers that is bounded above has a least upper bound.      Let be a nonempty set that is bounded above. The unique least upper bound of is called the supremum of and is denoted by .      Suppose is an upper bound for a set . Then if and only if for every there is an such that .    Suppose and let . Then , so is not an upper bound for . Therefore, there is an such that .  Conversely, suppose that for every there is an such that . We need to show that is the least upper bound for . We already know that is an upper bound for , so we need only show that if is any upper bound for , then . So let be an upper bound for . If , then let . By hypothesis, there is an such that , or equivalently, . But this contradicts the fact that is an upper bound for . Thus , and hence .        The supremum of the interval is . If there is such that , namely .    The supremum of the interval is also . If , then there is such that , for example, .   Observe that . Hence we have , but .     There is a positive real number whose square is 2.    Let . Then is nonempty (since ) and bounded above (since is an upper bound for ). By the completeness property of the real numbers ( ), has a supremum; call it . We will show that .  First suppose that . Let and compute , because (since is an upper bound for ) and . Since , we can choose so small that . This shows that , and hence . But this contradicts the fact that and . Thus is impossible.  Now suppose . Let and compute , because (since is an upper bound for ), , and . Since , we can choose so small that . This shows that , and hence . But this contradicts the fact that and . Thus is impossible.  This shows that , as required.      Let . A real number is a lower bound for provided that for every , . If such an exists, we say that is bounded below .      Let . A real number is a greatest lower bound for provided that is a lower bound for and for every lower bound of , . If such an exists, we say that has a greatest lower bound .      Let be a nonempty set that is bounded below. Then has a unique greatest lower bound.    Left to the reader.      Let be a nonempty set that is bounded below. The unique greatest lower bound of is called the infimum of and is denoted by .      Let be a lower bound for a set . Then if and only if for every there is an such that .    Left to the reader.     Let . Then is a lower bound for , and in fact . To see this, let . Then there is such that , and since , we can write for some with . Thus and .     For , let be real numbers and set . Suppose that for each , so that . Then the set .    Let . We have and is bounded above by , since for all . By , has a supremum; call it . Now fix and consider . Since , we have . Also, since is an upper bound for , we have . Thus . Since was arbitrary, we have for all , and hence . This shows that , as required.     It is necessary that the intervals be closed in order for the conclusion of the theorem to hold. For example, let . Then the intervals are nested, but their intersection is empty: , by the archimedean property ( ).     Cardinality    Two sets and are said to be equinumerous if there exists a bijection (one-to-one and onto function) . In this case, we write to denote that the sets have the same cardinality.      A set is said to be finite if there exists a natural number such that is equinumerous to the set . In this case, we write .      A set is said to be infinite if it is not finite.     The set is infinite. Indeed, if it were finite, then there would be a natural number such that is equinumerous to . This would mean that there is a bijection . But if is such a function, then setting , we have but and . This contradicts the fact that is surjective. Thus is infinite.    Define a function by . Then implies , and hence , so is injective. Also, if , then and , so is surjective. Thus is a bijection, and hence . This shows that it is possible for a set to be equinumerous to a proper subset of itself.    Let be an infinite set and let be distinct elements of . Such elements exist by the definition of infinite set. Let us show that is equinumerous to the set .  First, we can choose such that are all distinct. (If we could not do this, then would be finite.) Now define by and . Then is a bijection, and hence .     A set is said to be countable if there exists a bijection . In this case, we write to denote that is equinumerous to the natural numbers.     Define by . Then is a bijection, and hence . Thus the set of integers is countable.     A set is said to be uncountable if it is infinite and there does not exist a bijection . In this case, we write to denote that is not equinumerous to the natural numbers.      and are countable.        If and is countable, then is countable or finite.    If and are countable, then is countable.    If and are countable, then is countable.    If is countable for each , then is countable.       Proof of (3). For each , let be a bijection. Choose and set . Now define by . Let us show that is injective. So suppose that for some . Then Using the unique factorization of positive integers into primes, we have and , and . But is injective. Thus and is injective.     "
+},
+{
+  "id": "thm-archimedean-prop-reals",
+  "level": "2",
+  "url": "sec-the-real-number-system.html#thm-archimedean-prop-reals",
+  "type": "Theorem",
+  "number": "69",
+  "title": "",
+  "body": "  Let be real numbers. Then there is a natural number such that .   "
+},
+{
+  "id": "cor-rats-between-nats",
+  "level": "2",
+  "url": "sec-the-real-number-system.html#cor-rats-between-nats",
+  "type": "Corollary",
+  "number": "70",
+  "title": "",
+  "body": "  For each there is a unique such that .    By , there exists such that . Therefore, the set is nonempty. We observe that, by the well-ordering principle ( ) this set has a smallest element. (Strictly speaking, the well-ordering principle doesn't apply to the set , but we can easily prove by contradiction that has a least element using the well-ordering principle.) Call this smallest element .  Now let . Then , because . We also have because if not, then , which means , which would contradict the minimality of . This shows that .  The proof of uniqueness is omitted.   "
+},
+{
+  "id": "thm-rats-dense-reals",
+  "level": "2",
+  "url": "sec-the-real-number-system.html#thm-rats-dense-reals",
+  "type": "Theorem",
+  "number": "71",
+  "title": "",
+  "body": "  For any real numbers , there is a rational number with .    Choose so that . This is possible by the Archimedean property of the real numbers ( ). Then By the corollary above ( ), there is an integer such that Dividing this inequality by gives Since , we have and hence Thus is a rational number such that .   "
+},
+{
+  "id": "def-upper-bound",
+  "level": "2",
+  "url": "sec-the-real-number-system.html#def-upper-bound",
+  "type": "Definition",
+  "number": "72",
+  "title": "",
+  "body": "  Let . A real number is an upper bound for provided that for every , . If such an exists, we say that is bounded above .   "
+},
+{
+  "id": "subsec-properties-of-reals-6",
+  "level": "2",
+  "url": "sec-the-real-number-system.html#subsec-properties-of-reals-6",
+  "type": "Example",
+  "number": "73",
+  "title": "",
+  "body": " Let . Then is an upper bound for , and in fact any real number is an upper bound for . Thus is bounded above.  However, is not an upper bound for since but .  "
+},
+{
+  "id": "subsec-properties-of-reals-7",
+  "level": "2",
+  "url": "sec-the-real-number-system.html#subsec-properties-of-reals-7",
+  "type": "Example",
+  "number": "74",
+  "title": "",
+  "body": " The set is not bounded above. To see this, let be arbitrary. By the Archimedean property ( ), there is a natural number such that . Since , this shows that is not an upper bound for . Thus is not bounded above.  "
+},
+{
+  "id": "def-least-upper-bound",
+  "level": "2",
+  "url": "sec-the-real-number-system.html#def-least-upper-bound",
+  "type": "Definition",
+  "number": "75",
+  "title": "",
+  "body": "  We say that a real number is the least upper bound of a set provided that is an upper bound for and that if is any upper bound for , then .   "
+},
+{
+  "id": "lem-least-upper-bound-unique",
+  "level": "2",
+  "url": "sec-the-real-number-system.html#lem-least-upper-bound-unique",
+  "type": "Lemma",
+  "number": "76",
+  "title": "",
+  "body": "  Suppose and are both least upper bounds for a set . Then , because is an upper bound for and is a least upper bound. On the other hand, because is an upper bound for and is a least upper bound. Thus .   "
+},
+{
+  "id": "thm-reals-complete",
+  "level": "2",
+  "url": "sec-the-real-number-system.html#thm-reals-complete",
+  "type": "Theorem",
+  "number": "77",
+  "title": "",
+  "body": "  Every nonempty set of real numbers that is bounded above has a least upper bound.   "
+},
+{
+  "id": "def-supremum",
+  "level": "2",
+  "url": "sec-the-real-number-system.html#def-supremum",
+  "type": "Definition",
+  "number": "78",
+  "title": "",
+  "body": "  Let be a nonempty set that is bounded above. The unique least upper bound of is called the supremum of and is denoted by .   "
+},
+{
+  "id": "prop-supremum-property",
+  "level": "2",
+  "url": "sec-the-real-number-system.html#prop-supremum-property",
+  "type": "Proposition",
+  "number": "79",
+  "title": "",
+  "body": "  Suppose is an upper bound for a set . Then if and only if for every there is an such that .    Suppose and let . Then , so is not an upper bound for . Therefore, there is an such that .  Conversely, suppose that for every there is an such that . We need to show that is the least upper bound for . We already know that is an upper bound for , so we need only show that if is any upper bound for , then . So let be an upper bound for . If , then let . By hypothesis, there is an such that , or equivalently, . But this contradicts the fact that is an upper bound for . Thus , and hence .   "
+},
+{
+  "id": "subsec-properties-of-reals-13",
+  "level": "2",
+  "url": "sec-the-real-number-system.html#subsec-properties-of-reals-13",
+  "type": "Example",
+  "number": "80",
+  "title": "",
+  "body": "    The supremum of the interval is . If there is such that , namely .    The supremum of the interval is also . If , then there is such that , for example, .   Observe that . Hence we have , but .  "
+},
+{
+  "id": "prop-square-root-2-exists",
+  "level": "2",
+  "url": "sec-the-real-number-system.html#prop-square-root-2-exists",
+  "type": "Proposition",
+  "number": "81",
+  "title": "",
+  "body": "  There is a positive real number whose square is 2.    Let . Then is nonempty (since ) and bounded above (since is an upper bound for ). By the completeness property of the real numbers ( ), has a supremum; call it . We will show that .  First suppose that . Let and compute , because (since is an upper bound for ) and . Since , we can choose so small that . This shows that , and hence . But this contradicts the fact that and . Thus is impossible.  Now suppose . Let and compute , because (since is an upper bound for ), , and . Since , we can choose so small that . This shows that , and hence . But this contradicts the fact that and . Thus is impossible.  This shows that , as required.   "
+},
+{
+  "id": "def-lower-bound",
+  "level": "2",
+  "url": "sec-the-real-number-system.html#def-lower-bound",
+  "type": "Definition",
+  "number": "82",
+  "title": "",
+  "body": "  Let . A real number is a lower bound for provided that for every , . If such an exists, we say that is bounded below .   "
+},
+{
+  "id": "def-greatest-lower-bound",
+  "level": "2",
+  "url": "sec-the-real-number-system.html#def-greatest-lower-bound",
+  "type": "Definition",
+  "number": "83",
+  "title": "",
+  "body": "  Let . A real number is a greatest lower bound for provided that is a lower bound for and for every lower bound of , . If such an exists, we say that has a greatest lower bound .   "
+},
+{
+  "id": "prop-greatest-lower-bound-unique",
+  "level": "2",
+  "url": "sec-the-real-number-system.html#prop-greatest-lower-bound-unique",
+  "type": "Proposition",
+  "number": "84",
+  "title": "",
+  "body": "  Let be a nonempty set that is bounded below. Then has a unique greatest lower bound.    Left to the reader.   "
+},
+{
+  "id": "def-infimum",
+  "level": "2",
+  "url": "sec-the-real-number-system.html#def-infimum",
+  "type": "Definition",
+  "number": "85",
+  "title": "",
+  "body": "  Let be a nonempty set that is bounded below. The unique greatest lower bound of is called the infimum of and is denoted by .   "
+},
+{
+  "id": "prop-infimum-property",
+  "level": "2",
+  "url": "sec-the-real-number-system.html#prop-infimum-property",
+  "type": "Proposition",
+  "number": "86",
+  "title": "",
+  "body": "  Let be a lower bound for a set . Then if and only if for every there is an such that .    Left to the reader.   "
+},
+{
+  "id": "subsec-properties-of-reals-20",
+  "level": "2",
+  "url": "sec-the-real-number-system.html#subsec-properties-of-reals-20",
+  "type": "Example",
+  "number": "87",
+  "title": "",
+  "body": " Let . Then is a lower bound for , and in fact . To see this, let . Then there is such that , and since , we can write for some with . Thus and .  "
+},
+{
+  "id": "thm-nested-interval-property",
+  "level": "2",
+  "url": "sec-the-real-number-system.html#thm-nested-interval-property",
+  "type": "Theorem",
+  "number": "88",
+  "title": "",
+  "body": "  For , let be real numbers and set . Suppose that for each , so that . Then the set .    Let . We have and is bounded above by , since for all . By , has a supremum; call it . Now fix and consider . Since , we have . Also, since is an upper bound for , we have . Thus . Since was arbitrary, we have for all , and hence . This shows that , as required.   "
+},
+{
+  "id": "subsec-properties-of-reals-22",
+  "level": "2",
+  "url": "sec-the-real-number-system.html#subsec-properties-of-reals-22",
+  "type": "Example",
+  "number": "89",
+  "title": "",
+  "body": " It is necessary that the intervals be closed in order for the conclusion of the theorem to hold. For example, let . Then the intervals are nested, but their intersection is empty: , by the archimedean property ( ).  "
+},
+{
+  "id": "def-equinumerous",
+  "level": "2",
+  "url": "sec-the-real-number-system.html#def-equinumerous",
+  "type": "Definition",
+  "number": "90",
+  "title": "",
+  "body": "  Two sets and are said to be equinumerous if there exists a bijection (one-to-one and onto function) . In this case, we write to denote that the sets have the same cardinality.   "
+},
+{
+  "id": "def-finite-set",
+  "level": "2",
+  "url": "sec-the-real-number-system.html#def-finite-set",
+  "type": "Definition",
+  "number": "91",
+  "title": "",
+  "body": "  A set is said to be finite if there exists a natural number such that is equinumerous to the set . In this case, we write .   "
+},
+{
+  "id": "def-infinite-set",
+  "level": "2",
+  "url": "sec-the-real-number-system.html#def-infinite-set",
+  "type": "Definition",
+  "number": "92",
+  "title": "",
+  "body": "  A set is said to be infinite if it is not finite.   "
+},
+{
+  "id": "subsec-cardinality-5",
+  "level": "2",
+  "url": "sec-the-real-number-system.html#subsec-cardinality-5",
+  "type": "Example",
+  "number": "93",
+  "title": "",
+  "body": " The set is infinite. Indeed, if it were finite, then there would be a natural number such that is equinumerous to . This would mean that there is a bijection . But if is such a function, then setting , we have but and . This contradicts the fact that is surjective. Thus is infinite.  "
+},
+{
+  "id": "subsec-cardinality-6",
+  "level": "2",
+  "url": "sec-the-real-number-system.html#subsec-cardinality-6",
+  "type": "Example",
+  "number": "94",
+  "title": "",
+  "body": " Define a function by . Then implies , and hence , so is injective. Also, if , then and , so is surjective. Thus is a bijection, and hence . This shows that it is possible for a set to be equinumerous to a proper subset of itself.  "
+},
+{
+  "id": "subsec-cardinality-7",
+  "level": "2",
+  "url": "sec-the-real-number-system.html#subsec-cardinality-7",
+  "type": "Example",
+  "number": "95",
+  "title": "",
+  "body": " Let be an infinite set and let be distinct elements of . Such elements exist by the definition of infinite set. Let us show that is equinumerous to the set .  First, we can choose such that are all distinct. (If we could not do this, then would be finite.) Now define by and . Then is a bijection, and hence .  "
+},
+{
+  "id": "def-countable-set",
+  "level": "2",
+  "url": "sec-the-real-number-system.html#def-countable-set",
+  "type": "Definition",
+  "number": "96",
+  "title": "",
+  "body": "  A set is said to be countable if there exists a bijection . In this case, we write to denote that is equinumerous to the natural numbers.   "
+},
+{
+  "id": "subsec-cardinality-9",
+  "level": "2",
+  "url": "sec-the-real-number-system.html#subsec-cardinality-9",
+  "type": "Example",
+  "number": "97",
+  "title": "",
+  "body": " Define by . Then is a bijection, and hence . Thus the set of integers is countable.  "
+},
+{
+  "id": "def-uncountable-set",
+  "level": "2",
+  "url": "sec-the-real-number-system.html#def-uncountable-set",
+  "type": "Definition",
+  "number": "98",
+  "title": "",
+  "body": "  A set is said to be uncountable if it is infinite and there does not exist a bijection . In this case, we write to denote that is not equinumerous to the natural numbers.   "
+},
+{
+  "id": "subsec-cardinality-11",
+  "level": "2",
+  "url": "sec-the-real-number-system.html#subsec-cardinality-11",
+  "type": "Example",
+  "number": "99",
+  "title": "",
+  "body": "  and are countable.  "
+},
+{
+  "id": "thm-countable-properties",
+  "level": "2",
+  "url": "sec-the-real-number-system.html#thm-countable-properties",
+  "type": "Theorem",
+  "number": "100",
+  "title": "",
+  "body": "     If and is countable, then is countable or finite.    If and are countable, then is countable.    If and are countable, then is countable.    If is countable for each , then is countable.       Proof of (3). For each , let be a bijection. Choose and set . Now define by . Let us show that is injective. So suppose that for some . Then Using the unique factorization of positive integers into primes, we have and , and . But is injective. Thus and is injective.   "
+},
+{
   "id": "homework",
   "level": "1",
   "url": "homework.html",
   "type": "Section",
-  "number": "2",
+  "number": "3",
   "title": "Homework assignments",
   "body": " Homework assignments   HW 01  Note: These statements should be proved using only the definitions and properties presented in the lecture notes.   Show that, for all , the following are true.   If , then .    If , then .    We have if and only if .          Prove that for all .    Use to prove that for all .       Prove the following identities hold for all . You may freely use any corresponding properties of .                     Show that multiplication in , defined by is well-defined.    For , show that if and only if .    For , show that if and only if .    For , prove the following.   If then or . Hint: Suppose and split into cases and . Use the results of previous problems.    If and , then .       For , we write if either or . Prove that is a partial order . That is, prove the following are true for all .        If and , then     If and , then    (For the last two parts you will probably want to divide into cases.)       HW 02  Note: These statements should be proved using only the definitions and properties presented in the lecture notes.     Show that the equivalence relation of is an equivalence relation.      Prove .    A rational number satisfies exactly one of , , or , so divide into cases based on these.      Prove that if , then there exists with . You may use any of the standard properties of the relation on .      Prove that for all .      Prove the result of .      Use the Triangle Inequality to prove the Reverse Triangle Inequality .      If and are Cauchy sequences of rational numbers, prove that the sequence is also Cauchy.       HW 03  Note: These statements should be proved using only the definitions and properties presented in the lecture notes, as well as the additional definitions below.  Consider a subset of . We say that is a lower bound for if for all . We say that is a greatest lower bound for if, for all lower bounds of , we have .  Greatest lower bounds are unique when they exist, and every nonempty subset of that has a lower bound has a greatest lower bound. You can assume all this without proof for the rest of the HW 03.  The greatest lower bound of a set (provided it exists) is also called the infimum of and written .     Let . Prove that if , then and .    Use the definition of a real number as an equivalence class of Cauchy sequences of rational numbers.      Let be a Cauchy sequence of rational numbers and let . Show that if for all , then .    Use a proof by contradiction. If , then there exists such that (why?).      Suppose are nonempty and that has an upper bound.   Show that has an upper bound.    Show that .         Suppose each have an upper bound.   Show has an upper bound.    Find a formula for . Prove your result.         Let be nonempty and suppose has an upper bound. Let and define the set by . Prove that .      Suppose that is nonempty. Show that if is a lower bound for , then if and only if for every real number , there is an such that .      Find the supremum and infimum of the set . Prove your results.         Let be the set of irrational numbers. Show that if and , then .    Use the previous part and the density of in to prove that is also dense in . That is, if for , prove that there exists such that .       Apply the density result to . You may assume .      "
 },
@@ -662,7 +959,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "homework.html#subsec-hw-02-3-1",
   "type": "Exercise",
-  "number": "2.2.1",
+  "number": "3.2.1",
   "title": "",
   "body": "  Show that the equivalence relation of is an equivalence relation.   "
 },
@@ -671,7 +968,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "homework.html#subsec-hw-02-3-2",
   "type": "Exercise",
-  "number": "2.2.2",
+  "number": "3.2.2",
   "title": "",
   "body": "  Prove .    A rational number satisfies exactly one of , , or , so divide into cases based on these.   "
 },
@@ -680,7 +977,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "homework.html#subsec-hw-02-3-3",
   "type": "Exercise",
-  "number": "2.2.3",
+  "number": "3.2.3",
   "title": "",
   "body": "  Prove that if , then there exists with . You may use any of the standard properties of the relation on .   "
 },
@@ -689,7 +986,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "homework.html#subsec-hw-02-3-4",
   "type": "Exercise",
-  "number": "2.2.4",
+  "number": "3.2.4",
   "title": "",
   "body": "  Prove that for all .   "
 },
@@ -698,7 +995,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "homework.html#subsec-hw-02-3-5",
   "type": "Exercise",
-  "number": "2.2.5",
+  "number": "3.2.5",
   "title": "",
   "body": "  Prove the result of .   "
 },
@@ -707,7 +1004,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "homework.html#subsec-hw-02-3-6",
   "type": "Exercise",
-  "number": "2.2.6",
+  "number": "3.2.6",
   "title": "",
   "body": "  Use the Triangle Inequality to prove the Reverse Triangle Inequality .   "
 },
@@ -716,7 +1013,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "homework.html#subsec-hw-02-3-7",
   "type": "Exercise",
-  "number": "2.2.7",
+  "number": "3.2.7",
   "title": "",
   "body": "  If and are Cauchy sequences of rational numbers, prove that the sequence is also Cauchy.   "
 },
@@ -725,7 +1022,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "homework.html#exercises-hw-03-1",
   "type": "Exercise",
-  "number": "2.3.1",
+  "number": "3.3.1",
   "title": "",
   "body": "  Let . Prove that if , then and .    Use the definition of a real number as an equivalence class of Cauchy sequences of rational numbers.   "
 },
@@ -734,7 +1031,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "homework.html#exercises-hw-03-2",
   "type": "Exercise",
-  "number": "2.3.2",
+  "number": "3.3.2",
   "title": "",
   "body": "  Let be a Cauchy sequence of rational numbers and let . Show that if for all , then .    Use a proof by contradiction. If , then there exists such that (why?).   "
 },
@@ -743,7 +1040,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "homework.html#exercises-hw-03-3",
   "type": "Exercise",
-  "number": "2.3.3",
+  "number": "3.3.3",
   "title": "",
   "body": "  Suppose are nonempty and that has an upper bound.   Show that has an upper bound.    Show that .      "
 },
@@ -752,7 +1049,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "homework.html#exercises-hw-03-4",
   "type": "Exercise",
-  "number": "2.3.4",
+  "number": "3.3.4",
   "title": "",
   "body": "  Suppose each have an upper bound.   Show has an upper bound.    Find a formula for . Prove your result.      "
 },
@@ -761,7 +1058,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "homework.html#exercises-hw-03-5",
   "type": "Exercise",
-  "number": "2.3.5",
+  "number": "3.3.5",
   "title": "",
   "body": "  Let be nonempty and suppose has an upper bound. Let and define the set by . Prove that .   "
 },
@@ -770,7 +1067,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "homework.html#exercises-hw-03-6",
   "type": "Exercise",
-  "number": "2.3.6",
+  "number": "3.3.6",
   "title": "",
   "body": "  Suppose that is nonempty. Show that if is a lower bound for , then if and only if for every real number , there is an such that .   "
 },
@@ -779,7 +1076,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "homework.html#exercises-hw-03-7",
   "type": "Exercise",
-  "number": "2.3.7",
+  "number": "3.3.7",
   "title": "",
   "body": "  Find the supremum and infimum of the set . Prove your results.   "
 },
@@ -788,7 +1085,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "homework.html#exercises-hw-03-8",
   "type": "Exercise",
-  "number": "2.3.8",
+  "number": "3.3.8",
   "title": "",
   "body": "     Let be the set of irrational numbers. Show that if and , then .    Use the previous part and the density of in to prove that is also dense in . That is, if for , prove that there exists such that .       Apply the density result to . You may assume .   "
 }
