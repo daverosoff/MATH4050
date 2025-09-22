@@ -395,5 +395,187 @@
             </p>
         </example>
     </subsection>
+    <subsection xml:id="subsec-cardinality">
+        <title>Cardinality</title>
+        <definition xml:id="def-equinumerous">
+            <statement>
+                <p>
+                    Two sets <m>A</m> and <m>B</m> are said to be <em>equinumerous</em>
+                    if there exists a bijection (one-to-one and onto function)
+                    <m>f \colon A \to B</m>. In this case, we write <m>\abs{A} = \abs{B}</m> to denote
+                    that the sets have the same cardinality.
+                </p>
+            </statement>
+        </definition>
+        <definition xml:id="def-finite-set">
+            <statement>
+                <p>
+                    A set <m>A</m> is said to be <em>finite</em> if there exists a natural number
+                    <m>n \in \N</m> such that <m>A</m> is equinumerous to the set
+                    <m>\{ 1, 2, \ldots, n \}</m>. In this case, we write <m>\abs{A} = n</m>.
+                </p>
+            </statement>
+        </definition>
+        <definition xml:id="def-infinite-set">
+            <statement>
+                <p>
+                    A set <m>A</m> is said to be <em>infinite</em> if it is not finite.
+                </p>
+            </statement>
+        </definition>
+        <example>
+            <p>
+                The set <m>\N</m> is infinite. Indeed, if it were finite, then there would
+                be a natural number <m>n</m> such that <m>\N</m> is equinumerous to
+                <m>\{ 1, 2, \ldots, n \}</m>. This would mean that there is a bijection
+                <m>f \colon \{ 1, 2, \ldots, n \} \to \N</m>. But if <m>f</m>
+                is such a function, then setting <me>
+                    M = max{(f(1), f(2), \ldots, f(n))}
+                </me>, we have <m>M \in \N</m> but <m>M + 1 \in \N</m> and
+                <m>M + 1 \not\in \{ f(1), f(2), \ldots, f(n) \}</m>. This
+                contradicts the fact that <m>f</m> is surjective. Thus <m>\N</m> is infinite.
+            </p>
+        </example>
+        <example>
+            <p>
+                Define a function <m>f \colon \N \to \N \setminus \{1\}</m> by
+                <me>
+                    f(n) = n + 1
+                </me>. Then <m>f(m) = f(n)</m> implies <m>m + 1 = n + 1</m>, and hence
+                <m>m = n</m>, so <m>f</m> is injective. Also, if <m>y \in \N \setminus \{1\}</m>,
+                then <m>y - 1 \in \N</m> and <m>f(y - 1) = y</m>, so <m>f</m> is surjective. Thus
+                <m>f</m> is a bijection, and hence <m>\abs{\N} = \abs{\N \setminus \{1\}}</m>.
+                This shows that it is possible for a set to be equinumerous to a proper subset of itself.
+            </p>
+        </example>
+        <example>
+            <p>
+                Let <m>A</m> be an infinite set and let 
+                <me>
+                    a_1, a_2, a_3, \ldots, a_n \in A
+                </me>
+                be distinct elements of <m>A</m>. Such elements exist by the
+                definition of infinite set. Let us show that 
+                <m>A</m> is equinumerous to the set 
+                <m>A \setminus \{ a_1, \ldots, a_n \}</m>.
+            </p>
+            <p>
+                First, we can choose <m>a_{n+1}, a_{n+2}, \ldots \in A</m> such that
+                <me>
+                    a_1, a_2, \ldots, a_n, a_{n+1}, a_{n+2}, \ldots
+                </me>
+                are all distinct. (If we could not do this, then <m>A</m> would be finite.)
+                Now define <m>f \colon A \to A \setminus \{ a_1, \ldots, a_n \}</m> by
+                <me>
+                    f(a_i) = a_{i+n} \text{ for } i = 1, 2, \ldots
+                </me>
+                and <me>
+                    f(x) = x \text{ for } x \in A \setminus \{ a_1, a_2, \ldots \}
+                </me>.
+                Then <m>f</m> is a bijection, and hence
+                <m>\abs{A} = \abs{A \setminus \{ a_1, \ldots, a_n \}}</m>.  
+            </p>
+        </example>
+        <definition xml:id="def-countable-set">
+            <statement>
+                <p>
+                    A set <m>A</m> is said to be <em>countable</em> if it is
+                    equinumerous with <m>\N</m>. 
+                    In other words, <m>A</m> is countable if
+                    <m>\abs{A} = \abs{\N}</m>.
+                </p>
+            </statement>
+        </definition>
+        <example>
+            <p>
+                Define <m>f \colon \N \to \Z</m> by
+                <me>
+                    f(n) = \begin{cases}
+                        -\frac{n}{2}, \amp \text{if $n$ is even} \\
+                        \frac{n-1}{2}, \amp \text{if $n$ is odd}
+                    \end{cases}
+                </me>.
+                Then <m>f</m> is a bijection, and hence <m>\abs{\N} = \abs{\Z}</m>.
+                Thus the set of integers is countable.
+            </p>
+        </example>
+        <definition xml:id="def-uncountable-set">
+            <statement>
+                <p>
+                    A set <m>A</m> is said to be <em>uncountable</em> 
+                    if it is infinite and it is not equinumerous with <m>\N</m>.
+                    In turns out that with a little goodwill this is enough
+                    to prove that <m>\abs{A} \gt \abs{\N}</m>.
+                </p>
+            </statement>
+        </definition>
+        <example>
+            <p>
+                <m>\Z</m> and <m>\N \setminus \{ a_1, \ldots, a_n \}</m>
+                are countable.
+            </p>
+        </example>
+        <theorem xml:id="thm-countable-properties">
+            <statement>
+                <p>
+                    <ol marker="1.">
+                        <li>
+                            <p>
+                                If <m>A \subseteq B</m> and <m>B</m> is countable, then
+                                <m>A</m> is countable or finite.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                If <m>A</m> and <m>B</m> are countable, then
+                                <m>A \times B</m> is countable.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                If <m>A</m> and <m>B</m> are countable, then
+                                <m>A \cup B</m> is countable.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                If <m>A_n</m> is countable for each <m>n \in \N</m>,
+                                then <m>\bigcup_{n=1}^\infty A_n</m> is countable.
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+            </statement>
+            <proof>
+                <p>
+                    Proof of (3). For each <m>n \in \N</m>, let 
+                    <me>
+                        f_n \colon A_n \to \N
+                    </me>
+                    be a bijection. Choose <m>x \in \bigcup_{n=1}^\infty A_n</m>
+                    and set <m>n_x = \min \{ k \in \N : x \in A_k \}</m>. Now
+                    define
+                    <me>
+                        f \colon \bigcup_{n=1}^\infty A_n \to \N \times \N
+                    </me>
+                    by 
+                    <me>
+                        f(x) = 2^{n_x} 3^{f_{n_x}(x)}
+                    </me>. Let us show that <m>f</m> is injective. So suppose that
+                    <m>f(x) = f(y)</m> for some <m>x, y \in \bigcup_{n=1}^\infty A_n</m>.
+                    Then
+
+                    <me>
+                        2^{n_x} 3^{f_{n_x}(x)} = 2^{n_y} 3^{f_{n_y}(y)}.
+                    </me>
+                    Using the unique factorization of positive integers into
+                    primes, we have <m>n_x = n_y</m> and <m>f_{n_x}(x) = f_{n_y}(y)</m>,
+                    and <m>f_{n_x}(x) = f_{n_x}(y)</m>. 
+                    But <m>f_{n_x}</m> is injective.
+                    Thus <m>x = y</m> and <m>f</m> is injective.
+                </p>
+            </proof>
+        </theorem>
+        
     </subsection>
 </section>
