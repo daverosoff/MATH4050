@@ -23,6 +23,7 @@
 
     <xi:include href="./introduction.ptx" />
     <xi:include href="./section-1.ptx" />
+    <xi:include href="./section-2.ptx" />
     <xi:include href="./homework.ptx" />
   </article>
 
