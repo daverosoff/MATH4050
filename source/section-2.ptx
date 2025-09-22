@@ -29,10 +29,371 @@
                     <me>
                         A = \{ a \in \Z : a \gt x \}
                     </me>
-                    is nonempty. We observe that, by the well-ordering principle
-                    <xref ref="thm-well-ordering" text="custom"/>
+                    is nonempty. We observe that, by the 
+                    well-ordering principle (<xref ref="thm-well-ordering"/>)
+                    this set has a smallest element. (Strictly speaking, the
+                    well-ordering principle doesn't apply to the set <m>A</m>,
+                    but we can easily prove by contradiction that <m>A</m> has
+                    a least element using the well-ordering principle.) Call
+                    this smallest element <m>a_0</m>.
+                </p>
+                <p>
+                    Now let <m>N = a_0 - 1</m>. Then <m>x \lt a_0 = N + 1</m>,
+                    because <m>a_0 \in A</m>. We also have <m>x \geq N</m>
+                    because if not, then <m>N \gt x</m>, which means 
+                    <m>N \in A</m>, which would contradict the minimality of
+                    <m>a_0</m>. This shows that <m>N \leq x \lt N + 1</m>.
+                </p>
+                <p>
+                    The proof of uniqueness is omitted.
                 </p>
             </proof>
         </corollary>
+        <theorem xml:id="thm-rats-dense-reals">
+            <statement>
+                <p>
+                    For any real numbers <m>x \lt y</m>, there is a rational
+                    number <m>r</m> with <m>x \lt r \lt y</m>.
+                </p>
+            </statement>
+            <proof>
+                <p>
+                    Choose <m>n \in \N</m> so that <m>n \gt \frac{1}{y-x}</m>.
+                    This is possible by the Archimedean property of the real
+                    numbers (<xref ref="thm-archimedean-prop-reals"/>). Then
+                    <me>
+                        \frac{1}{n} \lt y - x.
+                    </me>
+                    By the corollary above (<xref ref="cor-rats-between-nats"/>),
+                    there is an integer <m>m</m> such that
+                    <me>
+                        m - 1 \leq nx \lt m.
+                    </me>
+                    Dividing this inequality by <m>n</m> gives
+                    <me>
+                        \frac{m-1}{n} \leq x \lt \frac{m}{n}.
+                    </me>
+                    Since <m>\frac{1}{n} \lt y - x</m>, we have
+                    <me>
+                        x + \frac{1}{n} \lt y,
+                    </me>
+                    and hence
+                    <me>
+                        \frac{m}{n} \lt x + \frac{1}{n} \lt y.
+                    </me>
+                    Thus <m>r = \frac{m}{n}</m> is a rational number such that
+                    <m>x \lt r \lt y</m>.
+                </p>
+            </proof>
+        </theorem>
+        <definition xml:id="def-upper-bound">
+            <statement>
+                <p>
+                    Let <m>A \subseteq \R</m>. A real number <m>M</m> is an
+                    <em>upper bound</em> for <m>A</m> provided that for
+                    every <m>a \in A</m>, <m>a \leq M</m>. If such an
+                    <m>M</m> exists, we say that <m>A</m> is
+                    <em>bounded above</em>.
+                </p>
+            </statement>
+        </definition>
+        <example>
+            <p>
+                Let <m>A = [0, 1]</m>. Then <m>1</m> is an upper bound for
+                <m>A</m>, and in fact any real number <m>M \geq 1</m> is an
+                upper bound for <m>A</m>. Thus <m>A</m> is bounded above.
+            </p>
+            <p>
+                However, <m>M = \frac{1}{2}</m> is not an upper bound for
+                <m>A</m> since <m>\frac{3}{4} \in A</m> but
+                <m>\frac{3}{4} \gt \frac{1}{2}</m>.
+            </p>
+        </example>
+        <example>
+            <p>
+                The set <m>\R</m> is not bounded above. To see this, let
+                <m>M \in \R</m> be arbitrary. By the Archimedean property
+                (<xref ref="thm-archimedean-prop-reals"/>), there is a natural
+                number <m>N</m> such that <m>N \gt M</m>. Since
+                <m>N \in \R</m>, this shows that <m>M</m> is not an upper bound for
+                <m>\R</m>. Thus <m>\R</m> is not bounded above.
+            </p>
+        </example>
+        <definition xml:id="def-least-upper-bound">
+            <statement>
+                <p>
+                    We say that a real number <m>M</m> is the
+                    <em>least upper bound</em> of a set <m>A \subseteq \R</m>
+                    provided that <m>M</m> is an upper bound for <m>A</m> and
+                    that if <m>M'</m> is any upper bound for <m>A</m>, then
+                    <m>M \leq M'</m>.
+                </p>
+            </statement>
+        </definition>
+        <lemma xml:id="lem-least-upper-bound-unique">
+            <statement>
+                <p>
+                    Suppose <m>M_1</m> and <m>M_2</m> are both least upper bounds
+                    for a set <m>A \subseteq \R</m>. Then <m>M_1 \leq M_2</m>,
+                    because <m>M_2</m> is an upper bound for <m>A</m> and
+                    <m>M_1</m> is a least upper bound. On the other hand,
+                    <m>M_2 \leq M_1</m> because <m>M_1</m> is an upper bound
+                    for <m>A</m> and <m>M_2</m> is a least upper bound. Thus
+                    <m>M_1 = M_2</m>.
+                </p>
+            </statement>
+        </lemma>
+        <theorem xml:id="thm-reals-complete">
+            <statement>
+                <p>
+                    Every nonempty set of real numbers that is bounded 
+                    above has a least upper bound.
+                </p>
+            </statement>
+        </theorem>
+        <definition xml:id="def-supremum">
+            <statement>
+                <p>
+                    Let <m>A \subseteq \R</m> be a nonempty set that is bounded
+                    above. The unique least upper bound of <m>A</m> is called the
+                    <em>supremum</em> of <m>A</m> and is denoted by
+                    <m>\sup{(A)}</m>.
+                </p>
+            </statement>
+        </definition>
+        <proposition xml:id="prop-supremum-property">
+            <statement>
+                <p>
+                    Suppose <m>M \in \R</m> is an upper bound for a set
+                    <m>A \subseteq \R</m>. Then <m>M = \sup{(A)}</m> 
+                    if and only if for every <m>\eps \gt 0</m> there is
+                    an <m>a \in A</m> such that <m>M - \eps \lt a</m>.
+                </p>
+            </statement>
+            <proof>
+                <p>
+                    Suppose <m>M = \sup{(A)}</m> and let <m>\eps \gt 0</m>.
+                    Then <m>M - \eps \lt \sup{(A)}</m>, so <m>M - \eps</m> is
+                    not an upper bound for <m>A</m>. Therefore, there is
+                    an <m>a \in A</m> such that <m>M - \eps \lt a</m>.
+                </p>
+                <p>
+                    Conversely, suppose that for every <m>\eps \gt 0</m> there
+                    is an <m>a \in A</m> such that <m>M - \eps \lt a</m>.
+                    We need to show that <m>M</m> is the least upper bound
+                    for <m>A</m>. We already know that <m>M</m> is an upper
+                    bound for <m>A</m>, so we need only show that if
+                    <m>M'</m> is any upper bound for <m>A</m>, then
+                    <m>M \leq M'</m>. So let <m>M'</m> be an upper bound for
+                    <m>A</m>. If <m>M \gt M'</m>, then let
+                    <m>\eps = M - M' \gt 0</m>. By hypothesis, there is
+                    an <m>a \in A</m> such that
+                    <m>M - \eps \lt a</m>, or equivalently,
+                    <m>M' \lt a</m>. But this contradicts the fact that
+                    <m>M'</m> is an upper bound for <m>A</m>. Thus
+                    <m>M \leq M'</m>, and hence <m>M = \sup{(A)}</m>.
+                </p>
+            </proof>
+        </proposition>
+        <example>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            The supremum of the interval <m>[0, 1]</m> is <m>1</m>. If 
+                            <m>\eps \gt 0</m> there is <m>a</m> such that 
+                            <m>1 - \eps \lt a</m>,
+                            namely <m>a = 1</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The supremum of the interval <m>(0, 1)</m> is also
+                            <m>1</m>. If <m>\eps \gt 0</m>, then there is
+                            <m>a \in (0, 1)</m> such that <m>1 - \eps \lt a</m>,
+                            for example, <m>a = 1 - \frac{\eps}{2}</m>.
+                        </p>
+                    </li>
+                </ol>
+                Observe that <m>\sup{([0, 1])} = \sup{((0, 1))} = 1</m>. Hence
+                we have <m>\sup{((0, 1))} \not\in (0, 1)</m>, but
+                <m>\sup{([0, 1])} \in [0, 1]</m>.
+            </p>
+        </example>
+        <proposition xml:id="prop-square-root-2-exists">
+            <statement>
+                <p>
+                    There is a positive real number whose square is 2.
+                </p>
+            </statement>
+            <proof>
+                <p>
+                    Let <m>A = \{ x \in \R : x^2 \lt 2 \}</m>. Then <m>A</m> is
+                    nonempty (since <m>1 \in A</m>) and bounded above (since
+                    <m>2</m> is an upper bound for <m>A</m>). By the completeness
+                    property of the real numbers (<xref ref="thm-reals-complete"/>),
+                    <m>A</m> has a supremum; call it <m>x = \sup{(A)}</m>.
+                    We will show that <m>x^2 = 2</m>.
+                </p>
+                <p>
+                    First suppose that <m>x^2 \lt 2</m>. Let
+                    <m>0 \lt \eps \lt 1</m> and compute
+                    <me>
+                        (x + \eps)^2 = x^2 + 2x\eps + \eps^2 \lt x^2 + 4\eps + \eps
+                        = x^2 + 5\eps
+                    </me>,
+                    because <m>x \lt 2</m> (since <m>2</m> is an upper bound for
+                    <m>A</m>) and <m>\eps \lt 1</m>. Since <m>x^2 \lt 2</m>,
+                    we can choose <m>\eps</m> so small that
+                    <m>x^2 + 5\eps \lt 2</m>. This shows that
+                    <m>(x + \eps)^2 \lt 2</m>, and hence
+                    <m>x + \eps \in A</m>. But this contradicts the fact that
+                    <m>x = \sup{(A)}</m> and <m>\eps \gt 0</m>. Thus
+                    <m>x^2 \lt 2</m> is impossible.
+                </p>
+                <p>
+                    Now suppose <m>x^2 \gt 2</m>. Let
+                    <m>0 \lt \eps \lt 1</m> and compute
+                    <me>
+                        (x - \eps)^2 = x^2 - 2x\eps + \eps^2 
+                        \geq x^2 - 2x\eps \geq x^2 - 4\eps
+                    </me>,
+                    because <m>x \lt 2</m> (since <m>2</m> is an upper bound for
+                    <m>A</m>), <m>\eps \lt 1</m>, and <m>\eps^2 \gt 0</m>.
+                    Since <m>x^2 \gt 2</m>, we can choose <m>\eps</m> so small
+                    that <m>x^2 - 4\eps \gt 2</m>. This shows that
+                    <m>(x - \eps)^2 \gt 2</m>, and hence
+                    <m>x - \eps \not\in A</m>. But this contradicts the fact that
+                    <m>x = \sup{(A)}</m> and <m>\eps \gt 0</m>. Thus
+                    <m>x^2 \gt 2</m> is impossible.
+                </p>
+                <p>
+                    This shows that <m>x^2 = 2</m>, as required.
+                </p>
+            </proof>
+        </proposition>
+        <definition xml:id="def-lower-bound">
+            <statement>
+                <p>
+                    Let <m>A \subseteq \R</m>. A real number <m>M</m> is a
+                    <em>lower bound</em> for <m>A</m> provided that for every
+                    <m>a \in A</m>, <m>a \geq M</m>. If such an <m>M</m>
+                    exists, we say that <m>A</m> is <em>bounded below</em>.
+                </p>
+            </statement>
+        </definition>
+        <definition xml:id="def-greatest-lower-bound">
+            <statement>
+                <p>
+                    Let <m>A \subseteq \R</m>. A real number <m>m</m> is a
+                    <em>greatest lower bound</em> for <m>A</m> provided that
+                    <m>M</m> is a lower bound for <m>A</m> and for every lower
+                    bound <m>M'</m> of <m>A</m>, <m>M' \leq M</m>. If such an
+                    <m>M</m> exists, we say that <m>A</m> has a
+                    <em>greatest lower bound</em>.
+                </p>
+            </statement>
+        </definition>
+        <proposition xml:id="prop-greatest-lower-bound-unique">
+            <statement>
+                <p>
+                    Let <m>A \subseteq \R</m> be a nonempty set that is bounded below.
+                    Then <m>A</m> has a unique greatest lower bound.
+                </p>
+            </statement>
+            <proof>
+                <p>
+                    Left to the reader.
+                </p>
+            </proof>
+        </proposition>
+        <definition xml:id="def-infimum">
+            <statement>
+                <p>
+                    Let <m>A \subseteq \R</m> be a nonempty set that is bounded
+                    below. The unique greatest lower bound of <m>A</m> is called
+                    the <em>infimum</em> of <m>A</m> and is denoted by
+                    <m>\inf{(A)}</m>.
+                </p>
+            </statement>
+        </definition>
+        <proposition xml:id="prop-infimum-property">
+            <statement>
+                <p>
+                    Let <m>M \in \R</m> be a lower bound for a set
+                    <m>A \subseteq \R</m>. Then <m>M = \inf{(A)}</m> if and only if
+                    for every <m>\eps \gt 0</m> there is an <m>a \in A</m>
+                    such that <m>a \lt M + \eps</m>.
+                </p>
+            </statement>
+            <proof>
+                <p>
+                    Left to the reader.
+                </p>
+            </proof>
+        </proposition>
+        <example>
+            <p>
+                Let <m>A = \{ \frac{m}{n} : m, n \in \N, m \lt n \}</m>.
+                Then <m>0</m> is a lower bound for <m>A</m>, and in fact 
+                <m>\inf{(A)} = 0</m>. To see this, let <m>0 \lt \eps \lt 1</m>.
+                Then there is <m>r \in \Q</m> such that <m>r \lt \eps</m>, and
+                since <m>0 \lt r \lt 1</m>, we can write <m>r = \frac{m}{n}</m>
+                for some <m>m, n \in \N</m> with <m>m \lt n</m>. Thus
+                <m>r \in A</m> and <m>\inf{(A)} = 0</m>.
+            </p>
+        </example>
+        <theorem xml:id="thm-nested-interval-property">
+            <statement>
+                <p>
+                    For <m>n \in \N</m>, let <m>a_n \lt b_n</m> be real numbers
+                    and set <me>
+                        I_n = [a_n, b_n] = \{ x \in \R : a_n \leq x \leq b_n \}
+                    </me>.
+                    Suppose that <m>I_{n+1} \subset I_n</m> for each
+                    <m>n \in \N</m>, so that
+                    <me>
+                        I_1 \supset I_2 \supset I_3 \supset \ldots
+                    </me>.
+                    Then the set
+                    <me>
+                        \bigcap_{n=1}^\infty I_n \ne \varnothing
+                    </me>.
+                </p>
+            </statement>
+            <proof>
+                <p>
+                    Let <m>A = \{ a_n : n \in \N \}</m>. We have <m>A \ne
+                    \varnothing</m> and <m>A</m> is bounded above by
+                    <m>b_1</m>, since <m>a_n \leq b_n \leq b_1</m> for all
+                    <m>n \in \N</m>. By <xref ref="thm-reals-complete"/>,
+                    <m>A</m> has a supremum; call it <m>x = \sup{(A)}</m>.
+                    Now fix <m>m \in \N</m> and consider <m>I_m = [a_m, b_m]</m>.
+                    Since <m>a_m \in A</m>, we have <m>a_m \leq x</m>. Also,
+                    since <m>b_m</m> is an upper bound for <m>A</m>, we have
+                    <m>x \leq b_m</m>. Thus <m>x \in I_m</m>. Since
+                    <m>m</m> was arbitrary, we have <m>x \in I_n</m> for all
+                    <m>n \in \N</m>, and hence
+                    <me>
+                        x \in \bigcap_{n=1}^\infty I_n
+                    </me>.
+                    This shows that <m>\bigcap_{n=1}^\infty I_n \ne \varnothing</m>,
+                    as required.
+                </p>
+            </proof>
+        </theorem>
+        <example>
+            <p>
+                It is necessary that the intervals <m>I_n</m> be closed in order
+                for the conclusion of the theorem to hold. For example, let
+                <m>I_n = (0, \frac{1}{n})</m>. Then
+                the intervals <m>I_n</m> are nested, but their intersection is empty:
+                <me>
+                    \bigcap_{n=1}^\infty I_n = \varnothing
+                </me>, by the archimedean property
+                (<xref ref="thm-archimedean-prop-reals"/>).
+            </p>
+        </example>
+    </subsection>
     </subsection>
 </section>
