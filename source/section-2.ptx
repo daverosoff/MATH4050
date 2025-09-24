@@ -576,6 +576,156 @@
                 </p>
             </proof>
         </theorem>
-        
+        <example>
+            <p>
+                The set <m>\Q</m> of rational numbers is countable. To see this,
+                fix <m>m \in \N</m> and define
+                <me>
+                    A_m = \left\{ \frac{n}{m} : n \in \N \right\} \subseteq \Q
+                </me>.
+                Then <m>A_m</m> is countable because the function
+                <me>
+                    f \colon \N \to A_m, \quad f(n) = \frac{n}{m}
+                </me>
+                is a bijection. Now, define <m>-A_m</m> as
+                <me>
+                    -A_m = \left\{ -\frac{n}{m} : n \in \N \right\} \subseteq \Q
+                </me>.
+                Then <m>-A_m</m> is also countable, by a similar argument.
+                Now, observe that
+                <me>
+                    \Q = \{0\} \cup \bigcup_{m=1}^\infty (A_m \cup -A_m).
+                </me>
+                Since <m>\{0\}</m> is finite and each <m>A_m</m> and <m>-A_m</m> is countable,
+                it follows from
+                <xref ref="thm-countable-properties"/> that <m>\Q</m> is countable.
+            </p>
+        </example>
+        <theorem xml:id="thm-uncountability-reals">
+            <statement>
+                <p>
+                    The set of real numbers <m>\R</m> is uncountable.
+                </p>
+            </statement>
+            <proof>
+                <p>
+                    Suppose that <m>f \colon \N \to \R</m> is a function.
+                    We will show that <m>f</m> is not surjective, and hence
+                    that <m>\R</m> is uncountable. For each <m>n \in \N</m>,
+                    let <m>I_n = [a_n, b_n]</m> be a closed interval such that
+                    <m>I_{n+1} \subset I_n</m> and
+                    <me>
+                        I_n \cap f(\{1, 2, \ldots, n\}) = \varnothing
+                    </me>.
+                    We sketch briefly why it is possible to do this.
+                </p>
+                <p>
+                    Start with <m>I_1 = [a_1, b_1]</m>. Choose <m>a_1</m>
+                    and <m>b_1</m> so that <m>a_1 \lt b_1</m> and
+                    <m>f(1) \notin I_1</m>. Now suppose that
+                    <m>I_n = [a_n, b_n]</m> has been chosen so that
+                    <m>I_n \cap f(\{1, 2, \ldots, n\}) = \varnothing</m>.
+                    To choose <m>I_{n+1} = [a_{n+1}, b_{n+1}]</m>,
+                    first choose <m>a_{n+1}</m> and <m>b_{n+1}</m> so that
+                    <m>a_{n+1} \lt b_{n+1}</m> and <m>f(n+1) \notin I_{n+1}</m>. 
+                    Then set <m>a_{n+1} = \max(a_n, a_{n+1})</m> and
+                    <m>b_{n+1} = \min(b_n, b_{n+1})</m>. This ensures that
+                    <m>I_{n+1} \subset I_n</m> and
+                    <m>I_{n+1} \cap f(\{1, 2, \ldots, n+1\}) = \varnothing</m>.
+                </p>
+                <p>    
+                    Now, by the nested interval property
+                    (<xref ref="thm-nested-interval-property"/>),
+                    there is a point <m>x \in \bigcap_{n=1}^\infty I_n</m>.
+                    That is, <m>x \in I_n</m> for all <m>n \in \N</m>.
+                </p>
+                <p>
+                    This is enough to show that <m>f</m> is not surjective.
+                    For if <m>x = f(n)</m> for some <m>n \in \N</m>, then
+                    <m>x \in f(\{1, 2, \ldots, n\})</m>. But
+                    <m>x \in I_n</m> and <m>I_n \cap f(\{1, 2, \ldots, n\})
+                    = \varnothing</m>, so this is impossible.
+                    Thus <m>x \ne f(n)</m> for all <m>n \in \N</m>.
+                </p>
+                <p>
+                    Since <m>f</m> is not surjective, <m>x \notin f(\N)</m>.
+                    Thus <m>x</m> is an element of <m>\R</m> that is not in the image of <m>f</m>,
+                    proving that <m>f</m> is not surjective.
+                </p>
+            </proof>
+        </theorem>
+        <theorem xml:id="thm-power-set-greater-cardinality">
+            <statement>
+                <p>
+                    If <m>A</m> is and set and <m>2^A</m> is the power set of <m>A</m>,
+                    that is 
+                    <me>
+                        2^A = \{ B : B \subseteq A \}
+                    </me>,
+                    then <m>A</m> and <m>2^A</m> are not equinumerous.
+                </p>
+            </statement>
+            <proof>
+                <p>
+                    Suppose there is a bijection <m>f \colon A \to 2^A</m>.
+                    Consider the set 
+                    <me>
+                        B = \{ x \in A : x \notin f(x) \}
+                    </me>.
+                    Since <m>B \subseteq A</m>, we have <m>B \in 2^A</m>.
+                    Since <m>f</m> is surjective, there is <m>y \in A</m>
+                    such that <m>f(y) = B</m>. Now, if <m>y \in B</m>, then
+                    by the definition of <m>B</m>, <m>y \notin f(y)</m>, that is,
+                    <m>y \notin B</m>: clearly, a contradiction. 
+                </p>
+                <p>
+                    This would seem to imply that <m>y \notin B</m>, then
+                    by the definition of <m>B</m>, <m>y \in f(y)</m>, that is,
+                    <m>y \in B</m>. This contradiction shows that there is
+                    no such bijection <m>f</m>, and hence that <m>A</m> and
+                    <m>2^A</m> are not equinumerous.
+                </p>
+            </proof>
+        </theorem>
+        <example>
+            <p>
+                Let <me>
+                    A = \{ f \colon \N \to \{0, 1\} \}
+                </me>
+                be the set of all functions from the natural numbers to the 
+                set <m>\{0, 1\}</m>. Then <m>A</m> is uncountable.
+            </p>
+            <p>
+                Indeed, let's define for each <m>f \in A</m> a set
+                <me>
+                    A_f = \{ n \in \N : f(n) = 1 \} \subseteq \N
+                </me>.
+                Now define a function <m>F \colon \N \to 2^{\N}</m> by
+                <m>F(f) = A_f</m>.
+            </p>
+            <p>
+                Then <m>F</m> is injective. To see this, suppose that
+                <m>F(f) = F(g)</m> for some <m>f, g \in A</m>. Then
+                <m>A_f = A_g</m>, and hence for every <m>n \in \N</m>,
+                <m>f(n) = 1</m> if and only if <m>g(n) = 1</m>. This shows that
+                <m>f(n) = g(n)</m> for all <m>n \in \N</m>, and hence
+                <m>f = g</m>.
+            </p>
+            <p>
+                Now let <m>B \in 2^{\N}</m> and define
+                <me>
+                    g(n) = \begin{cases}
+                        0 \amp \text{if $n \notin B$} \\
+                        1 \amp \text{if $n \in B$} \\
+                    \end{cases}
+                </me>.
+                Then <m>A_g = \{ n \in \N : g(n) = 1 \} = B</m>. It follows
+                that <m>F(g) = A_g = B</m> and <m>F</m> is surjective.
+            </p>
+            <p>
+                Thus <m>F</m> is a bijection, and hence <m>\abs{A} = \abs{2^{\N}}</m>.
+                By <xref ref="thm-power-set-greater-cardinality"/>, <m>A</m> is uncountable.
+            </p>
+        </example>
     </subsection>
 </section>
