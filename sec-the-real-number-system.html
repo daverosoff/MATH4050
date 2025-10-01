@@ -100,14 +100,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.10';
+eBookConfig.runestone_version = '7.9.11';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.fea5c754ab3e056b.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.b37c97cbe7a5455b.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<script src="_static/prefix-runtime.59de9dca80a62a76.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.b37c97cbe7a5455b.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
@@ -161,6 +161,8 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list active">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-the-real-number-system.html#subsec-properties-of-reals" class="internal"><span class="codenumber">2.1</span> <span class="title">Properties of <span class="process-math">\(\R\)</span></span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-the-real-number-system.html#subsec-cardinality" class="internal"><span class="codenumber">2.2</span> <span class="title">Cardinality</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-the-real-number-system.html#subsec-sequences" class="internal"><span class="codenumber">2.3</span> <span class="title">Sequences</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-the-real-number-system.html#subsec-monotone-sequences-and-bolzano-weierstrass" class="internal"><span class="codenumber">2.4</span> <span class="title">Monotone sequences and subsequences</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -511,7 +513,7 @@ f(x) = x \text{ for } x \in A \setminus \{ a_1, a_2, \ldots \}\text{.}
 <div class="autopermalink" data-description="Example 95"><a href="#subsec-cardinality-7" title="Copy heading and permalink for Example 95" aria-label="Copy heading and permalink for Example 95">🔗</a></div></article></details><article class="definition definition-like" id="def-countable-set"><h4 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">96</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="para" id="def-countable-set-1-1">A set <span class="process-math">\(A\)</span> is said to be <em class="emphasis">countable</em> if there exists a bijection <span class="process-math">\(f \colon \N \to A\text{.}\)</span> In this case, we write <span class="process-math">\(\abs{A} = \abs{\N}\)</span> to denote that <span class="process-math">\(A\)</span> is equinumerous to the natural numbers.<div class="autopermalink" data-description="Paragraph"><a href="#def-countable-set-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="def-countable-set-1-1">A set <span class="process-math">\(A\)</span> is said to be <em class="emphasis">countable</em> if it is equinumerous with <span class="process-math">\(\N\text{.}\)</span> In other words, <span class="process-math">\(A\)</span> is countable if <span class="process-math">\(\abs{A} = \abs{\N}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def-countable-set-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Definition 96"><a href="#def-countable-set" title="Copy heading and permalink for Definition 96" aria-label="Copy heading and permalink for Definition 96">🔗</a></div></article><details id="subsec-cardinality-9" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">97</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
@@ -531,7 +533,7 @@ f(n) = \begin{cases}
 <div class="autopermalink" data-description="Example 97"><a href="#subsec-cardinality-9" title="Copy heading and permalink for Example 97" aria-label="Copy heading and permalink for Example 97">🔗</a></div></article></details><article class="definition definition-like" id="def-uncountable-set"><h4 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">98</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="para" id="def-uncountable-set-1-1">A set <span class="process-math">\(A\)</span> is said to be <em class="emphasis">uncountable</em> if it is infinite and there does not exist a bijection <span class="process-math">\(f \colon \N \to A\text{.}\)</span> In this case, we write <span class="process-math">\(\abs{A} \gt \abs{\N}\)</span> to denote that <span class="process-math">\(A\)</span> is not equinumerous to the natural numbers.<div class="autopermalink" data-description="Paragraph"><a href="#def-uncountable-set-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="def-uncountable-set-1-1">A set <span class="process-math">\(A\)</span> is said to be <em class="emphasis">uncountable</em> if it is infinite and it is not equinumerous with <span class="process-math">\(\N\text{.}\)</span> In turns out that with a little goodwill this is enough to prove that <span class="process-math">\(\abs{A} \gt \abs{\N}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def-uncountable-set-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Definition 98"><a href="#def-uncountable-set" title="Copy heading and permalink for Definition 98" aria-label="Copy heading and permalink for Definition 98">🔗</a></div></article><details id="subsec-cardinality-11" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">99</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
@@ -594,7 +596,518 @@ f(x) = 2^{n_x} 3^{f_{n_x}(x)}\text{.}
 <div class="para">Using the unique factorization of positive integers into primes, we have <span class="process-math">\(n_x = n_y\)</span> and <span class="process-math">\(f_{n_x}(x) = f_{n_y}(y)\text{,}\)</span> and <span class="process-math">\(f_{n_x}(x) = f_{n_x}(y)\text{.}\)</span> But <span class="process-math">\(f_{n_x}\)</span> is injective. Thus <span class="process-math">\(x = y\)</span> and <span class="process-math">\(f\)</span> is injective.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#thm-countable-properties-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 100.1"><a href="#thm-countable-properties-2" title="Copy heading and permalink for Proof 100.1" aria-label="Copy heading and permalink for Proof 100.1">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 2.2: Cardinality"><a href="#subsec-cardinality" title="Copy heading and permalink for Subsection 2.2: Cardinality" aria-label="Copy heading and permalink for Subsection 2.2: Cardinality">🔗</a></div></section><div class="autopermalink" data-description="Section 2: The real number system"><a href="#sec-the-real-number-system" title="Copy heading and permalink for Section 2: The real number system" aria-label="Copy heading and permalink for Section 2: The real number system">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Proof 100.1"><a href="#thm-countable-properties-2" title="Copy heading and permalink for Proof 100.1" aria-label="Copy heading and permalink for Proof 100.1">🔗</a></div></article></details><details id="subsec-cardinality-13" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">101</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="subsec-cardinality-13-1">
+<div class="para">The set <span class="process-math">\(\Q\)</span> of rational numbers is countable. To see this, fix <span class="process-math">\(m \in \N\)</span> and define</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-countable-properties.html">
+\begin{equation*}
+A_m = \left\{ \frac{n}{m} : n \in \N \right\} \subseteq \Q\text{.}
+\end{equation*}
+</div>
+<div class="para">Then <span class="process-math">\(A_m\)</span> is countable because the function</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-countable-properties.html">
+\begin{equation*}
+f \colon \N \to A_m, \quad f(n) = \frac{n}{m}
+\end{equation*}
+</div>
+<div class="para">is a bijection. Now, define <span class="process-math">\(-A_m\)</span> as</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-countable-properties.html">
+\begin{equation*}
+-A_m = \left\{ -\frac{n}{m} : n \in \N \right\} \subseteq \Q\text{.}
+\end{equation*}
+</div>
+<div class="para">Then <span class="process-math">\(-A_m\)</span> is also countable, by a similar argument. Now, observe that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-countable-properties.html">
+\begin{equation*}
+\Q = \{0\} \cup \bigcup_{m=1}^\infty (A_m \cup -A_m).
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(\{0\}\)</span> is finite and each <span class="process-math">\(A_m\)</span> and <span class="process-math">\(-A_m\)</span> is countable, it follows from <a href="sec-the-real-number-system.html#thm-countable-properties" class="xref" data-knowl="./knowl/xref/thm-countable-properties.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 100">Theorem 100</a> that <span class="process-math">\(\Q\)</span> is countable.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-cardinality-13-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 101"><a href="#subsec-cardinality-13" title="Copy heading and permalink for Example 101" aria-label="Copy heading and permalink for Example 101">🔗</a></div></article></details><article class="theorem theorem-like" id="thm-uncountability-reals"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">102</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="thm-uncountability-reals-1-1">The set of real numbers <span class="process-math">\(\R\)</span> is uncountable.<div class="autopermalink" data-description="Paragraph"><a href="#thm-uncountability-reals-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 102"><a href="#thm-uncountability-reals" title="Copy heading and permalink for Theorem 102" aria-label="Copy heading and permalink for Theorem 102">🔗</a></div></article><details id="thm-uncountability-reals-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="thm-uncountability-reals-2-1">
+<div class="para">Suppose that <span class="process-math">\(f \colon \N \to \R\)</span> is a function. We will show that <span class="process-math">\(f\)</span> is not surjective, and hence that <span class="process-math">\(\R\)</span> is uncountable. For each <span class="process-math">\(n \in \N\text{,}\)</span> let <span class="process-math">\(I_n = [a_n, b_n]\)</span> be a closed interval such that <span class="process-math">\(I_{n+1} \subset I_n\)</span> and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+I_n \cap f(\{1, 2, \ldots, n\}) = \varnothing\text{.}
+\end{equation*}
+</div>
+<div class="para">We sketch briefly why it is possible to do this.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-uncountability-reals-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="thm-uncountability-reals-2-2">Start with <span class="process-math">\(I_1 = [a_1, b_1]\text{.}\)</span> Choose <span class="process-math">\(a_1\)</span> and <span class="process-math">\(b_1\)</span> so that <span class="process-math">\(a_1 \lt b_1\)</span> and <span class="process-math">\(f(1) \notin I_1\text{.}\)</span> Now suppose that <span class="process-math">\(I_n = [a_n, b_n]\)</span> has been chosen so that <span class="process-math">\(I_n \cap f(\{1, 2, \ldots, n\}) = \varnothing\text{.}\)</span> To choose <span class="process-math">\(I_{n+1} = [a_{n+1}, b_{n+1}]\text{,}\)</span> first choose <span class="process-math">\(a_{n+1}\)</span> and <span class="process-math">\(b_{n+1}\)</span> so that <span class="process-math">\(a_{n+1} \lt b_{n+1}\)</span> and <span class="process-math">\(f(n+1) \notin I_{n+1}\text{.}\)</span> Then set <span class="process-math">\(a_{n+1} = \max(a_n, a_{n+1})\)</span> and <span class="process-math">\(b_{n+1} = \min(b_n, b_{n+1})\text{.}\)</span> This ensures that <span class="process-math">\(I_{n+1} \subset I_n\)</span> and <span class="process-math">\(I_{n+1} \cap f(\{1, 2, \ldots, n+1\}) = \varnothing\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-uncountability-reals-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="thm-uncountability-reals-2-3">Now, by the nested interval property (<a href="sec-the-real-number-system.html#thm-nested-interval-property" class="xref" data-knowl="./knowl/xref/thm-nested-interval-property.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 88">Theorem 88</a>), there is a point <span class="process-math">\(x \in \bigcap_{n=1}^\infty I_n\text{.}\)</span> That is, <span class="process-math">\(x \in I_n\)</span> for all <span class="process-math">\(n \in \N\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-uncountability-reals-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="thm-uncountability-reals-2-4">This is enough to show that <span class="process-math">\(f\)</span> is not surjective. For if <span class="process-math">\(x = f(n)\)</span> for some <span class="process-math">\(n \in \N\text{,}\)</span> then <span class="process-math">\(x \in f(\{1, 2, \ldots, n\})\text{.}\)</span> But <span class="process-math">\(x \in I_n\)</span> and <span class="process-math">\(I_n \cap f(\{1, 2, \ldots, n\})
+= \varnothing\text{,}\)</span> so this is impossible. Thus <span class="process-math">\(x \ne f(n)\)</span> for all <span class="process-math">\(n \in \N\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-uncountability-reals-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="thm-uncountability-reals-2-5">Since <span class="process-math">\(f\)</span> is not surjective, <span class="process-math">\(x \notin f(\N)\text{.}\)</span> Thus <span class="process-math">\(x\)</span> is an element of <span class="process-math">\(\R\)</span> that is not in the image of <span class="process-math">\(f\text{,}\)</span> proving that <span class="process-math">\(f\)</span> is not surjective.<div class="autopermalink" data-description="Paragraph"><a href="#thm-uncountability-reals-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 102.1"><a href="#thm-uncountability-reals-2" title="Copy heading and permalink for Proof 102.1" aria-label="Copy heading and permalink for Proof 102.1">🔗</a></div></article></details><article class="theorem theorem-like" id="thm-power-set-greater-cardinality"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">103</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para logical" id="thm-power-set-greater-cardinality-1-1">
+<div class="para">If <span class="process-math">\(A\)</span> is and set and <span class="process-math">\(2^A\)</span> is the power set of <span class="process-math">\(A\text{,}\)</span> that is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+2^A = \{ B : B \subseteq A \}\text{,}
+\end{equation*}
+</div>
+<div class="para">then <span class="process-math">\(A\)</span> and <span class="process-math">\(2^A\)</span> are not equinumerous.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-power-set-greater-cardinality-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 103"><a href="#thm-power-set-greater-cardinality" title="Copy heading and permalink for Theorem 103" aria-label="Copy heading and permalink for Theorem 103">🔗</a></div></article><details id="thm-power-set-greater-cardinality-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="thm-power-set-greater-cardinality-2-1">
+<div class="para">Suppose there is a bijection <span class="process-math">\(f \colon A \to 2^A\text{.}\)</span> Consider the set</div>
+<div class="displaymath process-math">
+\begin{equation*}
+B = \{ x \in A : x \notin f(x) \}\text{.}
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(B \subseteq A\text{,}\)</span> we have <span class="process-math">\(B \in 2^A\text{.}\)</span> Since <span class="process-math">\(f\)</span> is surjective, there is <span class="process-math">\(y \in A\)</span> such that <span class="process-math">\(f(y) = B\text{.}\)</span> Now, if <span class="process-math">\(y \in B\text{,}\)</span> then by the definition of <span class="process-math">\(B\text{,}\)</span> <span class="process-math">\(y \notin f(y)\text{,}\)</span> that is, <span class="process-math">\(y \notin B\text{:}\)</span> clearly, a contradiction.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-power-set-greater-cardinality-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="thm-power-set-greater-cardinality-2-2">This would seem to imply that <span class="process-math">\(y \notin B\text{,}\)</span> then by the definition of <span class="process-math">\(B\text{,}\)</span> <span class="process-math">\(y \in f(y)\text{,}\)</span> that is, <span class="process-math">\(y \in B\text{.}\)</span> This contradiction shows that there is no such bijection <span class="process-math">\(f\text{,}\)</span> and hence that <span class="process-math">\(A\)</span> and <span class="process-math">\(2^A\)</span> are not equinumerous.<div class="autopermalink" data-description="Paragraph"><a href="#thm-power-set-greater-cardinality-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 103.1"><a href="#thm-power-set-greater-cardinality-2" title="Copy heading and permalink for Proof 103.1" aria-label="Copy heading and permalink for Proof 103.1">🔗</a></div></article></details><details id="subsec-cardinality-16" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">104</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="subsec-cardinality-16-1">
+<div class="para">Let</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A = \{ f \colon \N \to \{0, 1\} \}
+\end{equation*}
+</div>
+<div class="para">be the set of all functions from the natural numbers to the set <span class="process-math">\(\{0, 1\}\text{.}\)</span> Then <span class="process-math">\(A\)</span> is uncountable.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-cardinality-16-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-cardinality-16-2">
+<div class="para">Indeed, let’s define for each <span class="process-math">\(f \in A\)</span> a set</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A_f = \{ n \in \N : f(n) = 1 \} \subseteq \N\text{.}
+\end{equation*}
+</div>
+<div class="para">Now define a function <span class="process-math">\(F \colon \N \to 2^{\N}\)</span> by <span class="process-math">\(F(f) = A_f\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-cardinality-16-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-cardinality-16-3">Then <span class="process-math">\(F\)</span> is injective. To see this, suppose that <span class="process-math">\(F(f) = F(g)\)</span> for some <span class="process-math">\(f, g \in A\text{.}\)</span> Then <span class="process-math">\(A_f = A_g\text{,}\)</span> and hence for every <span class="process-math">\(n \in \N\text{,}\)</span> <span class="process-math">\(f(n) = 1\)</span> if and only if <span class="process-math">\(g(n) = 1\text{.}\)</span> This shows that <span class="process-math">\(f(n) = g(n)\)</span> for all <span class="process-math">\(n \in \N\text{,}\)</span> and hence <span class="process-math">\(f = g\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-cardinality-16-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-cardinality-16-4">
+<div class="para">Now let <span class="process-math">\(B \in 2^{\N}\)</span> and define</div>
+<div class="displaymath process-math">
+\begin{equation*}
+g(n) = \begin{cases}
+0 \amp \text{if $n \notin B$} \\
+1 \amp \text{if $n \in B$} \\
+\end{cases}\text{.}
+\end{equation*}
+</div>
+<div class="para">Then <span class="process-math">\(A_g = \{ n \in \N : g(n) = 1 \} = B\text{.}\)</span> It follows that <span class="process-math">\(F(g) = A_g = B\)</span> and <span class="process-math">\(F\)</span> is surjective.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-cardinality-16-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-cardinality-16-5">Thus <span class="process-math">\(F\)</span> is a bijection, and hence <span class="process-math">\(\abs{A} = \abs{2^{\N}}\text{.}\)</span> By <a href="sec-the-real-number-system.html#thm-power-set-greater-cardinality" class="xref" data-knowl="./knowl/xref/thm-power-set-greater-cardinality.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 103">Theorem 103</a>, <span class="process-math">\(A\)</span> is uncountable.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-cardinality-16-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 104"><a href="#subsec-cardinality-16" title="Copy heading and permalink for Example 104" aria-label="Copy heading and permalink for Example 104">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 2.2: Cardinality"><a href="#subsec-cardinality" title="Copy heading and permalink for Subsection 2.2: Cardinality" aria-label="Copy heading and permalink for Subsection 2.2: Cardinality">🔗</a></div></section><section class="subsection" id="subsec-sequences"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sequences</span>
+</h3>
+<article class="definition definition-like" id="def-absolute-value-real"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">105</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para logical" id="def-absolute-value-real-1-1">
+<div class="para">For <span class="process-math">\(x \in \R\text{,}\)</span> we define</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\abs{x} = \begin{cases}
+x \amp \text{if $x \geq 0$} \\
+-x \amp \text{if $x \lt 0$}.
+\end{cases}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-absolute-value-real-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 105"><a href="#def-absolute-value-real" title="Copy heading and permalink for Definition 105" aria-label="Copy heading and permalink for Definition 105">🔗</a></div></article><article class="definition definition-like" id="def-sequence"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">106</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para logical" id="def-sequence-1-1">
+<div class="para">A <em class="emphasis">sequence</em> of real numbers is a function <span class="process-math">\(a \colon \N \to \R\text{.}\)</span> The value <span class="process-math">\(a(n)\)</span> is the <span class="process-math">\(n\)</span>-th term of the sequence, and we write</div>
+<div class="displaymath process-math">
+\begin{equation*}
+a_n = a(n)\text{.}
+\end{equation*}
+</div>
+<div class="para">The sequence itself is often denoted by <span class="process-math">\((a_n)_{n \in \N}\)</span> or just <span class="process-math">\((a_n)\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-sequence-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 106"><a href="#def-sequence" title="Copy heading and permalink for Definition 106" aria-label="Copy heading and permalink for Definition 106">🔗</a></div></article><article class="definition definition-like" id="def-sequence-converges"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">107</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para logical" id="def-sequence-converges-1-1">
+<div class="para">A sequence <span class="process-math">\((a_n)\)</span> is said to <em class="emphasis">converge</em> to a limit <span class="process-math">\(a \in \R\)</span> if for every <span class="process-math">\(\eps \gt 0\text{,}\)</span> there exists a natural number <span class="process-math">\(N \in \N\)</span> such that for all <span class="process-math">\(n \geq N\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\abs{a_n - a} \lt \eps\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-sequence-converges-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 107"><a href="#def-sequence-converges" title="Copy heading and permalink for Definition 107" aria-label="Copy heading and permalink for Definition 107">🔗</a></div></article><article class="definition definition-like" id="def-sequence-diverges"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">108</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="def-sequence-diverges-1-1">A sequence <span class="process-math">\((a_n)\)</span> is said to <em class="emphasis">diverge</em> if it does not converge to any limit in <span class="process-math">\(\R\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def-sequence-diverges-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 108"><a href="#def-sequence-diverges" title="Copy heading and permalink for Definition 108" aria-label="Copy heading and permalink for Definition 108">🔗</a></div></article><details id="subsec-sequences-6" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">109</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="subsec-sequences-6-1">
+<div class="para">The sequence <span class="process-math">\(a_n = \frac{1}{n}\)</span> converges to <span class="process-math">\(0\text{.}\)</span> To see this, let <span class="process-math">\(\eps \gt 0\)</span> be given. By the archimedean property of the real numbers (<a href="sec-the-real-number-system.html#thm-archimedean-prop-reals" class="xref" data-knowl="./knowl/xref/thm-archimedean-prop-reals.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 69">Theorem 69</a>), there is <span class="process-math">\(N \in \N\)</span> such that <span class="process-math">\(\frac{1}{N} \lt \eps\text{.}\)</span> Now, if <span class="process-math">\(n \geq N\text{,}\)</span> then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-archimedean-prop-reals.html">
+\begin{equation*}
+\abs{a_n - 0} = \abs{\frac{1}{n} - 0}
+= \frac{1}{n} \lt \frac{1}{N} \lt \eps\text{.}
+\end{equation*}
+</div>
+<div class="para">This shows that <span class="process-math">\(a_n \to 0\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-sequences-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 109"><a href="#subsec-sequences-6" title="Copy heading and permalink for Example 109" aria-label="Copy heading and permalink for Example 109">🔗</a></div></article></details><details id="subsec-sequences-7" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">110</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="subsec-sequences-7-1">
+<div class="displaymath process-math">
+\begin{equation*}
+\lim_{n \to \infty} \frac{3n^2}{n^2 + 1} = 3\text{.}
+\end{equation*}
+</div>
+<div class="para">To see this, let <span class="process-math">\(\eps \gt 0\)</span> be given. Now we need to bound</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\abs{\frac{3n^2}{n^2 + 1} - 3} = 
+\abs{\frac{3n^2 - 3(n^2 + 1)}{n^2 + 1}} = 
+\abs{\frac{-3}{n^2 + 1}} = \frac{3}{n^2 + 1} \lt
+\frac{3}{n^2}.
+\end{equation*}
+</div>
+<div class="para">We want to show that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{3}{n^2} \lt \eps
+\end{equation*}
+</div>
+<div class="para">whenever <span class="process-math">\(n \geq N\)</span> for some <span class="process-math">\(N \in \N\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-sequences-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-sequences-7-2">By the archimedean property of the real numbers (<a href="sec-the-real-number-system.html#thm-archimedean-prop-reals" class="xref" data-knowl="./knowl/xref/thm-archimedean-prop-reals.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 69">Theorem 69</a>), there is <span class="process-math">\(N \in \N\)</span> such that <span class="process-math">\(\frac{3}{N^2} \lt \eps\text{.}\)</span> Indeed, we can choose <span class="process-math">\(N \in \N\)</span> such that <span class="process-math">\(N \gt \sqrt{\frac{3}{\eps}}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-sequences-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-sequences-7-3">
+<div class="para">Now, if <span class="process-math">\(n \geq N\text{,}\)</span> then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\abs{\frac{3n^2}{n^2 + 1} - 3} \lt \frac{3}{n^2} \leq
+\frac{3}{N^2} \lt \eps,
+\end{equation*}
+</div>
+<div class="para">as required.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-sequences-7-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 110"><a href="#subsec-sequences-7" title="Copy heading and permalink for Example 110" aria-label="Copy heading and permalink for Example 110">🔗</a></div></article></details><details id="subsec-sequences-8" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">111</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="subsec-sequences-8-1">
+<div class="para">The sequence <span class="process-math">\(a_n = (-1)^n\)</span> diverges. To see this, suppose that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim_{n \to \infty} (-1)^n = a
+\end{equation*}
+</div>
+<div class="para">for some <span class="process-math">\(a \in \R\text{.}\)</span> Let <span class="process-math">\(\eps = 1\text{.}\)</span> Then there is <span class="process-math">\(N \in \N\)</span> such that for all <span class="process-math">\(n \geq N\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\abs{(-1)^n - a} \lt 1.
+\end{equation*}
+</div>
+<div class="para">In particular, this holds for <span class="process-math">\(n = 2N\)</span> and <span class="process-math">\(n = 2N + 1\text{.}\)</span> Thus</div>
+<div class="displaymath process-math" id="subsec-sequences-8-1-10">
+\begin{align*}
+1 - a \lt \amp \abs{1 - a} \lt \abs{(-1)^{2N} - a} \lt 1 \implies a \gt 0\\
+1 + a \lt \amp \abs{1 + a} \lt \abs{(-1)^{2N + 1} - a} \lt 1 \implies a \lt 0
+\end{align*}
+</div>
+<div class="para">This is a contradiction, and hence <span class="process-math">\(a_n\)</span> diverges.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-sequences-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 111"><a href="#subsec-sequences-8" title="Copy heading and permalink for Example 111" aria-label="Copy heading and permalink for Example 111">🔗</a></div></article></details><article class="definition definition-like" id="def-bounded-sequence"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">112</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="def-bounded-sequence-1-1">A sequence <span class="process-math">\((a_n)\)</span> is said to be <em class="emphasis">bounded</em> if there exists a real number <span class="process-math">\(M \geq 0\)</span> such that <span class="process-math">\(\abs{a_n} \lt M\)</span> for all <span class="process-math">\(n \in \N\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def-bounded-sequence-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 112"><a href="#def-bounded-sequence" title="Copy heading and permalink for Definition 112" aria-label="Copy heading and permalink for Definition 112">🔗</a></div></article><article class="proposition theorem-like" id="prop-convergent-sequence-bounded"><h4 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">113</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="prop-convergent-sequence-bounded-1-1">Every convergent sequence is bounded.<div class="autopermalink" data-description="Paragraph"><a href="#prop-convergent-sequence-bounded-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proposition 113"><a href="#prop-convergent-sequence-bounded" title="Copy heading and permalink for Proposition 113" aria-label="Copy heading and permalink for Proposition 113">🔗</a></div></article><details id="prop-convergent-sequence-bounded-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="prop-convergent-sequence-bounded-2-1">
+<div class="para">Suppose that <span class="process-math">\((a_n)\)</span> is a sequence that converges to <span class="process-math">\(a \in \R\text{.}\)</span> Let <span class="process-math">\(\eps = 1\text{.}\)</span> Then there is <span class="process-math">\(N \in \N\)</span> such that for all <span class="process-math">\(n \geq N\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\abs{a_n - a} \lt 1.
+\end{equation*}
+</div>
+<div class="para">This implies that for all <span class="process-math">\(n \geq N\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\abs{a_n} \leq \abs{a_n - a + a} \leq \abs{a_n - a} + \abs{a} \lt 1 + \abs{a}\text{,}
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(n \geq N\text{.}\)</span> Now, let</div>
+<div class="displaymath process-math">
+\begin{equation*}
+M = \max(\abs{a_1}, \abs{a_2}, \ldots, \abs{a_{N-1}}, 1 + \abs{a}).
+\end{equation*}
+</div>
+<div class="para">Then <span class="process-math">\(M \geq 0\)</span> and <span class="process-math">\(\abs{a_n} \leq M\)</span> for all <span class="process-math">\(n \in \N\text{.}\)</span> This shows that <span class="process-math">\((a_n)\)</span> is bounded.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#prop-convergent-sequence-bounded-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 113.1"><a href="#prop-convergent-sequence-bounded-2" title="Copy heading and permalink for Proof 113.1" aria-label="Copy heading and permalink for Proof 113.1">🔗</a></div></article></details><details id="subsec-sequences-11" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">114</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="subsec-sequences-11-1">The sequence <span class="process-math">\(((-1)^n)\)</span> is bounded, since <span class="process-math">\(\abs{(-1)^n} = 1\)</span> for all <span class="process-math">\(n \in \N\text{.}\)</span> However, as we saw earlier, this sequence diverges.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-sequences-11-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 114"><a href="#subsec-sequences-11" title="Copy heading and permalink for Example 114" aria-label="Copy heading and permalink for Example 114">🔗</a></div></article></details><details id="subsec-sequences-12" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">115</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="subsec-sequences-12-1">
+<div class="para">The sequence <span class="process-math">\(\left(\frac{n^2}{n-1}\right)\)</span> diverges. To see this, observe that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{n^2}{n-1} \gt \frac{n^2}{n} = n\text{.}
+\end{equation*}
+</div>
+<div class="para">If the sequence were bounded, then there would be <span class="process-math">\(M \geq 0\)</span> such that <span class="process-math">\(\frac{n^2}{n-1} \leq M\)</span> for all <span class="process-math">\(n \in \N\text{.}\)</span> This would imply that <span class="process-math">\(n \leq M\)</span> for all <span class="process-math">\(n \in \N\text{,}\)</span> which is impossible.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-sequences-12-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 115"><a href="#subsec-sequences-12" title="Copy heading and permalink for Example 115" aria-label="Copy heading and permalink for Example 115">🔗</a></div></article></details><article class="theorem theorem-like" id="thm-algebraic-limit-laws"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">116</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para logical" id="thm-algebraic-limit-laws-1-1">
+<div class="para">Suppose <span class="process-math">\((a_n)\)</span> and <span class="process-math">\((b_n)\)</span> are sequences that converge to <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{,}\)</span> respectively. Then</div>
+<ol class="decimal ol-marker-1" id="thm-algebraic-limit-laws-1-1-5">
+<li id="thm-algebraic-limit-laws-1-1-5-1">
+<div class="para" id="thm-algebraic-limit-laws-1-1-5-1-1">If <span class="process-math">\(c \in \R\text{,}\)</span> then <span class="process-math">\(\lim_{n \to \infty} (c a_n) = c a\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-algebraic-limit-laws-1-1-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#thm-algebraic-limit-laws-1-1-5-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="thm-algebraic-limit-laws-1-1-5-2">
+<div class="para" id="thm-algebraic-limit-laws-1-1-5-2-1">
+<span class="process-math">\(\lim_{n \to \infty} (a_n + b_n) = a + b\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-algebraic-limit-laws-1-1-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#thm-algebraic-limit-laws-1-1-5-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="thm-algebraic-limit-laws-1-1-5-3">
+<div class="para" id="thm-algebraic-limit-laws-1-1-5-3-1">
+<span class="process-math">\(\lim_{n \to \infty} (a_n b_n) = ab\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-algebraic-limit-laws-1-1-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#thm-algebraic-limit-laws-1-1-5-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="thm-algebraic-limit-laws-1-1-5-4">
+<div class="para" id="thm-algebraic-limit-laws-1-1-5-4-1">If <span class="process-math">\(b \ne 0\)</span> and <span class="process-math">\(b_n \ne 0\)</span> for all <span class="process-math">\(n \in \N\text{,}\)</span> then <span class="process-math">\(\lim_{n \to \infty} \left( \frac{a_n}{b_n} \right) = \dfrac{a}{b}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-algebraic-limit-laws-1-1-5-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4"><a href="#thm-algebraic-limit-laws-1-1-5-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-algebraic-limit-laws-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 116"><a href="#thm-algebraic-limit-laws" title="Copy heading and permalink for Theorem 116" aria-label="Copy heading and permalink for Theorem 116">🔗</a></div></article><details id="thm-algebraic-limit-laws-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="thm-algebraic-limit-laws-2-1">
+<div class="para">To prove (1), let <span class="process-math">\(\eps \gt 0\)</span> be given. If <span class="process-math">\(c = 0\)</span> there is nothing to prove. Otherwise, since <span class="process-math">\((a_n)\)</span> converges to <span class="process-math">\(a\text{,}\)</span> there is <span class="process-math">\(N \in \N\)</span> such that for all <span class="process-math">\(n \geq N\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\abs{a_n - a} \lt \frac{\eps}{\abs{c}}\text{.}
+\end{equation*}
+</div>
+<div class="para">Then for all <span class="process-math">\(n \geq N\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\abs{c a_n - c a} = \abs{c} \abs{a_n - a} \lt
+\abs{c} \frac{\eps}{\abs{c}} = \eps,
+\end{equation*}
+</div>
+<div class="para">as required.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-algebraic-limit-laws-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="thm-algebraic-limit-laws-2-2">
+<div class="para">To prove (2), let <span class="process-math">\(\eps \gt 0\)</span> be given. Since <span class="process-math">\((a_n)\)</span> converges to <span class="process-math">\(a\text{,}\)</span> there is <span class="process-math">\(N_1 \in \N\)</span> such that for all <span class="process-math">\(n \geq N_1\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\abs{a_n - a} \lt \frac{\eps}{2}\text{.}
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\((b_n)\)</span> converges to <span class="process-math">\(b\text{,}\)</span> there is <span class="process-math">\(N_2 \in \N\)</span> such that for all <span class="process-math">\(n \geq N_2\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\abs{b_n - b} \lt \frac{\eps}{2}\text{.}
+\end{equation*}
+</div>
+<div class="para">Now, let <span class="process-math">\(N = \max(N_1, N_2)\text{.}\)</span> Then for all <span class="process-math">\(n \geq N\text{,}\)</span>
+</div>
+<div class="displaymath process-math" id="thm-algebraic-limit-laws-2-2-14">
+\begin{align*}
+\abs{(a_n + b_n) - (a + b)} \amp =
+\abs{(a_n - a) + (b_n - b)}\\
+\amp \leq
+\abs{a_n - a} + \abs{b_n - b}\\
+\amp \lt
+\frac{\eps}{2} + \frac{\eps}{2} = \eps\text{,}
+\end{align*}
+</div>
+<div class="para">as required.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-algebraic-limit-laws-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="thm-algebraic-limit-laws-2-3">
+<div class="para">To prove (3), let <span class="process-math">\(\eps \gt 0\)</span> be given. Since</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-convergent-sequence-bounded.html">
+\begin{equation*}
+a_n b_n - ab = a_n b_n - a b_n + a b_n - ab
+= a (b_n - b) + b_n (a_n - a)\text{,}
+\end{equation*}
+</div>
+<div class="para">we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-convergent-sequence-bounded.html">
+\begin{equation*}
+\abs{a_n b_n - ab} \leq
+\abs{a} \abs{b_n - b} + \abs{b_n} \abs{a_n - a}\text{.}
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\((a_n)\)</span> converges to <span class="process-math">\(a\text{,}\)</span> it is bounded by <a href="sec-the-real-number-system.html#prop-convergent-sequence-bounded" class="xref" data-knowl="./knowl/xref/prop-convergent-sequence-bounded.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 113">Proposition 113</a>. Thus there is <span class="process-math">\(M \geq 0\)</span> such that <span class="process-math">\(\abs{a_n} \leq M\)</span> for all <span class="process-math">\(n \in \N\text{.}\)</span> Now, there is <span class="process-math">\(N_1 \in \N\)</span> such that for all <span class="process-math">\(n \geq N_1\text{,}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-convergent-sequence-bounded.html">
+\begin{equation*}
+\abs{b_n - b} \lt \frac{\eps}{2M}\text{,}
+\end{equation*}
+</div>
+<div class="para">and there is <span class="process-math">\(N_2 \in \N\)</span> such that for all <span class="process-math">\(n \geq N_2\text{,}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-convergent-sequence-bounded.html">
+\begin{equation*}
+\abs{a_n - a} \lt \frac{\eps}{2\abs{b}}\text{.}
+\end{equation*}
+</div>
+<div class="para">Now, let <span class="process-math">\(N = \max(N_1, N_2)\text{.}\)</span> Then for all <span class="process-math">\(n \geq N\text{,}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-convergent-sequence-bounded.html" id="thm-algebraic-limit-laws-2-3-18">
+\begin{align*}
+\abs{a_n b_n - ab} \amp \leq
+\abs{a_n} \abs{b_n - b} + \abs{b} \abs{a_n - a}\\
+\amp \lt M \frac{\eps}{2M} + \abs{b} \frac{\eps}{2\abs{b}}\\
+\amp \leq \eps\text{,}
+\end{align*}
+</div>
+<div class="para">as required.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-algebraic-limit-laws-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="thm-algebraic-limit-laws-2-4">The proof of (4) is left to the reader.<div class="autopermalink" data-description="Paragraph"><a href="#thm-algebraic-limit-laws-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 116.1"><a href="#thm-algebraic-limit-laws-2" title="Copy heading and permalink for Proof 116.1" aria-label="Copy heading and permalink for Proof 116.1">🔗</a></div></article></details><article class="theorem theorem-like" id="thm-preservation-of-inequalities-limit"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">117</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para logical" id="thm-preservation-of-inequalities-limit-1-1">
+<ol class="decimal ol-marker-1" id="thm-preservation-of-inequalities-limit-1-1-1">
+<li id="thm-preservation-of-inequalities-limit-1-1-1-1">
+<div class="para" id="thm-preservation-of-inequalities-limit-1-1-1-1-1">Suppose <span class="process-math">\(a_n \to a\)</span> and that <span class="process-math">\(a_n \geq 0\)</span> for all <span class="process-math">\(n \in \N\text{.}\)</span> Then <span class="process-math">\(a \geq 0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-preservation-of-inequalities-limit-1-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#thm-preservation-of-inequalities-limit-1-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="thm-preservation-of-inequalities-limit-1-1-1-2">
+<div class="para" id="thm-preservation-of-inequalities-limit-1-1-1-2-1">Suppose <span class="process-math">\(a_n \to a\)</span> and <span class="process-math">\(b_n \to b\)</span> and that <span class="process-math">\(a_n \leq b_n\)</span> for all <span class="process-math">\(n \in \N\text{.}\)</span> Then <span class="process-math">\(a \leq b\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-preservation-of-inequalities-limit-1-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#thm-preservation-of-inequalities-limit-1-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="thm-preservation-of-inequalities-limit-1-1-1-3">
+<div class="para" id="thm-preservation-of-inequalities-limit-1-1-1-3-1">Suppose <span class="process-math">\(a \lt b\)</span> and <span class="process-math">\(c_n \to c\text{.}\)</span> If <span class="process-math">\(a \lt c_n \lt b\)</span> for all <span class="process-math">\(n \in \N\text{,}\)</span> then <span class="process-math">\(a \lt c \lt b\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-preservation-of-inequalities-limit-1-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#thm-preservation-of-inequalities-limit-1-1-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-preservation-of-inequalities-limit-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 117"><a href="#thm-preservation-of-inequalities-limit" title="Copy heading and permalink for Theorem 117" aria-label="Copy heading and permalink for Theorem 117">🔗</a></div></article><details id="thm-preservation-of-inequalities-limit-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="thm-preservation-of-inequalities-limit-2-1">
+<div class="para">For (a), suppose that <span class="process-math">\(a_n \to a\)</span> and that <span class="process-math">\(a \lt 0\text{.}\)</span> Then let <span class="process-math">\(\eps = \abs{a}\text{.}\)</span> Then there is <span class="process-math">\(N \in \N\)</span> such that for all <span class="process-math">\(n \geq N\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\abs{a_n - a} \lt \abs{a}\text{.}
+\end{equation*}
+</div>
+<div class="para">In particular,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+a_N - a \leq \abs{a_N - a} \lt \abs{a} = -a\text{,}
+\end{equation*}
+</div>
+<div class="para">since <span class="process-math">\(a \lt 0\text{.}\)</span> This implies that <span class="process-math">\(a_N \lt 0\text{,}\)</span> a contradiction.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-preservation-of-inequalities-limit-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="thm-preservation-of-inequalities-limit-2-2">For (b), we can apply <a href="sec-the-real-number-system.html#thm-algebraic-limit-laws" class="xref" data-knowl="./knowl/xref/thm-algebraic-limit-laws.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 116">Theorem 116</a> to see that <span class="process-math">\((b_n - a_n) \to (b - a)\text{.}\)</span> Since <span class="process-math">\(b_n - a_n \geq 0\)</span> for all <span class="process-math">\(n \in \N\text{,}\)</span> it follows from (a) that <span class="process-math">\(b - a \geq 0\text{,}\)</span> that is, <span class="process-math">\(a \leq b\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-preservation-of-inequalities-limit-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="thm-preservation-of-inequalities-limit-2-3">For (c), let us define <span class="process-math">\(a_n = a\)</span> and <span class="process-math">\(b_n = b\)</span> for all <span class="process-math">\(n \in \N\text{.}\)</span> Then <span class="process-math">\((a_n) \to a\)</span> and <span class="process-math">\((b_n) \to b\text{,}\)</span> and we have <span class="process-math">\(a_n \lt c_n \lt b_n\)</span> for all <span class="process-math">\(n \in \N\text{.}\)</span> It follows that <span class="process-math">\(a \lt c \lt b\)</span> by (b).<div class="autopermalink" data-description="Paragraph"><a href="#thm-preservation-of-inequalities-limit-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 117.1"><a href="#thm-preservation-of-inequalities-limit-2" title="Copy heading and permalink for Proof 117.1" aria-label="Copy heading and permalink for Proof 117.1">🔗</a></div></article></details><article class="corollary theorem-like" id="cor-squeeze-theorem"><h4 class="heading">
+<span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">118</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">squeeze theorem.</span>
+</h4>
+<div class="para logical" id="cor-squeeze-theorem-2-1">
+<div class="para">Suppose <span class="process-math">\((a_n)\text{,}\)</span> <span class="process-math">\((b_n)\text{,}\)</span> and <span class="process-math">\((c_n)\)</span> are sequences such that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+a_n \leq c_n \leq b_n
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(n \in \N\text{.}\)</span> If <span class="process-math">\((a_n)\)</span> and <span class="process-math">\((b_n)\)</span> converge to the same limit <span class="process-math">\(L \in \R\text{,}\)</span> then <span class="process-math">\((c_n)\)</span> also converges to <span class="process-math">\(L\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#cor-squeeze-theorem-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Corollary 118: squeeze theorem"><a href="#cor-squeeze-theorem" title="Copy heading and permalink for Corollary 118: squeeze theorem" aria-label="Copy heading and permalink for Corollary 118: squeeze theorem">🔗</a></div></article><details id="cor-squeeze-theorem-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="cor-squeeze-theorem-3-1">
+<div class="para">Let <span class="process-math">\(\eps \gt 0\)</span> be given. Since <span class="process-math">\((a_n)\)</span> converges to <span class="process-math">\(L\text{,}\)</span> there is <span class="process-math">\(N_1 \in \N\)</span> such that for all <span class="process-math">\(n \geq N_1\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\abs{a_n - L} \lt \eps\text{.}
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\((b_n)\)</span> converges to <span class="process-math">\(L\text{,}\)</span> there is <span class="process-math">\(N_2 \in \N\)</span> such that for all <span class="process-math">\(n \geq N_2\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\abs{b_n - L} \lt \eps\text{.}
+\end{equation*}
+</div>
+<div class="para">Now, let <span class="process-math">\(N = \max(N_1, N_2)\text{.}\)</span> Then for all <span class="process-math">\(n \geq N\text{,}\)</span>
+</div>
+<div class="displaymath process-math" id="cor-squeeze-theorem-3-1-14">
+\begin{align*}
+L - \eps \amp \lt a_n \leq c_n \leq b_n \lt L + \eps\\
+\implies \amp \abs{c_n - L} \leq \max(\abs{a_n - L}, \abs{b_n - L}) \lt \eps\text{,}
+\end{align*}
+</div>
+<div class="para">as required.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#cor-squeeze-theorem-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 118.1"><a href="#cor-squeeze-theorem-3" title="Copy heading and permalink for Proof 118.1" aria-label="Copy heading and permalink for Proof 118.1">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 2.3: Sequences"><a href="#subsec-sequences" title="Copy heading and permalink for Subsection 2.3: Sequences" aria-label="Copy heading and permalink for Subsection 2.3: Sequences">🔗</a></div></section><section class="subsection" id="subsec-monotone-sequences-and-bolzano-weierstrass"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Monotone sequences and subsequences</span>
+</h3>
+<div class="para" id="subsec-monotone-sequences-and-bolzano-weierstrass-2">Nothing here yet.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-monotone-sequences-and-bolzano-weierstrass-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 2.4: Monotone sequences and subsequences"><a href="#subsec-monotone-sequences-and-bolzano-weierstrass" title="Copy heading and permalink for Subsection 2.4: Monotone sequences and subsequences" aria-label="Copy heading and permalink for Subsection 2.4: Monotone sequences and subsequences">🔗</a></div></section><div class="autopermalink" data-description="Section 2: The real number system"><a href="#sec-the-real-number-system" title="Copy heading and permalink for Section 2: The real number system" aria-label="Copy heading and permalink for Section 2: The real number system">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-construction-reals.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="homework.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

@@ -655,7 +655,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2",
   "title": "The real number system",
-  "body": " The real number system   Properties of    Let be real numbers. Then there is a natural number such that .      For each there is a unique such that .    By , there exists such that . Therefore, the set is nonempty. We observe that, by the well-ordering principle ( ) this set has a smallest element. (Strictly speaking, the well-ordering principle doesn't apply to the set , but we can easily prove by contradiction that has a least element using the well-ordering principle.) Call this smallest element .  Now let . Then , because . We also have because if not, then , which means , which would contradict the minimality of . This shows that .  The proof of uniqueness is omitted.      For any real numbers , there is a rational number with .    Choose so that . This is possible by the Archimedean property of the real numbers ( ). Then By the corollary above ( ), there is an integer such that Dividing this inequality by gives Since , we have and hence Thus is a rational number such that .      Let . A real number is an upper bound for provided that for every , . If such an exists, we say that is bounded above .     Let . Then is an upper bound for , and in fact any real number is an upper bound for . Thus is bounded above.  However, is not an upper bound for since but .    The set is not bounded above. To see this, let be arbitrary. By the Archimedean property ( ), there is a natural number such that . Since , this shows that is not an upper bound for . Thus is not bounded above.     We say that a real number is the least upper bound of a set provided that is an upper bound for and that if is any upper bound for , then .      Suppose and are both least upper bounds for a set . Then , because is an upper bound for and is a least upper bound. On the other hand, because is an upper bound for and is a least upper bound. Thus .      Every nonempty set of real numbers that is bounded above has a least upper bound.      Let be a nonempty set that is bounded above. The unique least upper bound of is called the supremum of and is denoted by .      Suppose is an upper bound for a set . Then if and only if for every there is an such that .    Suppose and let . Then , so is not an upper bound for . Therefore, there is an such that .  Conversely, suppose that for every there is an such that . We need to show that is the least upper bound for . We already know that is an upper bound for , so we need only show that if is any upper bound for , then . So let be an upper bound for . If , then let . By hypothesis, there is an such that , or equivalently, . But this contradicts the fact that is an upper bound for . Thus , and hence .        The supremum of the interval is . If there is such that , namely .    The supremum of the interval is also . If , then there is such that , for example, .   Observe that . Hence we have , but .     There is a positive real number whose square is 2.    Let . Then is nonempty (since ) and bounded above (since is an upper bound for ). By the completeness property of the real numbers ( ), has a supremum; call it . We will show that .  First suppose that . Let and compute , because (since is an upper bound for ) and . Since , we can choose so small that . This shows that , and hence . But this contradicts the fact that and . Thus is impossible.  Now suppose . Let and compute , because (since is an upper bound for ), , and . Since , we can choose so small that . This shows that , and hence . But this contradicts the fact that and . Thus is impossible.  This shows that , as required.      Let . A real number is a lower bound for provided that for every , . If such an exists, we say that is bounded below .      Let . A real number is a greatest lower bound for provided that is a lower bound for and for every lower bound of , . If such an exists, we say that has a greatest lower bound .      Let be a nonempty set that is bounded below. Then has a unique greatest lower bound.    Left to the reader.      Let be a nonempty set that is bounded below. The unique greatest lower bound of is called the infimum of and is denoted by .      Let be a lower bound for a set . Then if and only if for every there is an such that .    Left to the reader.     Let . Then is a lower bound for , and in fact . To see this, let . Then there is such that , and since , we can write for some with . Thus and .     For , let be real numbers and set . Suppose that for each , so that . Then the set .    Let . We have and is bounded above by , since for all . By , has a supremum; call it . Now fix and consider . Since , we have . Also, since is an upper bound for , we have . Thus . Since was arbitrary, we have for all , and hence . This shows that , as required.     It is necessary that the intervals be closed in order for the conclusion of the theorem to hold. For example, let . Then the intervals are nested, but their intersection is empty: , by the archimedean property ( ).     Cardinality    Two sets and are said to be equinumerous if there exists a bijection (one-to-one and onto function) . In this case, we write to denote that the sets have the same cardinality.      A set is said to be finite if there exists a natural number such that is equinumerous to the set . In this case, we write .      A set is said to be infinite if it is not finite.     The set is infinite. Indeed, if it were finite, then there would be a natural number such that is equinumerous to . This would mean that there is a bijection . But if is such a function, then setting , we have but and . This contradicts the fact that is surjective. Thus is infinite.    Define a function by . Then implies , and hence , so is injective. Also, if , then and , so is surjective. Thus is a bijection, and hence . This shows that it is possible for a set to be equinumerous to a proper subset of itself.    Let be an infinite set and let be distinct elements of . Such elements exist by the definition of infinite set. Let us show that is equinumerous to the set .  First, we can choose such that are all distinct. (If we could not do this, then would be finite.) Now define by and . Then is a bijection, and hence .     A set is said to be countable if there exists a bijection . In this case, we write to denote that is equinumerous to the natural numbers.     Define by . Then is a bijection, and hence . Thus the set of integers is countable.     A set is said to be uncountable if it is infinite and there does not exist a bijection . In this case, we write to denote that is not equinumerous to the natural numbers.      and are countable.        If and is countable, then is countable or finite.    If and are countable, then is countable.    If and are countable, then is countable.    If is countable for each , then is countable.       Proof of (3). For each , let be a bijection. Choose and set . Now define by . Let us show that is injective. So suppose that for some . Then Using the unique factorization of positive integers into primes, we have and , and . But is injective. Thus and is injective.     "
+  "body": " The real number system   Properties of    Let be real numbers. Then there is a natural number such that .      For each there is a unique such that .    By , there exists such that . Therefore, the set is nonempty. We observe that, by the well-ordering principle ( ) this set has a smallest element. (Strictly speaking, the well-ordering principle doesn't apply to the set , but we can easily prove by contradiction that has a least element using the well-ordering principle.) Call this smallest element .  Now let . Then , because . We also have because if not, then , which means , which would contradict the minimality of . This shows that .  The proof of uniqueness is omitted.      For any real numbers , there is a rational number with .    Choose so that . This is possible by the Archimedean property of the real numbers ( ). Then By the corollary above ( ), there is an integer such that Dividing this inequality by gives Since , we have and hence Thus is a rational number such that .      Let . A real number is an upper bound for provided that for every , . If such an exists, we say that is bounded above .     Let . Then is an upper bound for , and in fact any real number is an upper bound for . Thus is bounded above.  However, is not an upper bound for since but .    The set is not bounded above. To see this, let be arbitrary. By the Archimedean property ( ), there is a natural number such that . Since , this shows that is not an upper bound for . Thus is not bounded above.     We say that a real number is the least upper bound of a set provided that is an upper bound for and that if is any upper bound for , then .      Suppose and are both least upper bounds for a set . Then , because is an upper bound for and is a least upper bound. On the other hand, because is an upper bound for and is a least upper bound. Thus .      Every nonempty set of real numbers that is bounded above has a least upper bound.      Let be a nonempty set that is bounded above. The unique least upper bound of is called the supremum of and is denoted by .      Suppose is an upper bound for a set . Then if and only if for every there is an such that .    Suppose and let . Then , so is not an upper bound for . Therefore, there is an such that .  Conversely, suppose that for every there is an such that . We need to show that is the least upper bound for . We already know that is an upper bound for , so we need only show that if is any upper bound for , then . So let be an upper bound for . If , then let . By hypothesis, there is an such that , or equivalently, . But this contradicts the fact that is an upper bound for . Thus , and hence .        The supremum of the interval is . If there is such that , namely .    The supremum of the interval is also . If , then there is such that , for example, .   Observe that . Hence we have , but .     There is a positive real number whose square is 2.    Let . Then is nonempty (since ) and bounded above (since is an upper bound for ). By the completeness property of the real numbers ( ), has a supremum; call it . We will show that .  First suppose that . Let and compute , because (since is an upper bound for ) and . Since , we can choose so small that . This shows that , and hence . But this contradicts the fact that and . Thus is impossible.  Now suppose . Let and compute , because (since is an upper bound for ), , and . Since , we can choose so small that . This shows that , and hence . But this contradicts the fact that and . Thus is impossible.  This shows that , as required.      Let . A real number is a lower bound for provided that for every , . If such an exists, we say that is bounded below .      Let . A real number is a greatest lower bound for provided that is a lower bound for and for every lower bound of , . If such an exists, we say that has a greatest lower bound .      Let be a nonempty set that is bounded below. Then has a unique greatest lower bound.    Left to the reader.      Let be a nonempty set that is bounded below. The unique greatest lower bound of is called the infimum of and is denoted by .      Let be a lower bound for a set . Then if and only if for every there is an such that .    Left to the reader.     Let . Then is a lower bound for , and in fact . To see this, let . Then there is such that , and since , we can write for some with . Thus and .     For , let be real numbers and set . Suppose that for each , so that . Then the set .    Let . We have and is bounded above by , since for all . By , has a supremum; call it . Now fix and consider . Since , we have . Also, since is an upper bound for , we have . Thus . Since was arbitrary, we have for all , and hence . This shows that , as required.     It is necessary that the intervals be closed in order for the conclusion of the theorem to hold. For example, let . Then the intervals are nested, but their intersection is empty: , by the archimedean property ( ).     Cardinality    Two sets and are said to be equinumerous if there exists a bijection (one-to-one and onto function) . In this case, we write to denote that the sets have the same cardinality.      A set is said to be finite if there exists a natural number such that is equinumerous to the set . In this case, we write .      A set is said to be infinite if it is not finite.     The set is infinite. Indeed, if it were finite, then there would be a natural number such that is equinumerous to . This would mean that there is a bijection . But if is such a function, then setting , we have but and . This contradicts the fact that is surjective. Thus is infinite.    Define a function by . Then implies , and hence , so is injective. Also, if , then and , so is surjective. Thus is a bijection, and hence . This shows that it is possible for a set to be equinumerous to a proper subset of itself.    Let be an infinite set and let be distinct elements of . Such elements exist by the definition of infinite set. Let us show that is equinumerous to the set .  First, we can choose such that are all distinct. (If we could not do this, then would be finite.) Now define by and . Then is a bijection, and hence .     A set is said to be countable if it is equinumerous with . In other words, is countable if .     Define by . Then is a bijection, and hence . Thus the set of integers is countable.     A set is said to be uncountable if it is infinite and it is not equinumerous with . In turns out that with a little goodwill this is enough to prove that .      and are countable.        If and is countable, then is countable or finite.    If and are countable, then is countable.    If and are countable, then is countable.    If is countable for each , then is countable.       Proof of (3). For each , let be a bijection. Choose and set . Now define by . Let us show that is injective. So suppose that for some . Then Using the unique factorization of positive integers into primes, we have and , and . But is injective. Thus and is injective.     The set of rational numbers is countable. To see this, fix and define . Then is countable because the function is a bijection. Now, define as . Then is also countable, by a similar argument. Now, observe that Since is finite and each and is countable, it follows from that is countable.     The set of real numbers is uncountable.    Suppose that is a function. We will show that is not surjective, and hence that is uncountable. For each , let be a closed interval such that and . We sketch briefly why it is possible to do this.  Start with . Choose and so that and . Now suppose that has been chosen so that . To choose , first choose and so that and . Then set and . This ensures that and .  Now, by the nested interval property ( ), there is a point . That is, for all .  This is enough to show that is not surjective. For if for some , then . But and , so this is impossible. Thus for all .  Since is not surjective, . Thus is an element of that is not in the image of , proving that is not surjective.      If is and set and is the power set of , that is , then and are not equinumerous.    Suppose there is a bijection . Consider the set . Since , we have . Since is surjective, there is such that . Now, if , then by the definition of , , that is, : clearly, a contradiction.  This would seem to imply that , then by the definition of , , that is, . This contradiction shows that there is no such bijection , and hence that and are not equinumerous.     Let be the set of all functions from the natural numbers to the set . Then is uncountable.  Indeed, let's define for each a set . Now define a function by .  Then is injective. To see this, suppose that for some . Then , and hence for every , if and only if . This shows that for all , and hence .  Now let and define . Then . It follows that and is surjective.  Thus is a bijection, and hence . By , is uncountable.     Sequences    For , we define       A sequence of real numbers is a function . The value is the -th term of the sequence, and we write . The sequence itself is often denoted by or just .      A sequence is said to converge to a limit if for every , there exists a natural number such that for all , we have .      A sequence is said to diverge if it does not converge to any limit in .     The sequence converges to . To see this, let be given. By the archimedean property of the real numbers ( ), there is such that . Now, if , then . This shows that .     . To see this, let be given. Now we need to bound We want to show that whenever for some .  By the archimedean property of the real numbers ( ), there is such that . Indeed, we can choose such that .  Now, if , then as required.    The sequence diverges. To see this, suppose that for some . Let . Then there is such that for all , In particular, this holds for and . Thus This is a contradiction, and hence diverges.     A sequence is said to be bounded if there exists a real number such that for all .      Every convergent sequence is bounded.    Suppose that is a sequence that converges to . Let . Then there is such that for all , This implies that for all , , for all . Now, let Then and for all . This shows that is bounded.     The sequence is bounded, since for all . However, as we saw earlier, this sequence diverges.    The sequence diverges. To see this, observe that . If the sequence were bounded, then there would be such that for all . This would imply that for all , which is impossible.     Suppose and are sequences that converge to and , respectively. Then   If , then .     .     .    If and for all , then .       To prove (1), let be given. If there is nothing to prove. Otherwise, since converges to , there is such that for all , . Then for all , as required.  To prove (2), let be given. Since converges to , there is such that for all , . Since converges to , there is such that for all , . Now, let . Then for all , , as required.  To prove (3), let be given. Since , we have . Since converges to , it is bounded by . Thus there is such that for all . Now, there is such that for all , , and there is such that for all , . Now, let . Then for all , , as required.  The proof of (4) is left to the reader.         Suppose and that for all . Then .    Suppose and and that for all . Then .    Suppose and . If for all , then .       For (a), suppose that and that . Then let . Then there is such that for all , . In particular, , since . This implies that , a contradiction.  For (b), we can apply to see that . Since for all , it follows from (a) that , that is, .  For (c), let us define and for all . Then and , and we have for all . It follows that by (b).     squeeze theorem   Suppose , , and are sequences such that for all . If and converge to the same limit , then also converges to .    Let be given. Since converges to , there is such that for all , . Since converges to , there is such that for all , . Now, let . Then for all , , as required.      Monotone sequences and subsequences  Nothing here yet.   "
 },
 {
   "id": "thm-archimedean-prop-reals",
@@ -907,7 +907,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "96",
   "title": "",
-  "body": "  A set is said to be countable if there exists a bijection . In this case, we write to denote that is equinumerous to the natural numbers.   "
+  "body": "  A set is said to be countable if it is equinumerous with . In other words, is countable if .   "
 },
 {
   "id": "subsec-cardinality-9",
@@ -925,7 +925,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "98",
   "title": "",
-  "body": "  A set is said to be uncountable if it is infinite and there does not exist a bijection . In this case, we write to denote that is not equinumerous to the natural numbers.   "
+  "body": "  A set is said to be uncountable if it is infinite and it is not equinumerous with . In turns out that with a little goodwill this is enough to prove that .   "
 },
 {
   "id": "subsec-cardinality-11",
@@ -944,6 +944,168 @@ var ptx_lunr_docs = [
   "number": "100",
   "title": "",
   "body": "     If and is countable, then is countable or finite.    If and are countable, then is countable.    If and are countable, then is countable.    If is countable for each , then is countable.       Proof of (3). For each , let be a bijection. Choose and set . Now define by . Let us show that is injective. So suppose that for some . Then Using the unique factorization of positive integers into primes, we have and , and . But is injective. Thus and is injective.   "
+},
+{
+  "id": "subsec-cardinality-13",
+  "level": "2",
+  "url": "sec-the-real-number-system.html#subsec-cardinality-13",
+  "type": "Example",
+  "number": "101",
+  "title": "",
+  "body": " The set of rational numbers is countable. To see this, fix and define . Then is countable because the function is a bijection. Now, define as . Then is also countable, by a similar argument. Now, observe that Since is finite and each and is countable, it follows from that is countable.  "
+},
+{
+  "id": "thm-uncountability-reals",
+  "level": "2",
+  "url": "sec-the-real-number-system.html#thm-uncountability-reals",
+  "type": "Theorem",
+  "number": "102",
+  "title": "",
+  "body": "  The set of real numbers is uncountable.    Suppose that is a function. We will show that is not surjective, and hence that is uncountable. For each , let be a closed interval such that and . We sketch briefly why it is possible to do this.  Start with . Choose and so that and . Now suppose that has been chosen so that . To choose , first choose and so that and . Then set and . This ensures that and .  Now, by the nested interval property ( ), there is a point . That is, for all .  This is enough to show that is not surjective. For if for some , then . But and , so this is impossible. Thus for all .  Since is not surjective, . Thus is an element of that is not in the image of , proving that is not surjective.   "
+},
+{
+  "id": "thm-power-set-greater-cardinality",
+  "level": "2",
+  "url": "sec-the-real-number-system.html#thm-power-set-greater-cardinality",
+  "type": "Theorem",
+  "number": "103",
+  "title": "",
+  "body": "  If is and set and is the power set of , that is , then and are not equinumerous.    Suppose there is a bijection . Consider the set . Since , we have . Since is surjective, there is such that . Now, if , then by the definition of , , that is, : clearly, a contradiction.  This would seem to imply that , then by the definition of , , that is, . This contradiction shows that there is no such bijection , and hence that and are not equinumerous.   "
+},
+{
+  "id": "subsec-cardinality-16",
+  "level": "2",
+  "url": "sec-the-real-number-system.html#subsec-cardinality-16",
+  "type": "Example",
+  "number": "104",
+  "title": "",
+  "body": " Let be the set of all functions from the natural numbers to the set . Then is uncountable.  Indeed, let's define for each a set . Now define a function by .  Then is injective. To see this, suppose that for some . Then , and hence for every , if and only if . This shows that for all , and hence .  Now let and define . Then . It follows that and is surjective.  Thus is a bijection, and hence . By , is uncountable.  "
+},
+{
+  "id": "def-absolute-value-real",
+  "level": "2",
+  "url": "sec-the-real-number-system.html#def-absolute-value-real",
+  "type": "Definition",
+  "number": "105",
+  "title": "",
+  "body": "  For , we define    "
+},
+{
+  "id": "def-sequence",
+  "level": "2",
+  "url": "sec-the-real-number-system.html#def-sequence",
+  "type": "Definition",
+  "number": "106",
+  "title": "",
+  "body": "  A sequence of real numbers is a function . The value is the -th term of the sequence, and we write . The sequence itself is often denoted by or just .   "
+},
+{
+  "id": "def-sequence-converges",
+  "level": "2",
+  "url": "sec-the-real-number-system.html#def-sequence-converges",
+  "type": "Definition",
+  "number": "107",
+  "title": "",
+  "body": "  A sequence is said to converge to a limit if for every , there exists a natural number such that for all , we have .   "
+},
+{
+  "id": "def-sequence-diverges",
+  "level": "2",
+  "url": "sec-the-real-number-system.html#def-sequence-diverges",
+  "type": "Definition",
+  "number": "108",
+  "title": "",
+  "body": "  A sequence is said to diverge if it does not converge to any limit in .   "
+},
+{
+  "id": "subsec-sequences-6",
+  "level": "2",
+  "url": "sec-the-real-number-system.html#subsec-sequences-6",
+  "type": "Example",
+  "number": "109",
+  "title": "",
+  "body": " The sequence converges to . To see this, let be given. By the archimedean property of the real numbers ( ), there is such that . Now, if , then . This shows that .  "
+},
+{
+  "id": "subsec-sequences-7",
+  "level": "2",
+  "url": "sec-the-real-number-system.html#subsec-sequences-7",
+  "type": "Example",
+  "number": "110",
+  "title": "",
+  "body": "  . To see this, let be given. Now we need to bound We want to show that whenever for some .  By the archimedean property of the real numbers ( ), there is such that . Indeed, we can choose such that .  Now, if , then as required.  "
+},
+{
+  "id": "subsec-sequences-8",
+  "level": "2",
+  "url": "sec-the-real-number-system.html#subsec-sequences-8",
+  "type": "Example",
+  "number": "111",
+  "title": "",
+  "body": " The sequence diverges. To see this, suppose that for some . Let . Then there is such that for all , In particular, this holds for and . Thus This is a contradiction, and hence diverges.  "
+},
+{
+  "id": "def-bounded-sequence",
+  "level": "2",
+  "url": "sec-the-real-number-system.html#def-bounded-sequence",
+  "type": "Definition",
+  "number": "112",
+  "title": "",
+  "body": "  A sequence is said to be bounded if there exists a real number such that for all .   "
+},
+{
+  "id": "prop-convergent-sequence-bounded",
+  "level": "2",
+  "url": "sec-the-real-number-system.html#prop-convergent-sequence-bounded",
+  "type": "Proposition",
+  "number": "113",
+  "title": "",
+  "body": "  Every convergent sequence is bounded.    Suppose that is a sequence that converges to . Let . Then there is such that for all , This implies that for all , , for all . Now, let Then and for all . This shows that is bounded.   "
+},
+{
+  "id": "subsec-sequences-11",
+  "level": "2",
+  "url": "sec-the-real-number-system.html#subsec-sequences-11",
+  "type": "Example",
+  "number": "114",
+  "title": "",
+  "body": " The sequence is bounded, since for all . However, as we saw earlier, this sequence diverges.  "
+},
+{
+  "id": "subsec-sequences-12",
+  "level": "2",
+  "url": "sec-the-real-number-system.html#subsec-sequences-12",
+  "type": "Example",
+  "number": "115",
+  "title": "",
+  "body": " The sequence diverges. To see this, observe that . If the sequence were bounded, then there would be such that for all . This would imply that for all , which is impossible.  "
+},
+{
+  "id": "thm-algebraic-limit-laws",
+  "level": "2",
+  "url": "sec-the-real-number-system.html#thm-algebraic-limit-laws",
+  "type": "Theorem",
+  "number": "116",
+  "title": "",
+  "body": "  Suppose and are sequences that converge to and , respectively. Then   If , then .     .     .    If and for all , then .       To prove (1), let be given. If there is nothing to prove. Otherwise, since converges to , there is such that for all , . Then for all , as required.  To prove (2), let be given. Since converges to , there is such that for all , . Since converges to , there is such that for all , . Now, let . Then for all , , as required.  To prove (3), let be given. Since , we have . Since converges to , it is bounded by . Thus there is such that for all . Now, there is such that for all , , and there is such that for all , . Now, let . Then for all , , as required.  The proof of (4) is left to the reader.   "
+},
+{
+  "id": "thm-preservation-of-inequalities-limit",
+  "level": "2",
+  "url": "sec-the-real-number-system.html#thm-preservation-of-inequalities-limit",
+  "type": "Theorem",
+  "number": "117",
+  "title": "",
+  "body": "     Suppose and that for all . Then .    Suppose and and that for all . Then .    Suppose and . If for all , then .       For (a), suppose that and that . Then let . Then there is such that for all , . In particular, , since . This implies that , a contradiction.  For (b), we can apply to see that . Since for all , it follows from (a) that , that is, .  For (c), let us define and for all . Then and , and we have for all . It follows that by (b).   "
+},
+{
+  "id": "cor-squeeze-theorem",
+  "level": "2",
+  "url": "sec-the-real-number-system.html#cor-squeeze-theorem",
+  "type": "Corollary",
+  "number": "118",
+  "title": "squeeze theorem.",
+  "body": " squeeze theorem   Suppose , , and are sequences such that for all . If and converge to the same limit , then also converges to .    Let be given. Since converges to , there is such that for all , . Since converges to , there is such that for all , . Now, let . Then for all , , as required.   "
 },
 {
   "id": "homework",

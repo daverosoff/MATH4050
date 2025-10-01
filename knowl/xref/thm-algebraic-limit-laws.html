@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">116</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para logical">
+<div class="para">Suppose <span class="process-math">\((a_n)\)</span> and <span class="process-math">\((b_n)\)</span> are sequences that converge to <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{,}\)</span> respectively. Then</div>
+<ol class="decimal ol-marker-1" id="thm-algebraic-limit-laws-1-1-5">
+<li>
+<div class="para">If <span class="process-math">\(c \in \R\text{,}\)</span> then <span class="process-math">\(\lim_{n \to \infty} (c a_n) = c a\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-algebraic-limit-laws-1-1-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#thm-algebraic-limit-laws-1-1-5-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li>
+<div class="para">
+<span class="process-math">\(\lim_{n \to \infty} (a_n + b_n) = a + b\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-algebraic-limit-laws-1-1-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#thm-algebraic-limit-laws-1-1-5-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li>
+<div class="para">
+<span class="process-math">\(\lim_{n \to \infty} (a_n b_n) = ab\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-algebraic-limit-laws-1-1-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#thm-algebraic-limit-laws-1-1-5-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li>
+<div class="para">If <span class="process-math">\(b \ne 0\)</span> and <span class="process-math">\(b_n \ne 0\)</span> for all <span class="process-math">\(n \in \N\text{,}\)</span> then <span class="process-math">\(\lim_{n \to \infty} \left( \frac{a_n}{b_n} \right) = \dfrac{a}{b}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-algebraic-limit-laws-1-1-5-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4"><a href="#thm-algebraic-limit-laws-1-1-5-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-algebraic-limit-laws-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 116"><a href="#thm-algebraic-limit-laws" title="Copy heading and permalink for Theorem 116" aria-label="Copy heading and permalink for Theorem 116">🔗</a></div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical">
+<div class="para">To prove (1), let <span class="process-math">\(\eps \gt 0\)</span> be given. If <span class="process-math">\(c = 0\)</span> there is nothing to prove. Otherwise, since <span class="process-math">\((a_n)\)</span> converges to <span class="process-math">\(a\text{,}\)</span> there is <span class="process-math">\(N \in \N\)</span> such that for all <span class="process-math">\(n \geq N\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\abs{a_n - a} \lt \frac{\eps}{\abs{c}}\text{.}
+\end{equation*}
+</div>
+<div class="para">Then for all <span class="process-math">\(n \geq N\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\abs{c a_n - c a} = \abs{c} \abs{a_n - a} \lt
+\abs{c} \frac{\eps}{\abs{c}} = \eps,
+\end{equation*}
+</div>
+<div class="para">as required.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-algebraic-limit-laws-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">To prove (2), let <span class="process-math">\(\eps \gt 0\)</span> be given. Since <span class="process-math">\((a_n)\)</span> converges to <span class="process-math">\(a\text{,}\)</span> there is <span class="process-math">\(N_1 \in \N\)</span> such that for all <span class="process-math">\(n \geq N_1\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\abs{a_n - a} \lt \frac{\eps}{2}\text{.}
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\((b_n)\)</span> converges to <span class="process-math">\(b\text{,}\)</span> there is <span class="process-math">\(N_2 \in \N\)</span> such that for all <span class="process-math">\(n \geq N_2\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\abs{b_n - b} \lt \frac{\eps}{2}\text{.}
+\end{equation*}
+</div>
+<div class="para">Now, let <span class="process-math">\(N = \max(N_1, N_2)\text{.}\)</span> Then for all <span class="process-math">\(n \geq N\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{align*}
+\abs{(a_n + b_n) - (a + b)} \amp =
+\abs{(a_n - a) + (b_n - b)}\\
+\amp \leq
+\abs{a_n - a} + \abs{b_n - b}\\
+\amp \lt
+\frac{\eps}{2} + \frac{\eps}{2} = \eps\text{,}
+\end{align*}
+</div>
+<div class="para">as required.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-algebraic-limit-laws-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">To prove (3), let <span class="process-math">\(\eps \gt 0\)</span> be given. Since</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-convergent-sequence-bounded.html">
+\begin{equation*}
+a_n b_n - ab = a_n b_n - a b_n + a b_n - ab
+= a (b_n - b) + b_n (a_n - a)\text{,}
+\end{equation*}
+</div>
+<div class="para">we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-convergent-sequence-bounded.html">
+\begin{equation*}
+\abs{a_n b_n - ab} \leq
+\abs{a} \abs{b_n - b} + \abs{b_n} \abs{a_n - a}\text{.}
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\((a_n)\)</span> converges to <span class="process-math">\(a\text{,}\)</span> it is bounded by <a href="sec-the-real-number-system.html#prop-convergent-sequence-bounded" class="xref" data-knowl="./knowl/xref/prop-convergent-sequence-bounded.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 113">Proposition 113</a>. Thus there is <span class="process-math">\(M \geq 0\)</span> such that <span class="process-math">\(\abs{a_n} \leq M\)</span> for all <span class="process-math">\(n \in \N\text{.}\)</span> Now, there is <span class="process-math">\(N_1 \in \N\)</span> such that for all <span class="process-math">\(n \geq N_1\text{,}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-convergent-sequence-bounded.html">
+\begin{equation*}
+\abs{b_n - b} \lt \frac{\eps}{2M}\text{,}
+\end{equation*}
+</div>
+<div class="para">and there is <span class="process-math">\(N_2 \in \N\)</span> such that for all <span class="process-math">\(n \geq N_2\text{,}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-convergent-sequence-bounded.html">
+\begin{equation*}
+\abs{a_n - a} \lt \frac{\eps}{2\abs{b}}\text{.}
+\end{equation*}
+</div>
+<div class="para">Now, let <span class="process-math">\(N = \max(N_1, N_2)\text{.}\)</span> Then for all <span class="process-math">\(n \geq N\text{,}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-convergent-sequence-bounded.html">
+\begin{align*}
+\abs{a_n b_n - ab} \amp \leq
+\abs{a_n} \abs{b_n - b} + \abs{b} \abs{a_n - a}\\
+\amp \lt M \frac{\eps}{2M} + \abs{b} \frac{\eps}{2\abs{b}}\\
+\amp \leq \eps\text{,}
+\end{align*}
+</div>
+<div class="para">as required.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-algebraic-limit-laws-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">The proof of (4) is left to the reader.<div class="autopermalink" data-description="Paragraph"><a href="#thm-algebraic-limit-laws-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 116.1"><a href="#thm-algebraic-limit-laws-2" title="Copy heading and permalink for Proof 116.1" aria-label="Copy heading and permalink for Proof 116.1">🔗</a></div></article></details><span class="incontext"><a class="internal" href="sec-the-real-number-system.html#thm-algebraic-limit-laws">in-context</a></span>
+</body>
+</html>
