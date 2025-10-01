@@ -728,4 +728,380 @@
             </p>
         </example>
     </subsection>
-</section>
+    <subsection xml:id="subsec-sequences">
+        <title>Sequences</title>
+        <definition xml:id="def-absolute-value-real">
+            <statement>
+                <p>
+                    For <m>x \in \R</m>, we define
+                    <me>
+                        \abs{x} = \begin{cases}
+                            x \amp \text{if $x \geq 0$} \\
+                            -x \amp \text{if $x \lt 0$}.
+                        \end{cases}
+                    </me>
+                </p>
+            </statement>
+        </definition>
+        <definition xml:id="def-sequence">
+            <statement>
+                <p>
+                    A <em>sequence</em> of real numbers is a function
+                    <m>a \colon \N \to \R</m>. The value <m>a(n)</m> is
+                    the <m>n</m>-th term of the sequence, and we write
+                    <me>
+                        a_n = a(n)
+                    </me>. The sequence itself is often denoted by
+                    <m>(a_n)_{n \in \N}</m> or just <m>(a_n)</m>.
+                </p>
+            </statement>
+        </definition>
+        <definition xml:id="def-sequence-converges">
+            <statement>
+                <p>
+                    A sequence <m>(a_n)</m> is said to <em>converge</em> to a 
+                    limit <m>a \in \R</m> if for every <m>\eps \gt 0</m>, 
+                    there exists a natural number <m>N \in \N</m> such that 
+                    for all <m>n \geq N</m>, we have
+                    <me>
+                        \abs{a_n - a} \lt \eps
+                    </me>.
+                </p>
+            </statement>
+        </definition>
+        <definition xml:id="def-sequence-diverges">
+            <statement>
+                <p>
+                    A sequence <m>(a_n)</m> is said to <em>diverge</em> if 
+                    it does not converge to any limit in <m>\R</m>.
+                </p>
+            </statement>
+        </definition>
+        <example>
+            <p>
+                The sequence <m>a_n = \frac{1}{n}</m> converges to <m>0</m>.
+                To see this, let <m>\eps \gt 0</m> be given. By the
+                archimedean property of the real numbers
+                (<xref ref="thm-archimedean-prop-reals"/>), there is
+                <m>N \in \N</m> such that <m>\frac{1}{N} \lt \eps</m>.
+                Now, if <m>n \geq N</m>, then
+                <me>
+                    \abs{a_n - 0} = \abs{\frac{1}{n} - 0}
+                    = \frac{1}{n} \lt \frac{1}{N} \lt \eps
+                </me>.
+                This shows that <m>a_n \to 0</m>.
+            </p>
+        </example>
+        <example>
+            <p>
+                <me>
+                    \lim_{n \to \infty} \frac{3n^2}{n^2 + 1} = 3
+                </me>.
+                To see this, let <m>\eps \gt 0</m> be given. Now we
+                need to bound
+                <me>
+                    \abs{\frac{3n^2}{n^2 + 1} - 3} = 
+                    \abs{\frac{3n^2 - 3(n^2 + 1)}{n^2 + 1}} = 
+                    \abs{\frac{-3}{n^2 + 1}} = \frac{3}{n^2 + 1} \lt
+                    \frac{3}{n^2}.
+                </me>
+                We want to show that <me>
+                    \frac{3}{n^2} \lt \eps
+                </me> whenever <m>n \geq N</m> for some <m>N \in \N</m>.
+            </p>
+            <p>
+                By the archimedean property of the real numbers
+                (<xref ref="thm-archimedean-prop-reals"/>), there is
+                <m>N \in \N</m> such that <m>\frac{3}{N^2} \lt \eps</m>.
+                Indeed, we can choose <m>N \in \N</m> such that
+                <m>N \gt \sqrt{\frac{3}{\eps}}</m>.
+            </p>
+            <p>
+                Now, if <m>n \geq N</m>, then
+                <me>    
+                    \abs{\frac{3n^2}{n^2 + 1} - 3} \lt \frac{3}{n^2} \leq
+                    \frac{3}{N^2} \lt \eps,
+                </me>
+                as required.
+            </p>
+        </example>
+        <example>
+            <p>
+                The sequence <m>a_n = (-1)^n</m> diverges. To see this,
+                suppose that
+                <me>
+                    \lim_{n \to \infty} (-1)^n = a
+                </me>
+                for some <m>a \in \R</m>. Let <m>\eps = 1</m>. Then there
+                is <m>N \in \N</m> such that for all <m>n \geq N</m>,
+                <me>
+                    \abs{(-1)^n - a} \lt 1.
+                </me>
+                In particular, this holds for <m>n = 2N</m> and <m>n = 2N + 1</m>.
+                Thus
+                <md>
+                    <mrow>1 - a \lt \amp \abs{1 - a} \lt \abs{(-1)^{2N} - a} \lt 1 \implies a \gt 0</mrow>
+                    <mrow>1 + a \lt \amp \abs{1 + a} \lt \abs{(-1)^{2N + 1} - a} \lt 1 \implies a \lt 0</mrow>
+                </md>
+                This is a contradiction, and hence <m>a_n</m> diverges.
+            </p>
+        </example>
+        <definition xml:id="def-bounded-sequence">
+            <statement>
+                <p>
+                    A sequence <m>(a_n)</m> is said to be <em>bounded</em> if
+                    there exists a real number <m>M \geq 0</m> such that
+                    <m>\abs{a_n} \lt M</m> for all <m>n \in \N</m>.
+                </p>
+            </statement>
+        </definition>
+        <proposition xml:id="prop-convergent-sequence-bounded">
+            <statement>
+                <p>
+                    Every convergent sequence is bounded.
+                </p>
+            </statement>
+            <proof>
+                <p>
+                    Suppose that <m>(a_n)</m> is a sequence that converges to
+                    <m>a \in \R</m>. Let <m>\eps = 1</m>. Then there is
+                    <m>N \in \N</m> such that for all <m>n \geq N</m>,
+                    <me>
+                        \abs{a_n - a} \lt 1.
+                    </me>
+                    This implies that for all <m>n \geq N</m>,
+                    <me>
+                        \abs{a_n} \leq \abs{a_n - a + a} \leq \abs{a_n - a} + \abs{a} \lt 1 + \abs{a}
+                    </me>,
+                    for all <m>n \geq N</m>. Now, let
+                    <me>
+                        M = \max(\abs{a_1}, \abs{a_2}, \ldots, \abs{a_{N-1}}, 1 + \abs{a}).
+                    </me>
+                    Then <m>M \geq 0</m> and <m>\abs{a_n} \leq M</m> for all <m>n \in \N</m>.
+                    This shows that <m>(a_n)</m> is bounded.
+                </p>
+            </proof>
+        </proposition>
+        <example>
+            <p>
+                The sequence <m>((-1)^n)</m> is bounded, since
+                <m>\abs{(-1)^n} = 1</m> for all <m>n \in \N</m>.
+                However, as we saw earlier, this sequence diverges.
+            </p>
+        </example>
+        <example>
+            <p>
+                The sequence <m>\left(\frac{n^2}{n-1}\right)</m> diverges.
+                To see this, observe that
+                <me>
+                    \frac{n^2}{n-1} \gt \frac{n^2}{n} = n
+                </me>.
+                If the sequence were bounded, then there would be
+                <m>M \geq 0</m> such that <m>\frac{n^2}{n-1} \leq M</m> for all
+                <m>n \in \N</m>. This would imply that <m>n \leq M</m> for all
+                <m>n \in \N</m>, which is impossible.
+            </p>
+        </example>
+        <theorem xml:id="thm-algebraic-limit-laws">
+            <statement>
+                <p>
+                    Suppose <m>(a_n)</m> and <m>(b_n)</m> are sequences that converge to
+                    <m>a</m> and <m>b</m>, respectively. Then
+                    <ol marker="1.">
+                        <li>
+                            <p>
+                                If <m>c \in \R</m>, then
+                                <m>\lim_{n \to \infty} (c a_n) = c a</m>.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <m>\lim_{n \to \infty} (a_n + b_n) = a + b</m>.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <m>\lim_{n \to \infty} (a_n b_n) = ab</m>.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                If <m>b \ne 0</m> and <m>b_n \ne 0</m> for all <m>n \in \N</m>, then
+                                <m>\lim_{n \to \infty} \left( \frac{a_n}{b_n} \right) = \dfrac{a}{b}</m>.
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+            </statement>
+            <proof>
+                <p>
+                    To prove (1), let <m>\eps \gt 0</m> be given. If <m>c = 0</m>
+                    there is nothing to prove. Otherwise, since
+                    <m>(a_n)</m> converges to <m>a</m>, there is <m>N \in \N</m>
+                    such that for all <m>n \geq N</m>,
+                    <me>
+                        \abs{a_n - a} \lt \frac{\eps}{\abs{c}}
+                    </me>.
+                    Then for all <m>n \geq N</m>,
+                    <me>
+                        \abs{c a_n - c a} = \abs{c} \abs{a_n - a} \lt
+                        \abs{c} \frac{\eps}{\abs{c}} = \eps,
+                    </me>
+                    as required.
+                </p>
+                <p>
+                    To prove (2), let <m>\eps \gt 0</m> be given. Since
+                    <m>(a_n)</m> converges to <m>a</m>, there is <m>N_1 \in \N</m>
+                    such that for all <m>n \geq N_1</m>,
+                    <me>
+                        \abs{a_n - a} \lt \frac{\eps}{2}
+                    </me>.
+                    Since <m>(b_n)</m> converges to <m>b</m>, there is <m>N_2 \in \N</m>
+                    such that for all <m>n \geq N_2</m>,
+                    <me>
+                        \abs{b_n - b} \lt \frac{\eps}{2}
+                    </me>.
+                    Now, let <m>N = \max(N_1, N_2)</m>. Then for all <m>n \geq N</m>,
+                    <md>
+                        <mrow>\abs{(a_n + b_n) - (a + b)} \amp =
+                        \abs{(a_n - a) + (b_n - b)}</mrow>
+                        <mrow>\amp \leq
+                        \abs{a_n - a} + \abs{b_n - b}</mrow>
+                        <mrow>\amp \lt
+                        \frac{\eps}{2} + \frac{\eps}{2} = \eps</mrow>
+                    </md>,
+                    as required.
+                </p>
+                <p>
+                    To prove (3), let <m>\eps \gt 0</m> be given. Since
+                    <me>
+                        a_n b_n - ab = a_n b_n - a b_n + a b_n - ab
+                        = a (b_n - b) + b_n (a_n - a)
+                    </me>,
+                    we have
+                    <me>
+                        \abs{a_n b_n - ab} \leq
+                        \abs{a} \abs{b_n - b} + \abs{b_n} \abs{a_n - a}
+                    </me>.
+                    Since <m>(a_n)</m> converges to <m>a</m>, it is bounded
+                    by <xref ref="prop-convergent-sequence-bounded"/>.
+                    Thus there is <m>M \geq 0</m> such that <m>\abs{a_n} \leq M</m>
+                    for all <m>n \in \N</m>.
+                    Now, there is <m>N_1 \in \N</m>
+                    such that for all <m>n \geq N_1</m>,
+                    <me>
+                        \abs{b_n - b} \lt \frac{\eps}{2M}
+                    </me>, and there is <m>N_2 \in \N</m> such that for all <m>n \geq N_2</m>,
+                    <me>
+                        \abs{a_n - a} \lt \frac{\eps}{2\abs{b}}
+                    </me>.
+                    Now, let <m>N = \max(N_1, N_2)</m>. Then for all <m>n \geq N</m>,
+                    <md>
+                        <mrow>\abs{a_n b_n - ab} \amp \leq
+                        \abs{a_n} \abs{b_n - b} + \abs{b} \abs{a_n - a}</mrow>
+                        <mrow>\amp \lt M \frac{\eps}{2M} + \abs{b} \frac{\eps}{2\abs{b}}</mrow>
+                        <mrow>\amp \leq \eps</mrow>
+                    </md>,
+                    as required.
+                </p>
+                <p>
+                    The proof of (4) is left to the reader.
+                </p>
+            </proof>
+        </theorem>
+        <theorem xml:id="thm-preservation-of-inequalities-limit">
+            <statement>
+                <p>
+                    <ol marker="1.">
+                        <li>
+                            <p>
+                                Suppose <m>a_n \to a</m> 
+                                and that <m>a_n \geq 0</m>
+                                for all <m>n \in \N</m>. Then <m>a \geq 0</m>.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Suppose <m>a_n \to a</m> and <m>b_n \to b</m> and that
+                                <m>a_n \leq b_n</m> for all <m>n \in \N</m>. Then <m>a \leq b</m>.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Suppose <m>a \lt b</m> and <m>c_n \to c</m>. If
+                                <m>a \lt c_n \lt b</m> for all <m>n \in \N</m>, then
+                                <m>a \lt c \lt b</m>.
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+            </statement>
+            <proof>
+                <p>
+                    For (a), suppose that <m>a_n \to a</m> and that
+                    <m>a \lt 0</m>. Then let <m>\eps = \abs{a}</m>.
+                    Then there is <m>N \in \N</m> such that for all <m>n \geq N</m>,
+                    <me>
+                        \abs{a_n - a} \lt \abs{a}
+                    </me>. In particular, 
+                    <me>
+                        a_N - a \leq \abs{a_N - a} \lt \abs{a} = -a
+                    </me>,
+                    since <m>a \lt 0</m>. This implies that
+                    <m>a_N \lt 0</m>, a contradiction.
+                </p>
+                <p>
+                    For (b), we can apply <xref ref="thm-algebraic-limit-laws"/> to
+                    see that <m>(b_n - a_n) \to (b - a)</m>. Since
+                    <m>b_n - a_n \geq 0</m> for all <m>n \in \N</m>, it follows from (a) that
+                    <m>b - a \geq 0</m>, that is, <m>a \leq b</m>.
+                </p>
+                <p>
+                    For (c), let us define <m>a_n = a</m> and <m>b_n = b</m> for all <m>n \in \N</m>.
+                    Then <m>(a_n) \to a</m> and <m>(b_n) \to b</m>, and we have
+                    <m>a_n \lt c_n \lt b_n</m> for all <m>n \in \N</m>.
+                    It follows that <m>a \lt c \lt b</m> by (b).
+                </p>
+            </proof>
+        </theorem>
+        <corollary xml:id="cor-squeeze-theorem">
+            <title>squeeze theorem</title>
+            <statement>
+                <p>
+                    Suppose <m>(a_n)</m>, <m>(b_n)</m>, and <m>(c_n)</m> are sequences such that
+                    <me>
+                        a_n \leq c_n \leq b_n
+                    </me>
+                    for all <m>n \in \N</m>. If <m>(a_n)</m> and <m>(b_n)</m> converge to the same limit
+                    <m>L \in \R</m>, then <m>(c_n)</m> also converges to <m>L</m>.
+                </p>
+            </statement>
+            <proof>
+                <p>
+                    Let <m>\eps \gt 0</m> be given. Since <m>(a_n)</m> converges to <m>L</m>,
+                    there is <m>N_1 \in \N</m> such that for all <m>n \geq N_1</m>,
+                    <me>
+                        \abs{a_n - L} \lt \eps
+                    </me>.
+                    Since <m>(b_n)</m> converges to <m>L</m>,
+                    there is <m>N_2 \in \N</m> such that for all <m>n \geq N_2</m>,
+                    <me>
+                        \abs{b_n - L} \lt \eps
+                    </me>.
+                    Now, let <m>N = \max(N_1, N_2)</m>. Then for all <m>n \geq N</m>,
+                    <md>
+                        <mrow>L - \eps \amp \lt a_n \leq c_n \leq b_n \lt L + \eps</mrow>
+                        <mrow>\implies \amp \abs{c_n - L} \leq \max(\abs{a_n - L}, \abs{b_n - L}) \lt \eps</mrow>
+                    </md>,
+                    as required.
+                </p>
+            </proof>
+        </corollary>
+    </subsection>
+    <subsection xml:id="subsec-monotone-sequences-and-bolzano-weierstrass">
+        <title>Monotone sequences and subsequences</title>
+        <p>
+            Nothing here yet.
+        </p>
+    </subsection>
+</section> 
