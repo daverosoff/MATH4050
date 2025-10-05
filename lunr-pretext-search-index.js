@@ -1114,7 +1114,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3",
   "title": "Homework assignments",
-  "body": " Homework assignments   HW 01  Note: These statements should be proved using only the definitions and properties presented in the lecture notes.   Show that, for all , the following are true.   If , then .    If , then .    We have if and only if .          Prove that for all .    Use to prove that for all .       Prove the following identities hold for all . You may freely use any corresponding properties of .                     Show that multiplication in , defined by is well-defined.    For , show that if and only if .    For , show that if and only if .    For , prove the following.   If then or . Hint: Suppose and split into cases and . Use the results of previous problems.    If and , then .       For , we write if either or . Prove that is a partial order . That is, prove the following are true for all .        If and , then     If and , then    (For the last two parts you will probably want to divide into cases.)       HW 02  Note: These statements should be proved using only the definitions and properties presented in the lecture notes.     Show that the equivalence relation of is an equivalence relation.      Prove .    A rational number satisfies exactly one of , , or , so divide into cases based on these.      Prove that if , then there exists with . You may use any of the standard properties of the relation on .      Prove that for all .      Prove the result of .      Use the Triangle Inequality to prove the Reverse Triangle Inequality .      If and are Cauchy sequences of rational numbers, prove that the sequence is also Cauchy.       HW 03  Note: These statements should be proved using only the definitions and properties presented in the lecture notes, as well as the additional definitions below.  Consider a subset of . We say that is a lower bound for if for all . We say that is a greatest lower bound for if, for all lower bounds of , we have .  Greatest lower bounds are unique when they exist, and every nonempty subset of that has a lower bound has a greatest lower bound. You can assume all this without proof for the rest of the HW 03.  The greatest lower bound of a set (provided it exists) is also called the infimum of and written .     Let . Prove that if , then and .    Use the definition of a real number as an equivalence class of Cauchy sequences of rational numbers.      Let be a Cauchy sequence of rational numbers and let . Show that if for all , then .    Use a proof by contradiction. If , then there exists such that (why?).      Suppose are nonempty and that has an upper bound.   Show that has an upper bound.    Show that .         Suppose each have an upper bound.   Show has an upper bound.    Find a formula for . Prove your result.         Let be nonempty and suppose has an upper bound. Let and define the set by . Prove that .      Suppose that is nonempty. Show that if is a lower bound for , then if and only if for every real number , there is an such that .      Find the supremum and infimum of the set . Prove your results.         Let be the set of irrational numbers. Show that if and , then .    Use the previous part and the density of in to prove that is also dense in . That is, if for , prove that there exists such that .       Apply the density result to . You may assume .      "
+  "body": " Homework assignments   HW 01  Note: These statements should be proved using only the definitions and properties presented in the lecture notes.   Show that, for all , the following are true.   If , then .    If , then .    We have if and only if .          Prove that for all .    Use to prove that for all .       Prove the following identities hold for all . You may freely use any corresponding properties of .                     Show that multiplication in , defined by is well-defined.    For , show that if and only if .    For , show that if and only if .    For , prove the following.   If then or . Hint: Suppose and split into cases and . Use the results of previous problems.    If and , then .       For , we write if either or . Prove that is a partial order . That is, prove the following are true for all .        If and , then     If and , then    (For the last two parts you will probably want to divide into cases.)       HW 02  Note: These statements should be proved using only the definitions and properties presented in the lecture notes.     Show that the equivalence relation of is an equivalence relation.      Prove .    A rational number satisfies exactly one of , , or , so divide into cases based on these.      Prove that if , then there exists with . You may use any of the standard properties of the relation on .      Prove that for all .      Prove the result of .      Use the Triangle Inequality to prove the Reverse Triangle Inequality .      If and are Cauchy sequences of rational numbers, prove that the sequence is also Cauchy.       HW 03  Note: These statements should be proved using only the definitions and properties presented in the lecture notes, as well as the additional definitions below.  Consider a subset of . We say that is a lower bound for if for all . We say that is a greatest lower bound for if, for all lower bounds of , we have .  Greatest lower bounds are unique when they exist, and every nonempty subset of that has a lower bound has a greatest lower bound. You can assume all this without proof for the rest of the HW 03.  The greatest lower bound of a set (provided it exists) is also called the infimum of and written .     Let . Prove that if , then and .    Use the definition of a real number as an equivalence class of Cauchy sequences of rational numbers.      Let be a Cauchy sequence of rational numbers and let . Show that if for all , then .    Use a proof by contradiction. If , then there exists such that (why?).      Suppose are nonempty and that has an upper bound.   Show that has an upper bound.    Show that .         Suppose each have an upper bound.   Show has an upper bound.    Find a formula for . Prove your result.         Let be nonempty and suppose has an upper bound. Let and define the set by . Prove that .      Suppose that is nonempty. Show that if is a lower bound for , then if and only if for every real number , there is an such that .      Find the supremum and infimum of the set . Prove your results.         Let be the set of irrational numbers. Show that if and , then .    Use and the density of in to prove that is also dense in . That is, if for , prove that there exists such that .       Apply the density result to . You may assume .       HW-04  Note: These statements should be proved using only the definitions and properties presented in the lecture notes and the book of Abbott.        Prove that is countable. Use the fact that is countable if each is countable.    Use to show that if and are countable, then is countable.    Let be the set of all functions . Use to show that is countable.            Show that if is a countable set and is a finite set with , then is countable.    Show that if and are countable sets, then is countable. (Hint: Write , and then with .)         Prove that the limit of a convergent sequence is unique: if converges to both and , then .      Use the definition of convergence to prove that .      For any real number , show that for all . (Hint: Use induction on .)         Let . Use the reverse triangle inequality to prove the stronger result .    Use the previous part to show that if converges to , then converges to .         Suppose is a sequence with for all .   If converges to , prove that converges to .    If converges to , prove that converges to . (Hint: The relation may be useful.)         Let be a sequence. We write if for every there exists such that implies . Prove that .      "
 },
 {
   "id": "subsec-hw-02-3-1",
@@ -1249,7 +1249,79 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.3.8",
   "title": "",
-  "body": "     Let be the set of irrational numbers. Show that if and , then .    Use the previous part and the density of in to prove that is also dense in . That is, if for , prove that there exists such that .       Apply the density result to . You may assume .   "
+  "body": "     Let be the set of irrational numbers. Show that if and , then .    Use and the density of in to prove that is also dense in . That is, if for , prove that there exists such that .       Apply the density result to . You may assume .   "
+},
+{
+  "id": "exercises-hw-04-1",
+  "level": "2",
+  "url": "homework.html#exercises-hw-04-1",
+  "type": "Exercise",
+  "number": "3.4.1",
+  "title": "",
+  "body": "     Prove that is countable. Use the fact that is countable if each is countable.    Use to show that if and are countable, then is countable.    Let be the set of all functions . Use to show that is countable.      "
+},
+{
+  "id": "exercises-hw-04-2",
+  "level": "2",
+  "url": "homework.html#exercises-hw-04-2",
+  "type": "Exercise",
+  "number": "3.4.2",
+  "title": "",
+  "body": "     Show that if is a countable set and is a finite set with , then is countable.    Show that if and are countable sets, then is countable. (Hint: Write , and then with .)      "
+},
+{
+  "id": "exercises-hw-04-3",
+  "level": "2",
+  "url": "homework.html#exercises-hw-04-3",
+  "type": "Exercise",
+  "number": "3.4.3",
+  "title": "",
+  "body": "  Prove that the limit of a convergent sequence is unique: if converges to both and , then .   "
+},
+{
+  "id": "exercises-hw-04-4",
+  "level": "2",
+  "url": "homework.html#exercises-hw-04-4",
+  "type": "Exercise",
+  "number": "3.4.4",
+  "title": "",
+  "body": "  Use the definition of convergence to prove that .   "
+},
+{
+  "id": "exercises-hw-04-5",
+  "level": "2",
+  "url": "homework.html#exercises-hw-04-5",
+  "type": "Exercise",
+  "number": "3.4.5",
+  "title": "",
+  "body": "  For any real number , show that for all . (Hint: Use induction on .)   "
+},
+{
+  "id": "exercises-hw-04-6",
+  "level": "2",
+  "url": "homework.html#exercises-hw-04-6",
+  "type": "Exercise",
+  "number": "3.4.6",
+  "title": "",
+  "body": "     Let . Use the reverse triangle inequality to prove the stronger result .    Use the previous part to show that if converges to , then converges to .      "
+},
+{
+  "id": "exercises-hw-04-7",
+  "level": "2",
+  "url": "homework.html#exercises-hw-04-7",
+  "type": "Exercise",
+  "number": "3.4.7",
+  "title": "",
+  "body": "  Suppose is a sequence with for all .   If converges to , prove that converges to .    If converges to , prove that converges to . (Hint: The relation may be useful.)      "
+},
+{
+  "id": "exercises-hw-04-8",
+  "level": "2",
+  "url": "homework.html#exercises-hw-04-8",
+  "type": "Exercise",
+  "number": "3.4.8",
+  "title": "",
+  "body": "  Let be a sequence. We write if for every there exists such that implies . Prove that .   "
 }
 ]
 
