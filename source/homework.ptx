@@ -353,7 +353,8 @@
               </li>
               <li>
                 <p>
-                  Use the previous part and the density of <m>\Q</m> in <m>\R</m>
+                  Use <xref ref="hw-04-ex-n-times-n-countable"/>
+                  and the density of <m>\Q</m> in <m>\R</m>
                   to prove that <m>I</m> is also dense in <m>\R</m>. That is, if
                   <m>x \lt y</m> for <m>x, y \in \R</m>, prove that there exists
                   <m>t \in \mathbf{I}</m> such that <m>x \lt t \lt y</m>.
@@ -368,6 +369,165 @@
             You may assume <m>\sqrt{2} \in \mathbf{I}</m>.
           </p>
         </hint>
+      </exercise>
+    </exercises>
+  </subsection>
+  <subsection xml:id="subsec-hw-04">
+    <title>HW-04</title>
+    <p>
+      Note: These statements should be proved using only the definitions and
+      properties presented in the lecture notes and the book of Abbott.
+    </p>
+    <exercises xml:id="exercises-hw-04">
+      <exercise>
+        <statement>
+          <p>
+            <ol marker="(a)">
+              <li xml:id="hw-04-ex-n-times-n-countable">
+                <p>
+                  Prove that <m>\N \times \N</m> is countable. Use the
+                  fact that 
+                  <me>
+                    \bigcup_{n=0}^{\infty} A_n
+                  </me>
+                  is countable if each <m>A_n</m> is countable.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Use <xref ref="hw-04-ex-n-times-n-countable"/>
+                  to show that if <m>A</m> and <m>B</m> are
+                  countable, then <m>A \times B</m> is countable.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Let <m>A</m> be the set of all functions 
+                  <m>f \colon \{0, 1\} \to \N</m>. Use
+                  <xref ref="hw-04-ex-n-times-n-countable"/>
+                  to show that <m>A</m> is countable.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            <ol marker="(a)">
+              <li>
+                <p>
+                  Show that if <m>A</m> is a countable set and <m>B</m> is
+                  a finite set with <m>A \cap B = \varnothing</m>, then
+                  <m>A \cup B</m> is countable.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Show that if <m>A</m> and <m>B</m> are countable sets,
+                  then <m>A \cup B</m> is countable. (Hint: Write 
+                  <m>B' = B \setminus A</m>, and then <m>A \cup B = A \cup B'</m> with <m>A \cap B = \varnothing</m>.)
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Prove that the limit of a convergent sequence is unique: 
+            if <m>(a_n)</m> converges to both <m>a</m> and <m>b</m>, then
+            <m>a = b</m>.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Use the definition of convergence to prove that
+            <m>\lim_{n \to \infty} \frac{2n^2}{n^3 + 3} = 0</m>.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            For any real number <m>a \geq -1</m>, show that 
+            <m>(1 + a)^n \geq 1 + na</m> for all <m>n \in \N</m>.
+            (Hint: Use induction on <m>n</m>.)
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            <ol marker="(a)">
+              <li>
+                <p>
+                  Let <m>x, y \in \R</m>. Use the reverse triangle inequality
+                  <me>
+                    \abs{x} - \abs{y} \leq \abs{x - y}
+                  </me>
+                  to prove the stronger result
+                  <me>
+                    \abs{\abs{x} - \abs{y}} \leq \abs{x - y}
+                  </me>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Use the previous part to show that if <m>(a_n)</m>
+                  converges to <m>a</m>, then <m>(\abs{a_n})</m> converges
+                  to <m>\abs{a}</m>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Suppose <m>(a_n)</m> is a sequence with <m>a_n \geq 0</m>
+            for all <m>n \in \N</m>.
+            <ol marker="(a)">
+              <li>
+                <p>
+                  If <m>(a_n)</m> converges to <m>0</m>, prove that
+                  <m>(\sqrt{a_n})</m> converges to <m>0</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  If <m>(a_n)</m> converges to <m>a \ne 0</m>, prove that
+                  <m>(\sqrt{a_n})</m> converges to <m>\sqrt{a}</m>.
+                  (Hint: The relation 
+                  <me>
+                    \abs{\sqrt{x} - \sqrt{y}} = \frac{\abs{x - y}}{\sqrt{x} + \sqrt{y}}
+                  </me>
+                  may be useful.)
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement> 
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Let <m>(a_n)</m> be a sequence. We write
+            <me>
+              \lim_{n \to \infty} a_n = \infty
+            </me>
+            if for every <m>c \gt 0</m> there exists <m>N \in \N</m> such that
+            <m>n \geq N</m> implies
+            <me>
+              a_n \geq c
+            </me>. Prove that <m>\lim_{n \to \infty} (n^2 - 1) = \infty</m>.
+          </p>
+        </statement>
       </exercise>
     </exercises>
   </subsection>
