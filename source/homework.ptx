@@ -531,4 +531,107 @@
       </exercise>
     </exercises>
   </subsection>
+  <subsection xml:id="subsec-hw-05">
+    <title>Homework 05</title>
+    <p>
+      Note: These statements should be proved using only the definitions and
+      properties presented in the lecture notes and the book of Abbott.
+    </p>
+    <exercises>
+      <exercise>
+        <introduction>
+          <p>
+            Give an example of sequences <m>(a_n)</m> and <m>(b_n)</m> satisfying each property, or prove that it is impossible to give such an example.
+          </p>
+        </introduction>
+        <task>
+          <p>Both <m>(a_n)</m> and <m>(b_n)</m> diverge, but <m>(a_n + b_n)</m> converges. </p>
+        </task>
+        <task>
+          <p>The sequence <m>(a_n)</m> converges, <m>(b_n)</m> diverges, and <m>(a_n + b_n)</m> converges.</p>
+        </task>
+        <task>
+          <p>The sequence <m>(a_n)</m> is unbounded and <m>(b_n)</m> converges, with <m>(a_n - b_n)</m> bounded.</p>
+        </task>
+        <task>
+          <p>The sequences <m>(a_n b_n)</m> and <m>(a_n)</m> converge, but <m>(b_n)</m> diverges.</p>
+        </task>
+      </exercise>
+      <exercise>
+        <introduction>
+          <p>
+            Define a sequence <m>(a_n)</m> by <m>a_1 = 1</m> and <m>a_{n+1} = 3 - \frac{1}{a_n}</m> for <m>n \geq 1</m>. 
+          </p>
+        </introduction>
+        <task>
+          <p>Show <m>(a_n)</m> converges.</p>
+        </task>
+        <task>
+          <p>Find the limit of <m>(a_n)</m>.</p>
+        </task>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Define a sequence <m>(a_n)</m> by <m>a_1 = \sqrt{2}, a_2 = \sqrt{2+\sqrt{2}}, a_3 = \sqrt{2+\sqrt{2+\sqrt{2}}}, \ldots</m>.
+          </p>
+        </statement>
+        <task>
+          <p>Show <m>(a_n)</m> converges.</p>
+        </task>
+        <task>
+          <p>Find the limit of <m>(a_n)</m>.</p>
+        </task>
+      </exercise>
+      <exercise>
+        <introduction>
+          <p>
+            Determine whether each statement is true or false. If true, give a proof, and if false, give a counterexample.
+          </p>
+        </introduction>
+        <task>
+          <p>If a sequence <m>(a_n)</m> contains a divergent subsequence, then <m>(a_n)</m> diverges.</p>
+        </task>
+        <task>
+          <p>If a sequence <m>(a_n)</m> is monotone and unbounded, then every subsequence of <m>(a_n)</m> is unbounded.</p>
+        </task>
+        <task>
+          <p>If a sequence <m>(a_n)</m> is monotone and contains a convergent subsequence, then <m>(a_n)</m> converges.</p>
+        </task>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Prove directly from the definition (not using the Cauchy criterion) that
+            if <m>(a_n)</m> and <m>(b_n)</m> are Cauchy sequences, then
+            <m>(a_nb_n)</m> is Cauchy. (Hint: Look at the proof of
+            the product limit law for inspiration.)
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <introduction>
+          <p>
+            Consider the series <m>\displaystyle{\sum_{n=1}^{\infty}\left(\frac{1}{\sqrt{n}}-\frac{1}{\sqrt{n+1}}\right)}</m>.
+          </p>
+        </introduction>
+        <task>
+          <p>Find a formula for <m>s_k</m>, the <m>k</m>th partial sum. Prove your result.</p>
+        </task>
+        <task>
+          <p>Determine whether the series converges. If it does, find the sum.</p>
+        </task>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Suppose <m>\displaystyle{\sum_{n=1}^{\infty} a_n}</m> converges with
+            sum <m>A</m> and <m>\displaystyle{\sum_{n=1}^{\infty} b_n}</m> converges
+            with sum <m>B</m>. If <m>a_n \leq b_n</m> for all natural numbers
+            <m>n</m>, show <m>A \leq B</m>.
+          </p>
+        </statement>
+      </exercise>
+    </exercises>
+  </subsection>
 </section>
