@@ -571,11 +571,11 @@
         </task>
       </exercise>
       <exercise>
-        <statement>
+        <introduction>
           <p>
             Define a sequence <m>(a_n)</m> by <m>a_1 = \sqrt{2}, a_2 = \sqrt{2+\sqrt{2}}, a_3 = \sqrt{2+\sqrt{2+\sqrt{2}}}, \ldots</m>.
           </p>
-        </statement>
+        </introduction>
         <task>
           <p>Show <m>(a_n)</m> converges.</p>
         </task>
